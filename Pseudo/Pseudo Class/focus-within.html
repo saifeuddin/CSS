@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body:focus-within{
+            background-color: rgb(199, 120, 159);
+            padding: 2rem;
+        }
+        form{
+            background-color: #fff;
+            padding: 10px;
+        }
+        div{
+            border: 1px solid #000;
+        }
+        div:focus-within{
+            background-color: blue;
+        }   
+        label{
+            display: block;
+        }
+        form:focus-within{
+            background-color: bisque;
+        }
+    </style>
+</head>
+<body>
+    
+
+        <h1>CSS :Focus-within Pseudo Class</h1> 
+            <p>
+                 It selects an element if that element contains any children that have :focus.
+
+                </p>
+                <pre>
+                    <big>
+                        <b>
+    form:focus-within {
+        background: lightyellow;
+    }
+                            
+            </b>
+            </big>
+            </pre>
+        <form action="">
+            <div>
+                <label for="">Full Name</label>
+                <input type="text">
+            </div>
+            
+            <div>
+            <label for="">Email </label>
+            <input type="email">
+            </div>
+
+            <div>
+            <label for="">Gender </label>
+            <input type="radio">Male
+            <input type="radio">Female 
+            </div>
+
+            <div>
+                <label for="Hobbi">Hobbies</label>
+                <input type="checkbox">Travel
+                <input type="checkbox">Reading Books
+                <input type="checkbox">photography
+            </div>
+
+            <div>
+                <label for="">Country</label>   
+                <select name="" id="">
+                    <option value="">India</option>
+                    <option value="">bangladesh</option>
+                    <option value="">nepal</option>
+                </select>
+            </div>
+        </form>
+
+
+
+</body>
+</html>

@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Learn Every CSS Selectors </title>
+
+    <style>
+            ol h1{
+                    font-size: 50px;
+                    text-align: center;
+                    background-color: antiquewhite;
+                    padding: 10px;
+            }
+            ol li{
+                    font-size: 25px;
+            }
+    </style>
+</head>
+<body>
+
+
+        <ol>
+            <h1> Basic Type Selectors </h1>
+
+                <li>    Name : universal Selector <br>
+                        Css : * <br/>
+                        # Selects All Elements,Every think,Every Single thing(Except ::before,::after).
+                </li>
+                <br>
+                <li>    Name : Type/Element Selector <br/>
+                        Css : div <br/>
+                        # Select elements of that Type.
+                </li>
+                <br>
+                <li>    Name : Class Selector <br/>
+                        Css : .class name <br/>
+                        # Select elements with that Class.
+                </li>
+                <br>
+                <li>    Name : Id Selector <br/>
+                        Css : #id name <br>
+                        # Selects element with that Id.    
+                </li>
+        </ol>
+
+                <br>
+                <br>
+
+
+        <ol>
+            <h1> Combination Selectors</h1>
+                <li>    Name : Descendant(বংশধর) Selector <br>
+                        Css : div a <br>
+                        # Select elements that are "descendants" of the first element.<br>
+                        <br>
+                        Select all anchors(a) that are inside a div (Direct Child & Indirect Child all will selected).
+                </li>
+                <br>
+                <br>
+                <li>    Name : Or Selector <br>
+                        Css :div, p <br>
+                        Css :div, p.lorem <br>
+                        # Select elements that match any selector in "the list" .<br>
+                        <br>
+                        Selects all anchors and all divs.
+                </li>
+                <br>
+                <br>
+                <li>    Name : And Selector <br>
+                        Css : div.c <br>
+                        # Select elements that match all the selector "combinations". <br>
+                        <br>
+                        Selects all divs with the class c.
+                </li>
+                <br>
+                <br>
+                <li>    Name : Direct Child <br>
+                        Css : div &gt; a <br>
+                        # Selects elements that are "direct children" of the first element.<br>
+                        <br>
+                        Select anchors that are direct children of a div ("Not indirect" only Direct Children).
+                </li>
+                <br>
+                <br>
+                <li>    Name : General Siblings <br>
+                        Css : li.red ~ li<br>
+                        # Select elements that are siblings of the first element and come after the first element.<br>
+                        <br>
+                        Selects all anchors that are siblings of a div and come after the div.
+                </li>
+                <br>
+                <br>
+                <li>    Name: Adjacent Siblings <br>
+                        Css : div .c + a <br>
+                        # Select elements that are "siblings of the first element" and come "directly after" the first element. <br>
+                        <br>
+                        Selects all anchors that are siblings of a div .c and come "directly after" the div .c .
+                </li>
+        </ol>
+
+        <br>
+        <br>
+
+
+
+        <ol>
+            <h1> Pseudo Class Selectors state</h1>
+                <li>    Name : Hover Selector <br>
+                        Css : button:hover <br>
+                        # Select elements that are
+                        hovered by the mouse.<br>
+                        Select buttons that are being hovered.
+                </li>
+                <br>
+                <li>    Name : Focus Selector <br>
+                        Css : button:focus <br>
+                        # Select elements that are
+                        focused.
+                        Select buttons that are being focused<br>
+                        *Focus is set by "either tabbing" to an
+                        element or "clicking an element" such as a input,
+                        button or anchor tag.
+                </li>
+                <br>
+                <li>    Name : Required Selector <br>
+                        Css : input:required <br>
+                        # Select elements that "are required". <br>
+                        Select inputs with the required attribute.<br> 
+                </li>
+                <br>
+                <li>    :optional </li>
+                <br>
+                <li>    Name : Checked Selector <br>
+                        Css : input:checked <br>
+                        # Select "checkboxes/radio" buttons that are checked.<br>
+                        Select inputs that are checked. 
+                </li>
+                <br>
+                <li>    Name : Disabled Selector <br>
+                        Css : input:disabled <br>
+                        # Select inputs that are disabled<br>
+                        Select inputs with the disabled attribute
+                </li>
+                <br>
+                <br>
+                <br>
+
+
+
+        <h1> Pseudo class Selector position/other</h1>
+                <li>    Name : First Child Selector <br>
+                        Css : a:first-child <br>
+                        # Select elements that are the first child "inside a container". <br>
+                        Select anchors that are the first child. 
+                </li>
+                <br>        
+                <br>        
+                <li>    Name : Last Child Selector <br>
+                        Css : a:last-child <br>
+                        # Select elements that are the last child "inside a container". <br>
+                        Select anchors that are the last child. </li>
+                        <br>
+                        <br>
+                <li>    Name : Nth Child Selector <br>
+                        Css : a:nth-child(2n)<br> 
+                        # Select element that are the nth child "inside a container" based on formula. <br>
+                        Select anchors that are even number children.
+                </li>
+                <br>
+                <li> Name : Nth Last Child Selector <br>
+                        Css : a:nth-last-child(3)<br>
+                        # Select element that are the nth child "inside a container" based on formula "counting from the end". <br>
+                        Select anchors that are third to last  children.
+                </li>
+                <br>
+                <li>    Name : Only child Selector <br>
+                        Css : p:only-child <br>
+                        # Select element that are the only child "inside a container".<br>
+                        Select Select p that are the only child.
+                </li>
+                <br>        
+                <li>    Name : First Of type Selector <br>    
+                        Css : a:first-of-type <br>
+                        # Select elements that are the
+                        first of a type "inside/outside" a
+                        container. <br>
+                        Select the first anchor in/outside a container.
+                </li>
+                <br>
+                <li>    Name : Last Of type Selector <br>
+                        Css : a:last-of-type <br>
+                        # Select elements that are the
+                        last of a type "inside/outside" a
+                        container. <br>
+                        Select the last anchor in/outside a container.
+                </li>
+                <br>
+                <li>    Name : Nth Of Type Selector<br> 
+                        Css : a:nth-of-type(2n) <br>
+                        # Select elements that are the
+                        nth of a type "inside/outside" a container
+                        based on the formula.<br>
+                        Select every second anchor.
+                </li>
+                <br>
+                <li>    Name : Nth Last Of Type Selector<br>
+                        Css a:nth-last-of-type(2) <br>
+                        # Select elements that are the
+                        nth of a type inside/outside a container
+                        based on the formula counting
+                        from the end.<br>
+                        Select the second to last anchor.
+                </li>
+                <br>
+                <li>    Name : only Of Type Selector<br>
+                        Css : a:only-of-type(n) <br>
+                        # Select elements that are the
+                        only of a type inside/outside a
+                        container.<br>
+                        Select anchors that are the only anchor in/outside
+                        a container.
+                </li>
+                <br>
+                <br>
+                <li>    Name : Not Selector <br>
+                        Css : a:not(.green)<br>
+                        # Select all elements that do not
+                        match the selector inside the
+                        not selector. <br>
+                        Select all anchor tags that do not have
+                        the green class.
+                </li>
+        </ol>
+
+        <br>
+        <br>
+
+
+        <ol>
+        <h1> Pseudo Element Selectors</h1>
+                <li>    Name : Before Selector <br>
+                        Css : div.red::before <br>
+                        # Creates an empty element
+                        directly before the children of
+                        selected element.
+                </li>
+                <li>    Name : After Selector <br>
+                        Css  : div.red::after<br>
+                        Creates an empty element
+                        directly after the children of
+                        selected element.
+                </li>
+        </ol>
+
+        <br>
+        <br>
+        <br>
+
+
+        <ol>
+            <h1>    Attribute Selectors  </h1>
+            <h2>
+                    The Seven Different Types
+            </h2>
+                <li>    
+                        Name : Has Attribute Selector <br>
+                        Css : [href] <br>
+                        # Select elements that have that attribute. <br> <br>
+                        Select elements with the href attribute.
+                </li>
+                <br>
+                <br>
+                <li>    Name : Exact Attribute Selector <br>
+                        Css : [type="text"] <br>
+                        # Selects elements that have attribute "with exactly that value" .<br> <br>
+                        Selects elements with type attribute with value text. 
+                </li> 
+                <br>
+                <br>
+                <li>
+                        Name : Containing a Space-Separated Word Attribute Selector<br>
+                        Css : [title="flower new"] <br> <br>
+                        Css : [title ~ ="flower"] <br>
+                        Css : [title ~ ="new"] <br>
+                        <br>
+                        # Select all elements with a title attribute containing the word "flower" <br>
+                        # Selects all elements with a title attribute containing the word "new".
+
+
+                </li>
+                <br>
+                <li>    Name : Begins/Ends With Hyphen-Separated(-) Attribute Selector <br>
+                        Css : [type="another-link"] <br> <br>
+                        Css : [type|="link"] <br> 
+                        Css : [type|="another"] <br> 
+                        <br>
+                        # Selects elements that have that attribute which "start/end with that value",value will be hyped separated or any separated two words .<br>
+                        <br>
+                        Selects elements with type attribute with a value ends with link.
+                        Selects elements with type attribute with a value starts with another.
+                </li> 
+                <br>
+                <li>    Name : Begins With Attribute Selector <br>
+                        Css : [type^="te"] <br> 
+                        # Selects elements that have that attribute which "start with that value" .<br>
+                        <br>
+                        Selects elements with type attribute with a value starts with te.
+                </li> 
+                <br>
+                <li>    Name : Ends With Attribute Selector <br>
+                        Css : [type$="xt"] <br>
+                        # Selects elements that have that attribute which "ends with that value" .<br>
+                        <br>
+                        Selects elements with type attribute with a value ends with xt.
+                </li> 
+                <br>
+                <li>    Name : Substring Attribute Selector <br>
+                        Css : [type*="x"]<br>
+                        # Selects elements that have that attribute "which contain" that "value     anywhere" .<br>
+                        <br>
+                        Select elements with the a attribute with a value that contains x.
+                </li>
+        </ol>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        dialog::backdrop {
+            background-color: darkorange;
+            background-image: linear-gradient( 130deg,#ff7a18,#af002d 41.07%, #319197 76.05%
+        );
+        }
+
+
+        * {
+        box-sizing: border-box;
+        }
+
+
+
+
+        .container {
+        max-width: 72rem;
+        margin: 0 auto;
+        padding: 2rem;
+        }
+
+        button {
+        -webkit-tap-highlight-color: transparent;
+        box-sizing: border-box;
+        font-family: inherit;
+        display: inline-block;
+        text-align: center;
+        user-select: none;
+        border: 1px solid #007bff;
+        padding: .375rem .75rem;
+        font-size: 1rem;
+        line-height: 1.5;
+        border-radius: .25rem;
+        color: #fff;
+        background-color: #007bff;
+        cursor: pointer;
+        }
+
+
+        @supports not selector(::backdrop) {
+
+        body::before {
+        box-sizing: border-box;
+        content: "⚠️ Your browser doesn't support ::backdrop";
+        display: block;
+        max-width: 72rem;
+        margin: auto;
+        color: #f44336;
+        font-weight: bold;
+        padding: 2rem 2rem 0;
+        }
+        }
+
+    </style>
+</head>
+<body>
+
+        <h1>CSS ::backdrop Pseudo Class</h1>
+            <p>
+                The ::backdrop CSS pseudo-element creates a backdrop that covers the entire viewport and is rendered immediately below a dialog or any element that enters fullscreen mode using the Fullscreen API.
+            </p>
+           
+
+
+            <pre>
+                <b>
+    /* Backdrop is only displayed when dialog is opened with dialog.showModal() */
+                </b>
+
+            
+    dialog::backdrop {
+        background: rgba(255,0,0,.25);
+    }
+            </pre>
+
+            <pre>
+    video::backdrop {
+        background-color: #448;
+    }
+            </pre>
+            <br>
+            <br>
+            <br>
+
+
+
+            <h3>Example :</h3>
+
+            <div class="container">
+                <p>dialog element comes with a
+                    backdrop and we can style that
+                    with ::backdrop selector</p>
+
+                <button onclick="openDialog()">Open dialog</button>
+
+
+                <dialog>
+                    <h2>I'm an open dialog window
+                    </h2>
+                    <p>Check out my backdrop :)
+                    </p>
+                    <button onclick="closeDialog()">Close</button>
+                </dialog>
+
+            </div>
+            <br>
+            <br>
+            <br>
+
+            <script>
+                var dialog = document.querySelector('dialog');
+
+                function openDialog() {
+                    dialog.showModal();
+                }
+                
+                function closeDialog() {
+                    dialog.close();
+                }
+            </script>
+</body>
+</html>

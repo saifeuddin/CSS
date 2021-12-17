@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        input:placeholder-shown{
+            border: 4px solid red;
+        }
+        input::placeholder{
+            font-style: italic;
+            color: rgb(21, 34, 150);
+        }
+    </style>
+</head>
+<body>
+
+        <h1>CSS :placeholder-show Pseudo Class</h1>
+            <p>
+                The :placeholder-shown pseudo-class selects the input element itself when placeholder text exists in a
+                form input. Think of it as a nice way to distinguish between inputs that are currently showing
+                placeholder text versus those that are not.
+            </p>    
+            <pre>
+                input:placeholder-shown {
+                border: 5px solid red;
+                }
+            </pre>
+            <h2>The difference between :placeholder-shown and ::placeholder</h2>
+            <img src="Screenshot_6.jpg" alt="">
+                <p>
+                    :placeholder-shown is for selecting the input itself when it’s placeholder text is being shown. As
+                    opposed to ::placeholder which styles the placeholder text.
+                </p>
+            <h3>Example</h3>    
+                <input type="text"> <br> <br>
+                <input type="text" placeholder="I am saife"> <br> <br>
+                <input type="text" placeholder="I am saife">
+</body>
+</html>

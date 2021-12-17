@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .div ol li::marker {
+        color: red;
+        font-weight: bold;
+        }
+
+        .div ul li::marker {
+            font-size: 250%;
+            color: lightgreen;
+        }
+    </style>
+
+
+    <style>
+        .div1 ol li::marker {
+            content: "🧡 ";
+        }
+    </style>
+
+    <style>
+        .div2 h3 {
+            display: list-item;
+            counter-increment: h3;
+        }
+
+        .div2 h3::marker {
+            display: list-item;
+            content: "#" counter(h3) " ";
+            color: lightsalmon;
+            font-weight: bold;
+        }
+
+        body {
+            counter-reset: h3;
+            line-height: 1.4;
+            font-family: system-ui;
+            margin: 3rem;
+        }
+
+    </style>
+</head>
+<body>
+
+        <h1>CSS ::marker Pseudo Element </h1>
+            <p>
+                The ::marker pseudo-element is for styling the stylistic marker of a list element. For example, the
+                bullet point of a default ul (e.g. •) or the numeral of a default ol (.g. 1.). This makes it
+                        extremely easy to do simple things like colorize them.
+            </p>
+
+
+            <br>
+            <br>
+            <br>
+                <h2>Example</h2>    
+                    <div class="div">
+                        <ol>
+                            <li>Lorem ipsum dolor sit amet.</li>
+                            <li>Corporis aliquam excepturi neque deleniti.</li>
+                            <li>Incidunt eos repellendus vitae deserunt!</li>
+                        </ol>
+
+                        <ul>
+                            <li>Lorem ipsum dolor sit amet.</li>
+                            <li>Laborum molestias consequuntur soluta ab.</li>
+                            <li>Et veniam suscipit quod qui.</li>
+                        </ul>
+                    </div>
+            <br>
+            <br>
+            <br>
+            <br>
+                <b>
+                    You can combine ::marker with the content property to change what the marker is. For example,
+                    replacing list bullets with emoji (just not yet in Safari):
+                </b>
+                <h3>Example</h3>
+                    <div class="div1">
+                        <ol>
+                            <li>Lorem ipsum dolor sit amet.</li>
+                            <li>Corporis aliquam excepturi neque deleniti.</li>
+                            <li>Incidunt eos repellendus vitae deserunt!</li>
+                        </ol>
+                    </div>
+            <br>
+            <br>
+            <br>    
+                <b>
+                    If you change the display property to list-item on any element, you can control its ::marker. Here h3
+                    elements are numbered, which combines the idea of CSS counters:
+                </b>
+                <h3>Example</h3>
+                    <div class="div2">
+                        <h3>Lorem ipsum dolor sit amet.</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                        <h3>Itaque sequi eaque earum laboriosam.</h3>
+                        <p>Ratione culpa reprehenderit beatae quaerat voluptatibus, debitis iusto?</p>
+                        <h3>Laudantium sapiente commodi quidem excepturi!</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    </div>
+
+
+
+
+</body>
+</html>

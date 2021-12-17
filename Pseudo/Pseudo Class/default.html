@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        input[type="checkbox"]:default + label::after{
+            content: ' default';
+            color: rgb(167, 167, 108);
+            font-style: italic;
+            font-weight: 700;
+            font-size: 10px;
+        }
+        
+        input[type="radio"]:default + label::after{
+            content: ' default';
+            color: rgb(167, 167, 108);
+            font-style: italic;
+            font-weight: 700;
+            font-size: 10px;
+        }
+    </style>
+</head>
+<body>
+    
+        <h1>Css :default Pseudo Class Selector</h1> 
+            <p>
+                The :default pseudo selector will match the default, in a group of associated elements, such as the radio
+                button in a group of buttons that is selected by default, even if the user has selected a different
+                value.
+            </p>
+
+
+
+            <h3>Example</h3>    
+                <input type="checkbox"><br>
+                <input type="checkbox"><br>
+                <input type="checkbox" id="defult" checked>
+                <label for="default"> Default</label><br>
+                <input type="radio"><br>
+                <input type="radio" id="defaut" checked>
+                <label for="defaut"> Default</label><br>
+                <input type="radio"><br>
+
+
+</body>
+</html>

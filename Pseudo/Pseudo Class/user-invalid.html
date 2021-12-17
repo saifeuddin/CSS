@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        input:invalid {
+        color: red;
+        }
+
+        input:user-invalid {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    
+        <h1>CSS :user-invalid Pseudo Class </h1>    
+            <p>
+                The :user-invalid is a CSS pseudo-class that is under proposal in the CSS Selectors Level 4 working
+                draft that selects a form element based on whether the value—as entered by a user—is valid when checked
+                against the what is specified as an accepted value in the HTML markup after the end user has interacted
+                with the form beyond that input. In fact, :user-invalid has been called “The User Interaction
+                Pseudo-class” because it is unique in identifying a user action in selecting an element.
+            </p>
+            <p>
+                Take HTML markup for a basic form with a numeric field:
+            </p>
+            <p>
+                The numeric range set by the HTML markup for the input is between 1 and 10 but the default value has
+                been set to 11. That means the value is invalid as soon as the form loads.
+            </p>
+            <b>
+                However, the :user-invalid pseudo-class will not take effect until after the user has actually
+                interacted with the form beyond entering it in the field. That <mark> interaction </mark> is the
+                difference between
+                :user-invalid and :invalid. The same principle applies for entered form values that are set by
+                :in-range, :out-of-range and :required.
+            </b>
+
+            <pre>
+                input:user-invalid {
+                    color: red;
+                }
+            </pre>
+            
+            <br>
+            <br>
+            <br>
+            <h3>Example</h3>
+            <form>
+                <label for="quantity"> Quantity:</label>
+                <input id="quantity" max="10" min="0" type="number" value="11" />
+            </form>
+
+            <br>
+            <br>
+            <br>
+
+
+</body>
+</html>

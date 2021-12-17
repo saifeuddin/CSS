@@ -1,0 +1,460 @@
+
+                /* Open-quote & Close quote 
+.before h1::before{
+    content: open-quote;
+}
+.before h1::after{
+    content: close-quote;
+}
+
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                /* tooltip without a markup 
+                /* tooltip: add hover effect+animation  
+                /* tooltip: animation origin 
+                /* tooltip reminder: attr 
+.after{
+     background-color: antiquewhite;
+     margin-top: 60px;
+}
+
+.after a[data-tool-trip]{
+    position: relative;
+}
+.after a[data-tool-trip]::after{
+    content: attr(data-tool-trip);
+    position: absolute;
+    /* bottom: 100%; 
+    bottom: 0%;
+    left: 0;
+    display: block;
+    color: aliceblue;
+    background-color: red;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    padding: 1em 3em;
+    font-size: 0.8em;
+
+
+                /*Remove this to see changes
+    white-space: nowrap;
+}
+.after a[data-tool-trip]::after {
+
+                /*The content will disappeared
+    transform: scale(0);
+    -webkit-transform: scale(0);
+    -moz-transform: scale(0);
+    -ms-transform: scale(0);
+    -o-transform: scale(0);
+
+
+    transition: transform ease-out 150ms;
+    -webkit-transition: transform ease-out 150ms;
+    -moz-transition: transform ease-out 150ms;
+    -ms-transition: transform ease-out 150ms;
+    -o-transition: transform ease-out 150ms;
+}
+.after a[data-tool-trip]:hover::after {
+    transform: scale(1);
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+}
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* text decorations
+.section-with-deco::before{
+    content: url(unsplash.jpg);
+    display: block;
+}
+
+
+
+/* text decorations with font  
+.section-with-deco::before{
+    font-family: 'Font Awesome 5 Free';
+    content: '\f236';
+    display: block;
+    font-weight: 900;
+}
+
+
+/* p a[href^="http"]::after{
+        font-family: 'Font Awesome 5 Free';
+        content: '\f35d';
+        font-weight: 900;
+} */
+/* p a[href$=".com"]::after{
+        font-family: 'Font Awesome 5 Free';
+        content: '\f35d';
+        font-weight: 900;
+}
+
+
+p a[href]::after{
+        font-family: 'Font Awesome 5 Free';
+        content: '\f35d';
+        font-weight: 900;
+}
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* counters  
+
+.counters{
+    counter-reset: name;
+    counter-reset: order-list;
+
+    padding: 50px;
+    margin: 50px;
+}
+
+
+
+
+
+
+
+
+.section{
+    position: relative;
+}
+
+                /* Normal  */
+/* .section::before{
+    counter-increment: name;
+    content: counter(name) '.';
+} */
+
+
+
+/* Cool design  
+.section::before{
+    counter-increment: name;
+    content: counter(name) '';
+    font-size: 20px;
+    color: grey;
+    box-sizing: border-box;
+
+
+    position: absolute;
+    left: -3em;
+    top: -3px;
+
+
+    height: 2em;
+    width: 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border: 3px solid grey;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+
+
+.counters ol{
+    list-style-type: none;
+}
+ol li::before{
+    counter-increment: order-list;
+    content: 'List item ' counter(order-list) ') ';
+    font-size: .8em;
+    color: red;
+}
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Exploring how to use ::before and ::after to create some fun design elements without any extra markup 
+*, *::after,*::before{
+    box-sizing: border-box;
+}
+body{
+    text-align: center;
+}
+/* .intro{
+    position: relative;
+    display: inline-block;
+    
+}
+.intro::before,
+.intro::after{
+    content: '';
+    height: 100%;
+    display: block;
+    position: absolute;
+}
+.intro::before{
+    background-color: lightblue;
+    width: 100%;
+    z-index: -1;
+}
+
+.intro::after{
+    background-color: red;
+    width: 100vw;
+
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+
+    z-index: -2;
+} */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    /* Or This 
+
+.intro{
+    position: relative;
+    display: inline-block;
+    background-color: rgb(235, 239, 241);
+    height:100%;
+    padding: 7px;
+    border-bottom: 1px solid;
+
+}
+.intro::after{
+    content: '';
+    height: 100%;
+    width: 100vw;
+    background-color: rgb(182, 17, 17);
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    z-index: -2;
+}
+@media(max-width:600px){
+    .intro{
+        font-size: 20px;
+        width: 200px;
+        height: 60px;
+    }
+} */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Before with Image */
+html,body{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+*, *::before{
+    box-sizing: border-box;
+}
+.header{
+    /* Width dile margin right kaj korbe nah */
+    /* width: 99%; */
+    border-width: 3px;
+    border-style: groove;
+    margin: 10px 10px;
+}
+.header h1{
+    border: 1px groove;
+    padding: 10px 0;
+    margin:20px;
+    position: relative;
+    /* Width dile margin right kaj korbe nah */
+    /* width: 98%; */
+    height: 600px;
+    text-align: center;
+}
+p{
+    text-align: justify;
+    margin: 20px;
+
+}
+.header h1::before{
+    position:absolute;
+    left: 0;
+    top: 0;
+    content: '';
+
+    background: url('https://source.unsplash.com/user/erondu/1600x900') no-repeat center/cover;
+    z-index: -2;
+
+    width: 100%;
+    height: 100%;
+    /* remove comment to see the problem */
+    /* margin: 6px 8px; */
+}
+
+
+
+
+
+
+
+

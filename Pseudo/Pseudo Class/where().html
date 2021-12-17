@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        html {
+        font-family: sans-serif;
+        font-size: 150%;
+        }
+
+        :is(section.is-styling, aside.is-styling, footer.is-styling) a {
+        color: red;
+        }
+
+        :where(section.where-styling, aside.where-styling, footer.where-styling) a {
+        color: orange;
+        }
+
+        footer a {
+        color: blue;
+        }
+    </style>
+</head>
+<body>
+
+        <h1>CSS :where() Pseudo Class Function</h1>  
+            <p>
+                The :where() CSS pseudo-class function takes a selector list as its argument, and selects any element
+                that can be selected by one of the selectors in that list.
+            </p>
+            <b>
+                The difference between :where() and :is() is that :where() always has 0 specificity, whereas :is() takes
+                on the specificity of the most specific selector in its arguments.
+            </b>
+            <br>
+            <br>
+            <br>
+            <br>
+            <p>
+                In CSS when using a selector list, if any of the selectors are invalid then the whole list is deemed
+                invalid. When using :is() or :where() instead of the whole list of selectors being deemed invalid if one
+                fails to parse, the incorrect or unsupported selector will be ignored and the others used.
+            </p>
+            <pre>
+                :where(:valid, :unsupported) {
+                ...
+                }
+            </pre>
+                <b>Will still parse correctly and match :valid even in browsers which don't support :unsupported,
+                    whereas:</b>
+            <pre>
+                :valid, :unsupported {
+                ...
+                }
+            </pre>
+                <b>
+                    Will be ignored in browsers which don't support :unsupported even if they support :valid.
+                </b>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <h2>Example</h2>    
+                <article>
+                    <h2>:is()-styled links</h2>
+                    <section class="is-styling">
+                        <p>Here is my main content. This <a href="https://mozilla.org">contains a link</a> </p>
+                    </section>
+
+                    <aside class="is-styling">
+                        <p>Here is my aside content. This <a href="https://developer.mozilla.org">also contains a
+                                link</a>. </p>
+                    </aside>
+
+                    <footer class="is-styling">
+                        <p>This is my footer, also containing <a href="https://github.com/mdn">a link</a>. </p>
+                    </footer>
+                </article>
+
+                <article>
+                    <h2>:where()-styled links</h2>
+                    <section class="where-styling">
+                        <p>Here is my main content. This <a href="https://mozilla.org">contains a link</a>. </p>
+                    </section>
+
+                    <aside class="where-styling">
+                        <p>Here is my aside content. This <a href="https://developer.mozilla.org">also contains a
+                                link</a>. </p>
+                    </aside>
+
+                    <footer class="where-styling">
+                        <p>This is my footer, also containing <a href="https://github.com/mdn">a link</a> </p>
+                    </footer>
+                </article>  
+                <p>
+                    This won't work for the red links, because the selectors inside :is() count towards the specificity
+                    of the overall selector, and class selectors have a higher specificity than element selectors.
+                </p>
+                <p>
+                    However, selectors inside :where() have specificity 0, so the orange footer link will be overridden
+                    by our simple selector.
+                </p>
+
+</body>
+</html>

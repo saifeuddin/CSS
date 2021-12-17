@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .blanks p {
+            min-height: 30px;
+            width: 250px;
+            background-color: lightblue;
+        }
+
+        .blanks p::blank { display: none; }
+
+        .blanks p:-moz-only-whitespace { display: none; }
+    </style>
+</head>
+<body>
+
+        <div
+            style="border: 3px solid black; padding: 20px; margin: 40px 0;">
+            <h1
+                style="background-color: rgb(179, 154, 202); padding: 20px;">
+                CSS :autofill Pseudo Class
+            </h1>
+            <br>
+
+            <p> <b>
+                    $$ --
+                    The :blank pseudo-class builds upon the :empty pseudo-class. Like :empty, :blank will select elements that contain nothing at all, or contain only an HTML comment. 
+                    <mark>
+                        But, :blank will also select elements that include whitespace, which :empty will not.
+                    </mark>
+                </b>
+            </p>
+        </div>
+
+
+
+        <h3>Example :</h3>
+        <div class="blanks">
+            <p>This paragraph is not empty or blank.</p>
+            <p>
+                <!--this is empty and blank -->
+            </p>
+            <p>
+
+            </p>
+            <p>This paragraph is not empty or blank.</p>
+        </div>
+        <br>
+        <br>
+        <br>
+
+</body>
+</html>

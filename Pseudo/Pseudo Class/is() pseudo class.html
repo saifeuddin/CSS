@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible"
+        content="IE=edge">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        /* .div1 :is(h1, h2, h3){
+            font-family: arial;
+            color: blueviolet;
+        } */
+
+
+        /* :is(.div1, .div2) h1{
+            font-family: arial;
+            color: blueviolet;
+        } */
+
+        /* :is(.div1, .div2) :is(h1, h2, h3, p){
+            font-family: arial;
+            color: blueviolet;
+        } */
+
+
+        :is(.div1, .div2):hover :is(p) {
+            font-family: arial;
+            color: blueviolet;
+        }
+
+        :is(.div1, .div2) p:hover {
+            font-family: arial;
+            color: rgb(189, 183, 194);
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>CSS is() Pseudo Class Selector</h1>
+    <p>
+        The pseudo-select :is() in CSS allows you
+        to write compound selectors more tersely.
+        For example, rather than writing:
+    </p>
+
+
+    <pre style="background-color: rgb(124, 233, 142); padding: 20px; border: 2px solid #000;">
+    <big>
+    <b>
+    ul li,
+    ol li {}
+    
+    <hr>
+    
+We could write:
+    :is(ul, ol) li {}
+    </b>
+    </big>
+    </pre>
+
+    
+    <br>
+    <br>
+    <br>
+    <br>
+
+
+
+
+    <h3>Method 1</h3>
+    <pre style="background-color: rgb(124, 233, 142); padding: 20px; border: 2px solid #000;">
+    <big>
+    <b>
+    :is(section, article) h1 {
+        
+    }
+    </b>
+    </big>
+    </pre>
+    
+    
+    <h3>Method 2</h3>
+    <pre style="background-color: rgb(124, 233, 142); padding: 20px; border: 2px solid #000;">
+    <big>
+    <b>
+    :is(section, article, aside, nav) :is(h1, h2, h3, h4, h5, h6) {
+    color: #BADA55;
+    }
+    </b>
+    </big>
+    </pre>
+    
+    
+    
+    
+    <h3>Method 3</h3>
+    <pre style="background-color: rgb(124, 233, 142); padding: 20px; border: 2px solid #000;">
+    <big>
+    <b>
+    header:is(.back, .header) {
+    color: #BADA55;
+    }
+    </b>
+    </big>
+    </pre>
+
+
+
+
+    <h3>Method 4</h3>
+    <pre style="background-color: rgb(124, 233, 142); padding: 20px; border: 2px solid #000;">
+    <big>
+    <b>
+    :is(.div1, .div2) p:hover {
+        font-family: arial;
+        color: rgb(189, 183, 194);
+    }
+    </b>
+    </big>
+    </pre>
+    
+    
+    
+    
+    
+    <h3>Method 5</h3>
+    <pre style="background-color: rgb(124, 233, 142); padding: 20px; border: 2px solid #000;">
+    <big>
+    <b>
+    :is(.div1, .div2):hover :is(p) {
+        font-family: arial;
+        color: blueviolet;
+    }
+    </b>
+    </big>
+    </pre>
+
+
+
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <h3>Example</h3>
+    <div class="div1">
+        <h1>Love</h1>
+        <h2>Red</h2>
+        <p>
+            Lorem, ipsum dolor sit amet
+            consectetur adipisicing elit. Eaque
+            debitis totam voluptate nihil ab a
+            explicabo voluptatum itaque iusto
+            fugit odio, numquam corrupti molestiae
+            commodi minus ullam possimus molestias
+            laudantium rerum quae eveniet aut. Ut
+            deleniti eligendi dolorem, quia sunt
+            tempora voluptates voluptate, omnis
+            architecto vitae quae consequatur
+            repudiandae consectetur ratione, eos
+            doloribus quisquam! Quas debitis quo
+            fugit sapiente quisquam dolor
+            expedita, facere, delectus nobis
+            inventore error fuga quasi autem magni
+            molestias corporis dicta explicabo?
+            Obcaecati totam atque laborum tempora
+            iure, itaque modi nemo ea nesciunt
+            sint voluptatibus, ut distinctio ullam
+            debitis ratione ipsum velit tempore.
+            Ea debitis voluptatem eius?
+        </p>
+        <h3>blue </h3>
+        <p>
+            Lorem ipsum dolor sit, amet
+            consectetur adipisicing elit. Ab
+            facilis illum facere perferendis ut
+            laudantium qui nostrum impedit
+            deleniti asperiores!
+        </p>
+    </div>
+    <div class="div2">
+        <h1>Love</h1>
+        <p>
+            Lorem ipsum dolor sit amet consectetur
+            adipisicing elit. Aliquam, ea
+            cupiditate, totam delectus sed
+            deleniti quos in necessitatibus
+            eligendi repellendus saepe quis
+            perspiciatis officia excepturi
+            aspernatur corporis laborum quod atque
+            rerum omnis! Dignissimos aspernatur
+            reiciendis eveniet a velit quas alias
+            commodi quibusdam, est deserunt
+            architecto ducimus facere optio
+            delectus quaerat!
+        </p>
+    </div>
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .ex {
+            background: #333;
+            color: #fff;
+            font-family: arial;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .ex input {
+            margin-right: 0.25em;
+        }
+
+
+
+
+
+        .exm{
+            background: #333;
+            color: #fff;
+            font-family: arial;
+            padding: 20px;
+            text-align: center;
+          }
+
+        .exm input {
+            margin-right: .25em;
+          }
+
+        .exm label {
+            margin-right: .5em;
+            position: relative;
+            top: 1px;
+        }
+
+        .exm input[type='radio']:indeterminate + label {
+            color: orange;
+        }
+
+
+
+
+
+
+
+
+        .exam{
+            background: #333;
+            color: #fff;
+            font-family: arial;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .exam progress {
+            background-color: #fff;
+            display: block;
+            width: 100%;
+        }
+
+        .exam progress:indeterminate::-webkit-progress-bar{
+            background-color: rgb(10, 4, 4);
+        }
+    </style>
+</head>
+<body>
+
+        <div
+            style="border: 3px solid black; padding: 20px; margin: 40px 0;">
+            <h1
+                style="background-color: blueviolet; padding: 20px;">
+                ## CSS indeterminate Pseudo Class Selector
+            </h1>
+            <br>
+
+            <p> <b>
+                    $$ --
+                    :indeterminate is a pseudo-class selector in CSS named for a state that is neither checked nor unchecked. It’s that in-between state that we might consider the “Maybe” between “Yes” and “No” options. The state is not fully determined, hence the name: indeterminate.
+                </b>
+            </p>
+            <br>
+            <br>
+            <br>
+            <br>
+            <h4>## Indeterminate Checkboxes</h4>
+            <img src="Screenshot_1.jpg" alt="">
+        </div>
+
+
+        <div
+            style="border: 3px solid black; padding: 20px; margin: 40px 0;">
+            
+            <h2>
+                ## It cannot be set in the HTML
+            </h2>
+            <img src="Screenshot_2.jpg" alt="">
+
+
+            <h3>Example :</h3>
+            <div class="ex">
+
+                <form>
+                    <input type="checkbox" id="demo">
+                    <label for="option"> Rotate my State!</label>
+                </form>
+            </div>
+
+
+
+            <script>
+                var checkBx = document
+                    .getElementById('demo');
+
+                checkBx.indeterminate = true;
+            </script>
+
+
+            <p> <b>
+                    The limitation of the example above is that 
+                    <mark>
+                the checkbox can never get back to an indeterminate state once it changes to another state. 
+            </mark>
+            Instead, we can rotate between checked, unchecked and indeterminate states:
+                </b>
+            </p>
+        </div>
+
+
+
+
+        <br>
+        <br>
+        <br>
+        <br>
+        <h3>Example :</h3>
+        <img src="Screenshot_3.jpg" alt="">
+        <div class="ex">
+
+        <h4>Rotates between Unchecked, Checked and
+            Indeterminate states</h4>
+
+        <form>
+            <input type="checkbox" id="demo1" onclick="toggle(this)">
+            <label for="option"> Rotate my State!</label>
+        </form>
+        </div>
+
+
+
+        <script>
+            function toggle(demo) {
+                if(demo.readOnly) 
+                    demo.checked=demo.readOnly= false;
+                else if(!demo.checked)
+                    demo.readOnly=demo.indeterminate=true;
+            }
+        </script>
+        <br>
+        <br>
+        <br>
+        <br>
+
+
+
+        <h3>Example :</h3>
+        <div class="exm">
+            <h4>All labels will be orange if no
+                options are selected</h4>
+
+            <form>
+                <input type="radio" name="option" value="yes" id="indeterminate"> 
+                <label for="option">Yes</label>
+
+                <input type="radio" name="option" value="no" id="indeterminate1">
+                <label for="option">No</label>
+                
+                <input type="radio" name="option" value="maybe" id="indeterminate2"> 
+                <label for="option">Maybe</label>
+            </form>
+        </div>
+        <br>
+        <br>
+        <br>
+        <br>
+
+
+
+        <h3>Example :</h3>
+        <img src="Screenshot_4.jpg" alt="">
+        <div class="exam">
+            <h3>A progress bar with no explicit
+                value is considered indeterminate
+            </h3>
+
+            <h4>Progress with a determinate state
+                at 50%</h4>
+
+            <progress min="0" max="100"
+                value="50"></progress>
+
+            <h4>Progress with an indeterminate
+                state at no value</h4>
+
+            <progress max="100"></progress>
+        </div>
+</body>
+</html>

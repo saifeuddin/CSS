@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        :any-link{
+            color: red;
+            background-color: aqua;
+            text-decoration: line-through red dotted;
+        }
+    </style>
+</head>
+<body>
+    
+        <h1>CSS :any-link Pseudo Class</h1>
+            <p>
+                The :any-link pseudo-class in CSS provides a method for selecting elements that are the source anchor of
+                a hyperlink.
+            </p>
+            <p>
+                An element that accepts and contains a href attribute is a hyperlink and will be selected with
+                :any-link. This becomes a handy way of selecting all link-based HTML elements that might otherwise
+                appear unrelated and without touching the markup. Perhaps it exists because you might think :link would
+                select all links, but it misses :visited, so this wraps them all up together.
+            </p>
+            <b>
+                Functionally, it’s just like the attribute selector [href].
+            </b>
+            <h2>Example</h2>
+                <div>
+                    &lt;a> elements with...
+                    <br><br>
+                    <a href="https://google.com">valid href</a>
+                    <br>
+                    <a>no href</a>
+                    <br>
+                    <a href>href but no value</a>
+                    <br>
+                    <a href="">empty string href</a>
+                </div>
+
+
+
+
+
+
+
+
+</body>
+</html>

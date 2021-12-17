@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+            <h1>CSS ::slotted Pseudo Class Function</h1>
+                <p>
+                    The ::slotted() CSS pseudo-element represents any element that has been placed into a slot inside an
+                    HTML template (see Using templates and slots for more information).
+                </p>
+                <b>
+                    This only works when used inside CSS placed within a shadow DOM. Note also that this selector won't
+                    select a text node placed into a slot; it only targets actual elements.
+                </b>
+                <pre>
+                     <!-- Selects any element placed inside a slot  -->
+                    ::slotted(*) {
+                    font-weight: bold;
+                    }
+
+                    <!-- Selects any <span> placed inside a slot -->
+                        ::slotted(span) {
+                        font-weight: bold;
+                    }
+                </pre>
+
+
+</body>
+</html>

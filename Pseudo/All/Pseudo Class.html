@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Css Pseudo Element & classes </title>
+
+    <link rel="stylesheet" href="ps.css">
+</head>
+<body>
+
+
+    <h1>Css pseudo Classes</h1> 
+    <ol>
+        
+        <li> :root<br> <br>
+            Used for css variables.
+        </li>
+        <br>
+        <li>:is() 
+            <p>
+                
+            </p>
+        </li>
+        <li>
+            :dir()
+            <p>
+                Allows elements to be selected based on the direction of the language, as determined in the HTML markup.
+            </p>
+        </li>
+
+
+        <li> :hover</li>
+        <br/>
+
+        <li> :not(selector)
+            <br />
+            Jar sthy use krbo oita chara bki sob gulay kaj krbe.
+        </li>
+        <li> :not(:hover)</li>
+            <br/>
+
+        <li> 
+            :nth-child(value) <br/>
+            value(odd/even/2/3/6=5n/3n+1).<br/>
+            Ata "oporer dik theke" kaj krbve. Atake "parent element" er sathy use krte hbe jar child ase. 
+        </li>
+        <li> :nth-last-child()</li>
+        <li> :nth-of-type()
+        <br/>
+            Ata "nicher dik theke" kaj krbe. "Parent thakle o na thakle o" ata kaj krbe.
+        </li>
+        <li> :nth-last-of-type()</li>
+        <br/>
+
+        <li> :first-child
+        <br/>
+            Ata "parent element" er Jnnu.
+        </li>
+        <li> :last-child</li>
+        <li> :first-of-type
+        <br />
+            Ata "parent without parent" sobar jnnu.
+        </li>
+        <li> :last-of-type</li>
+        <br/>
+
+        <li> :only-child</li>
+        <li> :only-of-type</li>
+        <br/>
+
+        <li> :empty
+        <br/>
+            Use it on empty elements which "have no content".
+        </li>
+        <br>
+        <li>
+            :blank 
+            <p>
+                The :blank pseudo-class builds upon the :empty pseudo-class. Like :empty, :blank will select elements that contain nothing at all, or contain only an HTML comment. But, :blank will also select elements that include whitespace, which :empty will not.
+            </p>
+        </li>
+        <li> :lang()
+        <br/>
+            Jdi ami lang attribute use kore thaki kono element a tahole oi lang ta ai pseudo class diye select kore design krte parbo.
+        </li>
+        <br/>
+        <li> :where()
+            <p>
+                The :where() pseudo selector in
+                CSS is functionally identical to
+                the :is() psuedo selector in that
+                it takes a comma-separated list of
+                selectors to match against, except
+                that where :is() takes the
+                most specific among them as the
+                specificity of that whole part,
+                the specificity of :where() is
+                always zero (0).
+            </p>
+        </li>
+        <br>
+        <li>:fullscreen
+            <p>
+                The :fullscreen CSS pseudo-class allows you to select and style any element that is currently in fullscreen mode. 
+            </p>
+        </li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <ol>
+            <h1> For Links </h1>
+            <li> :link</li>
+            <br>
+            <li> :hover</li>
+            <br>
+            <li> :visited
+                <br/>
+                This class will only work on static site .On dynamic site this will not work anymore.
+            </li>
+            <br>
+            <li> :active</li>
+            <br>
+            <li> :target 
+                <p>
+                    Selects the current active #news element (clicked on a URL containing that anchor name)
+                </p>
+            </li>
+            <br>
+            <li> :any-link
+                <p>
+                    Provides a method for selecting elements that are the source anchor of a hyperlink.
+                </p>
+                <b>
+                    Functionally, it’s just like the attribute selector [href]. Must have href attribute .
+                </b>
+            </li>
+            <br/>
+        </ol>
+
+
+
+
+
+
+
+        <ol> <h1> For forms & inputs </h1>
+            <li> :default <br />
+                For Checkbox, radio button, select box.. jdi ami age theke select kore dei oigula ai class dara design kora jaby.
+            </li>
+            <br>
+            <li>autofill</li>
+            <br>
+            
+            <li> :focus <br/>
+                Use it on any input element to style the input field when input field get clicked.<br />
+                Use it on form, input element. "Checkbox, select box, radio button" a worked "krbe na" .
+            </li>
+            <br>
+            <li>:focus-within 
+                <p>
+                    Child a focus kore parent er style korar jnno
+                </p>
+            </li>
+            <li>:focus-visible 
+                <p>
+                    Use for keyboard focus.
+                </p>
+            </li>
+            <br>
+            <li> :checked 
+                <br/>
+                Worked only with "checkbox and radio button".
+            </li>
+            <br/>
+            
+            <li> :enabled</li>
+            <br>
+            <li> :disabled</li>
+            <br/>
+            
+            <li> :required</li>
+            <br>
+            <li> :optional</li>
+            <br/>
+            
+            <li> :in-range</li>
+            <br>
+            <li> :out-of-range</li>
+            <br>
+            
+            <li> :read-only</li>
+            <br>
+            <li> :write-only<br>
+                Use it on form, input element.</li>
+                <br>
+                <li> :valid <br/>
+                    Use it on form, input element.</li>
+                    <br>
+                    <li> :invalid<br>
+                        Use it on form, input element.</li>
+                            <br>
+                        <li> :user-valid </li>
+                        <br>
+                        <li> :user-invalid </li>
+                            <br>
+                        <li> :placeholder-shown 
+                            <p>
+                                Selects the input element itself when placeholder text exists in a form input.
+                            </p>
+                        </li>
+                        <li>:indeterminate
+                            <p>
+                                :indeterminate is a pseudo-class selector in CSS named for a state that is neither checked nor unchecked. It’s that in-between state that we might consider the “Maybe” between “Yes” and “No” options. The state is not fully determined, hence the name: indeterminate.
+                            </p>
+                        </li>
+                    </ol>
+    </ol>
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+                    <h1> Css pseudo Elements </h1>
+    <p>You can't have Pseudo elements on things that don't have any content </p>
+    <ol>
+        <li> ::before</li>
+        <br>
+        <li> ::after</li>
+        <br/>
+        <li> ::first-letter</li>
+        <br>
+        <li> ::first-line</li>
+        <br/>
+        <li> ::placeholder</li>
+        <br>
+        
+        <li> ::selection
+            <br>
+            <br>
+            this element matched the portion that is selected by the user. Means kew jdi text copy korar jnnu select kore tokhn atar effect dekha jaby <br />
+            In this element "font-size property" doesn't work, You will se no changes.</li>
+            <br>
+            
+            <li>::file-selector-button</li>
+            <br>
+            
+            <li>::marker 
+                <p>
+                    The ::marker pseudo-element is for styling the stylistic marker of a list element.
+                </p>
+            </li>
+            <br>
+            <li>::slotted
+                <p>
+                    represents any element that has been placed into a slot inside an HTML template.
+                </p>
+            </li>
+            <br>
+            <li> ::target-text 
+                <p>
+                    The ::target-text CSS pseudo-element represents the text that has been scrolled to if the browser
+                    supports scroll-to-text fragments. It allows authors to choose how to highlight that section of text.
+                </p>
+            </li>
+            <br>
+        <li> ::backdrop 
+            <p>
+                The ::backdrop CSS pseudo-element creates a backdrop that covers the entire viewport and is rendered immediately below a dialog or any element that enters fullscreen .
+            </p>
+        </li>
+    </ol>
+
+
+
+
+
+</body>
+</html>

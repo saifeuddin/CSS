@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        
+        input:focus {
+        border: 3px solid grey;
+        border-radius: 3px;
+        outline: none;
+        background-color: beige;
+        }
+
+        input:-webkit-autofill {
+        border: 3px solid blue;
+        }
+        input:autofill {
+        border: 3px solid blue;
+        }
+    </style>
+</head>
+<body>
+    
+
+            <h1>CSS :autofill Pseudo Class </h1>    
+                <p>
+                    The :autofill CSS pseudo-class matches when an input element has its value auto filled by the browser. The class stops matching if the user edits the field.
+                </p>
+                <b>
+                    You cannot set the background-color, background-image, or color in your own rules.
+                </b>
+                <br>
+                <br>
+
+
+                <h3>Example</h3>
+                    <form method="post" action="">
+                        <label for="email">Email</label> 
+                        <input type="email" name="email" id="email" autocomplete="email">
+                    </form>
+
+
+
+
+
+</body>
+</html>
