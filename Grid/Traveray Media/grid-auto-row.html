@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Css Grid tutorial </title>
+
+    <style>
+
+        .grid{
+            display: grid;
+            grid-template-columns: repeat(3, 300px);
+            grid-auto-rows: 100px;
+
+            /* Remove this to see the changes  */
+            /* grid-auto-rows: minmax(100px, auto); */
+        }
+
+        .box1 {
+            background-color: red;
+            /* Remove this to see the changes */
+            grid-column: 1/3
+        }
+
+        .box2 {
+            background-color: yellow;
+        }
+
+        .box3 {
+            background-color: grey;
+        }
+
+        .box4 {
+            background-color: blue;
+        }
+
+    </style>
+</head>
+<body>
+
+
+            <div class="grid">
+                <div class="box1"> Box1 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Temporibus sunt cum voluptates molestias. Ipsam magnam magni at, exercitationem soluta aliquam. Iste dolores ea alias molestiae. Tempore animi aliquid iusto facilis aut sequi deserunt quia tempora! Quos repellat illo, inventore id blanditiis assumenda dolores dignissimos praesentium unde tenetur sint minus quis nam ipsa doloribus vel tempore eum quaerat iste! Nobis blanditiis itaque aut enim dolore quia animi rerum minus qui reprehenderit quam commodi vero possimus, tempore explicabo voluptas voluptate! Velit vel dolore dignissimos soluta vitae rerum laborum optio explicabo placeat quis ut, eius error reprehenderit asperiores minima corrupti similique modi qui!</div>
+                <div class="box2"> Box2</div>
+                <div class="box3"> Box3</div>
+                <div class="box4"> Box4</div>
+            </div>
+
+
+
+
+    
+</body>
+</html>

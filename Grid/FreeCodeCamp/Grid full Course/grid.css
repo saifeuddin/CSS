@@ -1,0 +1,319 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+::selection{
+    color: white;
+    background-color: red;
+}
+html, body{
+    background-color: beige;
+
+    height: 700px;
+}
+
+
+
+.grid{
+    border: 1px groove #000;
+    margin: 40px;
+
+    height: 80%;
+
+}
+.grid h1{
+    text-align: center;
+}
+
+
+
+
+.container{
+    /* border: 5px solid rgb(235, 6, 6); */
+    padding: 30px;
+
+    height: 90%;
+
+    display: grid;
+    grid-gap: 5px;
+
+
+
+
+
+
+
+                        /* Fraction units and repeat
+    grid-template-columns: repeat(12, fr);
+    grid-template-rows:  40px auto 40px; */
+
+
+    /* grid-template: 40px 100px 40px/ repeat(12, 1fr) ;*/
+
+
+
+
+
+
+    
+                        /* Grid Area 
+    grid-template-areas: '. .  h h h h h h h h h h '
+                        'm m . c c c c c c c c c'
+                        'f f f f f f f f f f . .'; */
+
+
+
+
+
+
+
+
+                        /* Auto-fit and minmax */
+    /* grid-template-columns: repeat(auto-fit, 100px); */
+    /* grid-template-columns: repeat(auto-fit, 1fr); */
+    /* grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); */
+    /* grid-template-rows: repeat(2, 100px); */
+    
+
+
+
+
+
+
+                        /* Implicit rows */
+    /* grid-template-columns: repeat(auto-fill, minmax(108px, 1fr));
+
+    grid-template-rows: 60px 70px; 
+
+    grid-auto-rows: 100px; */
+
+
+
+
+
+
+
+                    /* Named Lines 
+    grid-template-columns: 
+                [header-start footer-start] 1fr [main-content-start]  5fr [main-content-end header-end footer-end];
+    grid-template-rows: 
+                [header-start] 40px [main-content-start] auto [main-content-end] 40px;
+                */
+}
+
+
+
+
+
+
+
+
+.header{
+    text-align: center;
+
+
+    
+    /* display: flex;
+    justify-content: center;
+        align-items: center; */
+
+    /* Remove Padding for Implicit rows  */
+    /* padding: 45px 0; */
+    background-color: palevioletred;
+    
+    /* grid-column: span 12; */
+                    /* If u don't know how many columns Use this it will expand all columns*/
+    /* grid-column: 1 / -1; */
+    /* grid-column: 5/ -1; */
+
+
+    /* grid-area: h; */
+
+    /* grid-column: 1/3; */
+
+
+
+    /* grid-column: header-start/ header-end ; */
+
+}
+.menu{
+    text-align: center;
+    /* padding: 45px 0; */
+    background-color: red;
+
+
+    /* grid-column: span 4; */
+    /* grid-row: 1 / 4; */
+
+
+
+    /* grid-area: m; */
+
+
+
+}
+
+
+
+.Content{
+    text-align: center;
+    /* padding: 45px 0; */
+    background-color: yellowgreen;
+
+
+    /* grid-column: span 8; */
+
+
+    /* grid-area: c; */
+
+
+    /* grid-column: 2/3; */
+    
+    
+    /* grid-column: main-content-start / main-content-end; */
+    /* grid-column: main-content; */
+    /* grid-area: main-content; */
+
+
+}
+.footer{
+     /* Only For Implicit
+    border: 1px solid #000; */
+    text-align: center;
+    /* padding: 45px 0; */
+    background-color: pink;
+
+
+    /* grid-column: 5 / -1; */
+
+
+    /* grid-area: f; */
+
+    /* grid-column: 1/3; */
+    
+    
+    /* grid-column: footer-start / footer-end; */
+
+
+                /* Here itt  will not worked  */
+    /* grid-area: footer; */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                /* An awesome image grid 
+.img-head{
+    text-align: center;
+    margin: 20px;
+    background-color: blueviolet;
+    color: white;
+    padding: 10px;
+}                           
+.img-container{
+    margin: 20px;
+    display: grid;
+
+
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    grid-auto-rows: 76px;
+*/
+
+                    /* Remove to see changes  */
+
+    /* grid-auto-flow: dense;
+
+
+
+
+    grid-row-gap: 20px;
+    grid-column-gap: 20px;
+}
+
+.img-container img{
+    border: 1px solid;
+    box-shadow: 4px 3px 6px rgb(50, 25, 194);
+
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.three {
+    grid-column: span 2;
+}
+
+.two {
+    grid-row: span 2;
+}
+
+.six {
+    grid-column: span 3;
+    grid-row: span 2;
+}
+
+.nine {
+    grid-row: span 2;
+} */
+
+
+
+
+
+
+
+
+
+
+
+.fill{
+    margin: 20px;
+    border: 1px solid #000;
+    font-size: 2rem;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns:  repeat(auto-fill,minmax(100px, 1fr));
+    grid-template-rows: 100px 100px;
+}
+.fill >div{
+    background-color: red;
+}
+
+
+.fit{
+    margin: 0 20px;
+    border: 1px solid #000;
+    font-size: 2rem;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns:  repeat(auto-fit,minmax(100px, 1fr));
+    grid-template-rows: 100px 100px;
+}
+.fit > div {
+    background-color: rgba(92, 100, 94, 0.521);
+}
+

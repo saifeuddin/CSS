@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css?family=Merriweather:300,900|Six+Caps');
+
+
+/* Styles */
+*{
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    display: grid;
+    /* grid-template-rows: 10em 50vh auto 10em;
+    grid-template-columns: 1fr 5fr 2fr 1fr;
+    grid-template-areas: "header header header header"
+                        "hero hero hero hero"
+                        ". main sidebar ."
+                        "footer footer footer footer "; */
+
+
+            /* Shorthand */
+    grid-template: "header header header header" 10em
+                        "hero hero hero hero" 50vh 
+                        ". main sidebar ." auto
+                        "footer footer footer footer" 10em 
+                        / 1fr  minmax(25em, 5fr) minmax(15em, 2fr)  1fr;
+    grid-column-gap: 1.5em;
+}
+
+
+header{
+    font-family: 'Merriweather',
+    serif;
+    
+    grid-area: header;
+}
+
+header, footer{
+    background-color: black;
+    color: yellow;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.header-title, .footer-title{
+    font-size: 40px;
+    text-transform: uppercase;
+    color: rgb(185, 185, 48);
+}
+.hero{
+    
+    grid-area: hero;
+    background: url(hero.jpg) no-repeat center/cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.hero-title{
+    /* border: 1px solid #000; */
+    font-family: 'Merriweather',
+    serif;
+    font-size: 40px;
+    word-spacing: 10px;
+    text-transform: uppercase;
+    width: 400px;
+    text-align: center;
+    margin-bottom: 0;
+}
+.hero-subtitle{
+    /* border: 1px solid #000; */
+    color: blue;
+    font-size: 30px;
+    margin-top: 20px;
+    width: 300px;
+    
+    text-align: center;
+}
+main{
+    grid-area: main;
+}
+
+aside{
+    grid-area: sidebar;
+    background-color: rgb(194, 191, 191);
+    padding: 1.5em;
+}
+footer{
+    grid-area: footer;
+}
+
+
+
+
+
+
+
+
+
+
+
+.card{
+    /* border: 1px solid #000; */
+    display: grid;
+    padding: 1.5em;
+    margin-bottom: 1.5em;
+
+
+    /* grid-template-columns: 1fr 3fr;
+    grid-template-rows: min-content auto;
+    grid-template-areas: " img title"
+                            "img content"; */
+
+                            /* Shorthand */
+    grid-template: 
+                    "img title" min-content
+                    "img content" auto / 1fr 3fr;
+    grid-column-gap:1.5em;
+
+
+    box-shadow: 0 0 1em rgba(0, 0, 0, 0.5);
+            
+}
+.card-img{
+    max-width: 100%;
+    grid-area: img;
+    /* background-color: pink; */
+}
+.card .card-title{
+    grid-area: title;
+    /* background-color: lightblue; */
+    font-weight: 300;
+    font-size: 35px;
+
+}
+.card .card-content{
+    grid-area: content;
+}
+
+.card-content a{
+    color: rgb(179, 179, 24);
+    text-decoration: none;
+    font-size: 20px;
+}

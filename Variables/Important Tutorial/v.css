@@ -1,0 +1,74 @@
+*{
+    box-sizing: border-box;
+}
+html, body{
+    margin: 0;
+    padding: 0;
+    background-color: var(--beige);
+    color: var(--red);
+}
+
+/* Css variables */
+:root{
+    --red: #ff6f69;
+    --beige: #ffeead;
+}
+
+
+
+
+
+#navbar ul li{
+    list-style-type: none;
+}
+#navbar ul {
+    border: 2px groove red;
+    display: flex;
+    justify-content: space-evenly;
+}
+#navbar a{
+    color: #ff6f69;
+    text-decoration: none;
+}
+main .grid{
+    display: grid;
+    grid-template-rows: 200px 200px;
+    grid-template-columns: auto auto;
+    grid-gap: 20px;
+    /* justify-content: space-around; */
+}
+main > h1{
+    text-align: center;
+}
+.grid .item{
+    background-color: #ffcc5c;
+    margin: 0 30px ;
+    padding: 20px;
+}
+.item h1{
+    margin: 10px 0 20px 20px;
+}
+button{
+    background-color: #ff6f69;
+    color: #ffcc5c;
+    padding: 10px;
+    margin: 0 0 20px 20px ;
+}
+
+
+
+
+                    /* ⌨️ Changing variables with JavaScript */
+@media screen and (max-width:550px) {
+    main .grid{
+        --column: auto;
+        --row: 150px;
+        --background : red;
+    }
+    main .grid{
+        grid-template-rows:  var(--row);
+        grid-template-columns: var(--column);
+        background-color: var(--background);
+    }
+    
+}

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <style>
+        :root{
+            --div-bg: #eeeeee;
+            --card-bg: #dfdedb;
+            --text-color: #30336b;
+
+            --box-h-shadow: 3px;
+            --box-y-shadow: 3px;
+            --box-shadow-blur: 3px;
+            --box-shadow-color: blueviolet;
+        }
+
+
+        body{
+            background-color: var(--background-color, pink);
+        }
+
+
+        .div .card{
+            background-color: var(--div-bg);
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .card1{
+            background-color: var(--div-bg);
+            margin-right: 10px ;
+            padding: 20px;
+            box-shadow: 3px 3px 5px blueviolet;
+        }
+        .card2{
+            background-color: var(--card-bg);
+            padding: 20px;
+            box-shadow:
+            var(--box-h-shadow) 
+            var(--box-y-shadow) 
+            var(--box-shadow-blur) 
+            var(--box-shadow-color);
+        }
+
+
+    </style>
+</head>
+<body>
+    
+        <div class="div">
+            <div class="card">
+                <div class="card1">
+                    <h1>ggggggggggg</h1>
+                </div>
+                <div class="card2">
+                    <h1>hhhhhhhhhhhh</h1>
+                </div>
+            </div>
+        </div>
+
+    <button id="dark-theme-btn">Dark Theme</button>
+    <button id="light-theme-btn"> Light Theme</button>
+
+
+
+
+
+
+
+
+
+
+
+    <!-- <script>
+        var card1 = document.querySelector('.card1');
+        var card1Styles = getComputedStyle(card1);
+        var cardBg = card1Styles.getPropertyValue('--card-bg');
+
+        var card2 = document.querySelector('.card2');
+        var New =  card2.style.setProperty('--card-bg','--div-bg');
+    </script> -->
+
+
+
+
+    <script>
+        // Get The value of any css variable
+       console.log(window.getComputedStyle(document.documentElement)
+       .getPropertyValue('--div-bg'));
+
+
+
+
+        // Change background color with css variable
+        document.getElementById('dark-theme-btn').addEventListener('click', () =>{
+            document.documentElement.style.setProperty('--background-color', '#333')
+        });
+        document.getElementById('light-theme-btn').addEventListener('click', () =>{
+            document.documentElement.style.setProperty('--background-color', '#fff')
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <style>
+        .div{
+            overflow: hidden;
+            display: grid;
+            grid-template-columns: fit-content(200px) fit-content(300px) 1fr;
+            grid-template-rows: repeat(2,100px);
+            grid-template-rows: repeat(2,minmax(100px, max-content));
+            grid-template-rows: repeat(2,minmax(100px, min-content));
+        }
+
+        .div .one {
+            background-color: red ;
+        }
+        .two {
+            background-color: green ;
+        }
+        .three {
+            background-color: blue ;
+        }
+        .four {
+            background-color: yellow ;
+        }
+        .five {
+            background-color: rgb(53, 53, 40) ;
+        }
+
+    </style>
+</head>
+<body>
+    
+
+            <h1> Fit Content </h1>
+                <div class="div">
+                    <div class="one">ggg Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel, beatae nulla? Consectetur eos doloribus fuga sequi excepturi fugit saepe sint aliquam velit cum, consequatur pariatur officia doloremque veritatis corporis ea voluptas! Earum voluptates, doloribus dolorem minima autem fuga architecto maxime omnis obcaecati assumenda, quisquam cupiditate placeat ex consequuntur nihil veniam provident labore quasi quidem. Quisquam pariatur illum fugiat unde explicabo dignissimos rerum exercitationem, deleniti earum sint, cupiditate amet ex, porro sunt! Sunt error, alias maiores optio exercitationem quae cupiditate tempora quam sapiente eaque? Nam velit reiciendis tempora atque earum error vel blanditiis! Unde inventore laboriosam officiis incidunt rem quia ratione.</div>
+                    
+                    <div class="two">ggg Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti consequatur quibusdam enim nostrum iure odit, rem hic expedita non rerum? Quod quae aspernatur saepe officiis ipsam, atque vitae, vero reiciendis, harum a officia deserunt eius quidem tempora porro at reprehenderit esse excepturi cumque laborum perspiciatis doloremque repudiandae. Dolor, minus rem. Aliquid itaque quas officia eaque quia quos corrupti ullam. Debitis distinctio quo eum autem quasi rem ipsa. Temporibus, dolores provident reprehenderit pariatur perferendis, voluptatem quos possimus vel assumenda atque, ratione exercitationem ad ipsa veniam magni aut? Quae inventore consectetur perferendis quaerat sint explicabo iure praesentium quis, cum eaque cupiditate ipsa!</div>
+                    <div class="three"> ghjj </div>
+                    <div class="four"> gggg </div>
+                    <div class="five"> hhhh</div>
+                </div>
+
+
+
+
+</body>
+</html>
