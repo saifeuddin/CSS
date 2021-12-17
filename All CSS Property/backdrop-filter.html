@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .div{
+            margin: auto;
+            height: 600px;
+            width: 600px;
+            border: 1px solid #000;
+            background: url('pineapple.jpg') no-repeat;
+            background-size: cover;
+        }
+        .div .div2{
+            height: 400px;
+            width: 250px;
+            border-radius: 5px;
+            border: 2px solid #fff;
+            margin:100px auto;
+            transition: backdrop-filter .3s;
+            backdrop-filter: blur(2px);
+        }
+        .div .div2:hover{
+            backdrop-filter: blur(12px) sepia(50%);
+        }
+    </style>
+</head>
+<body>
+    
+            <div style="border: 3px solid black; padding: 20px; margin: 40px 0;">
+                <h1 style="background-color: blueviolet; padding: 20px;"> ## Css backdrop-filter Property </h1>
+                <br>
+
+                <p> <b>
+                        $$ --
+                    </b>
+                    The backdrop-filter property in CSS is 
+                    <b>
+                        used to apply filter effects (grayscale, contrast, blur, etc)
+                    </b>
+                    to the background/backdrop of an element.
+                    <br>
+                    <br>
+                    <br>
+                    <b>
+                        $$ --
+                    </b>
+                    The backdrop-filter has the same effect as the filter
+                    property, 
+                    <b>
+                        except the filter effects are applied only to the background and instead of to the
+                        element’s content.
+                    </b>
+                </p>
+            </div>
+
+
+            <div style="border: 3px solid black; padding: 20px; margin: 40px 0;">
+
+                <h2>Values </h2>    
+                    <ol>
+                        <li>blur() </li>
+                        <li>brightness() </li>
+                        <li>contrast() </li>
+                        <li>drop-shadow() </li>
+                        <li>grayscale() </li>
+                        <li>hue-rotate() </li>
+                        <li>invert() </li>
+                        <li>opacity() </li>
+                        <li>sepia() </li>
+                        <li>saturation() </li>
+                        <li>url() – (for applying SVG filters)</li>
+                        <li>none</li>
+                    </ol>
+                <br>
+                <br>
+
+
+
+                <b>
+                    You can apply multiple filter-functions to a backdrop, like so:
+                </b>
+                <pre>
+                <big>
+                .element {
+                    backdrop-filter: grayscale(0.5) opacity(0.8) /* ...and on and on... */;
+                }
+                </big>
+                </pre>
+                <h3>Example</h3>
+                    <div class="div">
+                        <div class="div2">
+
+                        </div>
+                    </div>
+            </div>
+
+</body>
+</html>

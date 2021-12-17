@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <style>
+        .element {
+            border: 3rem solid transparent;
+            padding: 5rem;
+            -webkit-mask-image: url(https://i.imgur.com/P1bFwVG.png);
+            mask-image: url(https://i.imgur.com/P1bFwVG.png);
+            -webkit-mask-size: 100%;
+            mask-size: 100%;
+            -webkit-mask-repeat: repeat-y;
+            mask-repeat: no-repeat;
+            -webkit-mask-clip: border-box;
+            mask-clip: border-box;
+            
+
+
+
+
+
+        background-image: 
+            radial-gradient(circle at 90% 66%, 
+            rgba(63, 50, 50, 0.06)0%,
+            rgba(25, 25, 25,0.06) 25%,
+            rgba(23, 23,23,0.06)  25%, 
+            rgba(23, 23, 23,0.06) 50%,
+            rgba(20, 20, 20,0.06) 50%, 
+            rgba(20, 20, 20,0.06) 75%,
+            rgba(18, 18, 18,0.06) 75%, 
+            rgba(18, 18, 18,0.06)100%),
+
+            radial-gradient(circle at 62% 23%,
+            rgba(154, 154, 154,0.06) 0%, 
+            rgba(154,154, 154,0.06) 25%,
+            rgba(111, 111,111,0.06) 25%, 
+            rgba(111, 111, 111,0.06)50%,
+            rgba(68, 68, 68,0.06) 50%, 
+            rgba(68,68, 68,0.06) 75%,
+            rgba(25, 25, 25,0.06)75%, 
+            rgba(25, 25, 25,0.06)100%),
+
+            radial-gradient(circle at 47% 85%,
+            rgba(97, 97, 97,0.06) 0%, 
+            rgba(97, 97,97,0.06) 25%,
+            rgba(130, 130, 130,0.06) 25%,
+            rgba(130, 130, 130,0.06) 50%,
+            rgba(162,162, 162,0.06) 50%, 
+            rgba(162, 162,162,0.06) 75%,
+            rgba(195, 195, 195,0.06)75%, 
+            rgba(195, 195, 195,0.06)100%),
+
+            radial-gradient(circle at 72% 0%,
+            rgba(214, 214, 214,0.06) 0%, 
+            rgba(214,214, 214,0.06) 25%,
+            rgba(223, 223,223,0.06) 25%, 
+            rgba(223, 223, 223,0.06)50%,
+            rgba(231, 231, 231,0.06) 50%,
+            rgba(231, 231, 231,0.06) 75%,
+            rgba(240,240, 240,0.06) 75%, 
+            rgba(240, 240,240,0.06) 100%),
+        
+            linear-gradient(90deg,
+            rgb(181, 12, 26),
+            rgb(206, 132, 31));
+
+
+            background-origin: border-box;
+            line-height: 1.6;
+            color: #646464;
+            color: #fff;
+        }
+
+        
+        .container {
+            display: block;
+            max-width: 500px;
+            border: 2px dashed #ddd;
+        }
+
+
+        @import
+        url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
+    </style>
+    
+</head>
+<body>
+
+        <h1 style="background-color: blueviolet; padding: 20px;"> ## Css mask Property</h1>
+        <br>
+        <br>
+
+
+        <h2> ## Definition </h2>    
+            <p> <b>
+                $$ --
+            </b>
+                The mask property is a shorthand to specify all mask-* properties. 
+                <b>
+                    mask can hide part of the element is
+                    applied to 
+                </b>
+                and It accepts one or more comma-separated values, where each value corresponds to a mask
+                layer.
+            </p>
+            <pre>
+                <b>
+
+            .element {
+                mask: url(mask.png) right bottom / 100px repeat-y;
+            }
+                </b>
+            </pre>
+
+        <br>
+
+
+
+
+        <h2> $$ Syntax</h2>  
+            <big>
+            <pre>
+        mask: mask-reference || position / bg-size || repeat-style || geometry-box || geometry-box | no-clip  || compositing-operator || masking-mode
+            </pre>
+            </big>
+        <br>
+
+
+
+
+        <h2> ## Values</h2>
+            <ul> General Values
+                <li>
+                    mask: none;
+                </li>
+                <li>
+                    mask: url(mask.svg);
+                </li>
+                <li>
+                    mask: url(mask.png) luminance;
+                </li>
+                <li>
+                    mask: url(mask.png) 100px 200px;
+                </li>
+                <li>
+                    mask: url(mask.png) 100px 200px/50px 100px;
+                </li>
+                <li>
+                    mask: url(mask.png) repeat-x;
+
+                </li>
+                <li>
+                    mask: url(mask.png) 50% 50% / contain no-repeat border-box luminance;
+                </li>
+            </ul>
+            <ul> Multiple Values
+                <li>
+                    mask: url(mask.png) luminance center repeat-y exclude,
+                    linear-gradient(black, transparent);
+                </li>
+            </ul>
+
+
+
+        <br>
+        <br>
+
+
+
+
+            <p> <b>$$ --</b>
+                The mask property accepts the following values, each of which is takes the value of a mask constituent
+                property, including:
+            </p>
+            <b>
+                mask-mode : luminance| alpha | source-match 
+            </b> <br> <br>
+            <img src="mask1.jpg" alt=""> <br>
+            <img src="mask2.jpg" alt="">
+        <br>
+        <br>
+        <br>
+
+        <h2> ## Mask resets mask-border to its initial value</h2>
+            <p>
+                You might not see mask-border in the examples we’ve seen so far, but it’s still doing something in the
+                background because mask resets mask-border to its initial value. Remember, mask-border is a shorthand
+                property as well, so here’s how that breaks down:
+            </p>
+            <img src="mask-border.jpg" alt="">
+            <p>
+                As such, the spec suggests using mask instead of the individual properties to override mask settings
+                that pop up earlier in the cascade. That way, too, mask-border properties are properly reset to their
+                initial values, allowing the styles declared later to work as expected.
+            </p>
+
+        <br>
+        <br>
+        <br>
+
+        <h2> ## Setting the &lt;geometry-box&gt; value with mask-clip and mask-origin</h2>
+            <p> <b>
+                $$ --
+            </b>
+                Both mask-clip and mask-origin take a geometry-box value. So there are a couple of things to keep in mind.
+            </p>
+            <hr>
+            <hr>
+            <hr>
+            <p> <b>
+                $$ --
+            </b>
+                First, if there is one geometry-box value and the no-clip keyword, then:
+            </p>
+            <ul>
+                <li>
+                    mask-origin is the geometry-box
+                </li>
+                <li>
+                    mask-clip is set to no-clip
+                </li>
+                <b>
+                    <pre>
+                        mask: url(mask.png) content-box no-clip;
+                        
+                        /**
+                            mask-origin: content-box;
+                            mask-clip: no-clip;
+                        */
+                    </pre>
+                </b>
+            </ul>
+            <br>
+            <br>
+            <p> <b>
+                $$ --
+            </b>
+                If there is one geometry-box value but no no-clip keyword, then both mask-origin and mask-clip are set to the geometry-box value.
+            </p>
+            <b>
+                <pre>
+                    mask: url(mask.png) content-box;
+                    
+                    /**
+                        mask-origin: content-box;
+                        mask-clip: content-box;
+                    */
+                </pre>
+            </b>
+        <hr>
+        <hr>
+
+
+        <h2> $$ How about two &lt;geometry-box&gt; values?</h2>
+            <ul>
+                <li>The first sets mask-origin</li>
+                    <p>
+                        content-box | padding-box
+                        | border-box | margin-box
+                        | fill-box | stroke-box |
+                        view-box
+                    </p>
+                <li>
+                    The second sets mask-clip
+                </li>
+                <p>
+                    content-box | padding-box
+                    | border-box | margin-box
+                    | fill-box | stroke-box |
+                    view-box
+                </p>
+                <b>
+                    <pre>
+            mask: url(mask.png) content-box border-box;
+                        
+            /**
+                mask-origin: content-box;
+                mask-clip: border-box;
+            */
+                    </pre>
+                </b>
+            </ul>
+
+
+            <h3>Example :</h3>
+            <div class="container">
+                <div class="element">
+                    “When you are so full of
+                    sorrow
+                    that you can't walk, can't cry
+                    anymore,
+                    think about the green foliage
+                    that sparkles after
+                    the rain. When the daylight
+                    exhausts you, when
+                    you hope a final night will
+                    cover the world,
+                    think about the awakening of a
+                    young child.”
+                    <br>
+                    ― Omar Khayyám, The Rubaiyat
+                    of Omar Khayyam
+                </div>
+            </div>
+
+
+
+
+        
+</body>
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div style="border: 3px solid black; padding: 20px; margin: 40px 0;">
+        <h1 style="background-color: blueviolet; padding: 20px;">
+            ## Css font-display Property </h1>
+        <br>
+
+        <p> <b>
+                $$ --
+            </b>
+            The font-display property defines how font files are loaded and displayed by the browser. It is applied to
+            the @font-face rule which defines custom fonts in a stylesheet.
+        </p>
+        <br>
+        <br>
+
+        <h3>Example :</h3>
+        <pre>
+        <big>
+        @font-face {
+            font-family: 'MyWebFont'; 
+                /* Define the custom font name */
+
+            src: url('myfont.woff2') format('woff2'),
+            url('myfont.woff') format('woff'); 
+                /*Define where the font can be downloaded */
+
+
+            font-display: fallback; 
+                /* Define how the browser behaves during download */
+        }
+        </big>
+        </pre>
+    </div>
+
+
+
+
+
+
+
+
+    <div style="border: 3px solid black; padding: 20px; margin: 40px 0;">
+        <h1>## Values </h1>
+        <br>
+
+        <ul>
+            <li>
+                <b>
+                    auto
+                </b>
+            </li>
+            <br>
+            <li>
+                <b>
+                    block : <br>
+                </b>
+                Instructs the browser to briefly hide the text until the font has fully downloaded. More accurately, the
+                browser draws the text with an invisible placeholder then swaps it with the custom font face as soon as
+                it loads. This is also known as a “flash of invisible text” or FOIT.
+            </li>
+            <br>
+            <li>
+                <b>
+                    swap : <br>
+                </b>
+                Instructs the browser to use the
+                fallback font to display the text
+                until the custom font has fully
+                downloaded. This is also known as
+                a “flash of unstyled text” or
+                FOUT.
+            </li>
+            <br>
+            <li>
+                <b>
+                    fallback : <br>
+                </b>
+                 Acts as a compromise between the auto and swap values. The browser will hide the text for about 100ms
+                 and, if the font has not yet been downloaded, will use the fallback text. It will swap to the new font
+                 after it is downloaded, but only during a short swap period (probably 3 seconds).
+            </li>
+            
+            <li>
+                <b>
+                    optional : <br>
+                </b>
+                Like fallback, this value tells the browser to initially hide the text, then transition to a fallback
+                 font until the custom font is available to use. However, this value also allows the browser to
+                 determine whether the custom font is even used at all, using the user’s connection speed as a
+                 determining factor where slower connections are less likely to receive the custom font.
+            </li>
+        </ul>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .clip{
+            -webkit-block-overflow : ellipsis;
+            -webkit-max-lines: 1;
+
+        }
+    </style>
+</head>
+<body>
+
+        <div style="border: 3px solid black; padding: 20px; margin: 40px 0;">
+            <h1 style="background-color: blueviolet; padding: 20px;"> ## Css block- overflow  Property </h1>
+            <br>
+            <br>
+
+
+            <p> 
+                <b>
+                    $$ --
+                </b>
+                The block-overflow property 
+                <b>
+                    truncates(কাটা) text and indicates more content follows by inserting an
+                    ellipsis
+                </b>
+                    or 
+                <b>
+                    <mark>
+                        custom string after a number of lines that is set by the max-lines property.
+                    </mark>
+                </b>
+            </p>
+            <br>
+            <br>
+            <br>
+
+
+            <h2>Syntax</h2>
+            <pre>
+            <big>
+            .module {
+                block-overflow: [clip | ellipsis | ];
+                max-lines: []; /* required by block-overflow */
+            }
+            </big>
+            </pre>
+        </div>
+        
+        
+        
+        
+        
+        <div style="border: 3px solid black; padding: 20px; margin: 40px 0;">
+            <h2> ## Property Values </h2>
+            <br>
+
+            
+            <ul> 
+                <li>
+                    <b>
+                        clip :
+                    </b>
+                    Does not insert a character to indicate more text to follow. Instead, the content is merely
+                    truncated and cut off at the last character.
+                </li>
+
+                    <br>
+
+                <li>
+                    <b>
+                        ellipsis :
+                    </b>
+                    Displays an ellipsis (…) at the end of the last line.
+                </li>
+                    <br>
+
+                <li>
+                    <b>
+                        string :
+                    </b>
+                    Displays custom text (e.g. “Read more →”) at the end of the last line. The spec says that the
+                    User-Agent may replace the string with an ellipsis if the string is “absurdly” long.
+                </li>
+            </ul>
+        </div>
+
+
+            <h2>
+                ## Use line-clamp property for short
+            </h2>
+            <b class="clip">
+                We can get just about the same
+                thing using line-clamp which is
+                shorthand for the block-overflow
+                and max-lines properties.
+                and max-lines properties.
+                and max-lines properties.
+                and max-lines properties.
+                and max-lines properties.
+                and max-lines properties.
+                and max-lines properties.
+                and max-lines properties.
+            </b>
+
+</body>
+</html>

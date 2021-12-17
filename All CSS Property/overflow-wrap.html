@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible"
+        content="IE=edge">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>CSS overflow-wrap Property</h1>
+    <p>
+        The overflow-wrap property in CSS allows you to specify that the browser can break a line of text inside the targeted element onto multiple lines in an otherwise unbreakable place. This helps to avoid an unusually long string of text causing layout problems due to overflow.
+    </p>
+    
+    
+    
+    <h2>CSS Syntax </h2>
+    <pre>
+    overflow-wrap : normal | break-word;
+    </pre>
+
+
+
+    <h2>Property Values</h2>
+    <ol>
+        <li>normal
+            <p>
+                the default. The browser will break lines according to normal line breaking rules. Words or unbroken strings will not break, even if they overflow the container.
+            </p>
+        </li>
+        <li>break-word
+            <p>
+                words or strings of characters
+                that are too large to fit inside
+                their container will break in an
+                arbitrary place to force a line
+                break. A hyphen character will not
+                be inserted, even if the hyphens
+                property is used.
+            </p>
+        </li>
+    </ol>
+
+
+    <h2>
+        Similarities to the word-break Property
+    </h2>
+    <b>
+        overflow-wrap
+    </b>
+    <p>
+        is generally used to avoid problems with long strings causing broken layouts due to text flowing outside a container.
+    </p>
+    <b>
+        word-break
+    </b>
+    <p>
+        specifies soft wrap opportunities between letters commonly associated with languages like Chinese, Japanese, and Korean (CJK).
+    </p>
+    <br>
+    <br>
+        <b>
+        From this, we can surmise that
+        word-break is best used with
+        non-English content that
+        requires specific
+        word-breaking rules, and that
+        might be interspersed with
+        English content.
+    </b>
+
+
+
+
+
+
+</body>
+</html>      

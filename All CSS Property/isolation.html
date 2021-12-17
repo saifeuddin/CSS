@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+    </style>
+</head>
+<body>
+    
+                <h1>CSS isolation Property</h1>
+                    <p>
+                        The isolation property defines whether an element must create a new stacking content.
+                    </p>
+                    <b>Note: The isolation property is helpful when used with background-blend-mode or mix-blend-mode.</b>
+
+
+                    <br>
+                    <br>
+                <h2>CSS Syntax</h2>
+                    <pre>isolation: auto | isolate |initial|inherit;</pre>
+
+
+                    <br>
+                    <br>
+                <h2>Values</h2>
+                    <ol>
+                        <li>auto
+                            <p>
+                                Default. A new stacking context is created only if one of the properties applied to the
+                                element requires it
+                            </p>
+                        </li>
+                        <li>isolate
+                            <p>
+                                A new stacking context must be created
+                            </p>
+                        </li>
+                    </ol>
+                    
+
+                    <br>
+                    <br>
+                <h3>Example</h3>
+                    <pre>
+                        div {
+                            isolation: isolate;
+                        }
+
+                        div img {
+                            mix-blend-mode: multiply;
+                        }
+
+                        div h1 {
+                        
+                            mix-blend-mode: overlay;
+                        }
+                    </pre>
+
+            
+
+            <div
+                style="border: 3px solid black; padding: 20px; margin: 40px 0;">
+                <h2
+                    style="background-color: blueviolet; padding: 20px;">
+                    ## Where it doesn’t work
+                </h2>
+                <br>
+
+                <p> <b>
+                        You might expect isolation
+                        to isolate elements when
+                        background-blend-mode is
+                        used, but that’s not the
+                        case. Background elements
+                        are already isolated by
+                        their nature in that they
+                        do not blend with the
+                        content that is behind
+                        them.
+                    </b>
+                </p>
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

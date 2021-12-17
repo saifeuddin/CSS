@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+            <h1>CSS font-size-adjust Property</h1>
+
+
+
+                <h2>Definition and Usage</h2>
+                    <p>
+                        <b>$$ --</b>
+                        This property gives developers the ability to set the font-size of an element depending on the
+                        size of its lowercase letters, rather than the uppercase letters.
+
+                    </p>
+                    <p> 
+                        The font-size-adjust property gives you better control of the font size when the first selected
+                        font is not available.
+                    </p>
+                    <p>
+                        When a font is not available, the browser uses the second specified font. This could result in a
+                        big change for the font size. To prevent this, use the font-size-adjust property.
+                    </p>
+                    <p>
+                        All fonts have an "aspect value" which is the size-difference between the lowercase letter "x"
+                        and the uppercase letter "X".
+                    </p>
+                    <p>
+                        When the browser knows the "aspect value" for the first selected font, the browser can figure
+                        out what font-size to use when displaying text with the second choice font.
+                    </p>
+                    <pre>
+                    <big>
+                        .element {
+                            font-size: 22px;
+                            font-size-adjust: .5;
+                        }
+                    </big>
+                </pre>
+                <p>
+                    In this case the lowercase
+                    letters of the font would
+                    be 11px in height, since
+                    22 x .5 = 11.
+                </p>
+
+
+
+
+                <h3>Example:</h3>
+                    <pre>
+                        div {
+                            font-size-adjust: 0.58;
+                        }
+                    </pre>
+                <br>
+                <br>
+
+
+                <h2>CSS Syntax</h2>
+                    <pre>font-size-adjust: number|none|initial|inherit;</pre>
+                <br>
+                <br>
+
+
+                
+                <h2>Property Values</h2>
+                    <ol>
+                        <li>number 
+                            <p>
+                                Defines the aspect value to use
+                            </p>
+                        </li>
+                        <li>none 
+                            <p>
+                                Default value. No font size adjustment
+                            </p>
+                        </li>
+                    </ol>
+
+
+
+</body>
+</html>

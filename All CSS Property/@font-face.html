@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+            <h1>CSS @font-face Rule</h1>
+                <h3>Example</h3>    
+                    <pre>
+                        @font-face {
+                        font-family: myFirstFont;
+                        src: url(sansation_light.woff);
+                        }
+                    </pre>
+                <h2>Definition and Usage</h2>
+                    <p>With the @font-face rule, web designers do not have to use one of the "web-safe" fonts anymore.</p>
+                    <p>
+                        In the @font-face rule you must first define a name for the font (e.g. myFirstFont), and then
+                        point to the font file.
+                    </p>
+                <h2>Syntax</h2>
+                    <pre>
+                        @font-face {
+                        font-properties
+                        }
+                    </pre>
+                <h2>Property values</h2>
+                    <ol>
+                        <li>font-family
+                            <ol>
+                                <li>name </li>
+                                <p>Required. Defines the name of the font.</p>
+                            </ol>
+                        </li>
+                        <li>src 
+                            <ol>
+                                <li>URL </li>
+                                <p>Required. Defines the URL(s) where the font should be downloaded from</p>
+                            </ol>
+                        </li>
+                        <li>font-stretch 
+                            <ol>
+                                <li>normal</li>
+                                <br>
+                                <li>condensed</li>
+                                <li>condensed-semi</li>
+                                <li>condensed-extra</li>
+                                <li>condensed-ultra</li>
+                                <br>
+                                <li>expended</li>
+                                <li>expended-semi</li>
+                                <li>expended-extra</li>
+                                <li>expended-ultra</li>
+                            </ol>
+                            <p>
+                                Optional. Defines how the font should be stretched. Default value is "normal"
+                            </p>
+                        </li>
+                        <li>font-style 
+                            <ol>
+                                <li>normal</li>
+                                <li>italic</li>
+                                <li>oblique</li>
+                            </ol>
+                            <p>
+                                Optional. Defines how the font should be styled. Default value is "normal"
+                            </p>
+                        </li>
+                        <li>font-weight 
+                            <ol>
+                                <li>normal</li>
+                                <li>bold</li>
+                                <li>100</li>
+                                <li>200</li>
+                                <li>300</li>
+                                <li>400</li>
+                                <li>500</li>
+                                <li>600</li>
+                                <li>700</li>
+                                <li>800</li>
+                                <li>900</li>
+                                <p>
+                                    Optional. Defines the boldness of the font. Default value is "normal"
+                                </p>
+                            </ol>
+                        </li>
+                        <li>unicode-range 
+                            <ol>
+                                <li>unicode-range </li>
+                                <p>Optional. Defines the range of unicode characters the font supports. Default
+                                    value is "U+0-10FFFF"</p>
+                            </ol>
+                        </li>
+                    </ol>
+
+
+
+
+</body>
+</html>

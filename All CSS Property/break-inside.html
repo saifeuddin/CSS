@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        div li {
+            background: rgb(102, 79, 79);
+            padding: 1em;
+            margin-bottom: 1.3em;
+
+            -webkit-column-break-inside: avoid;
+            page-break-inside: avoid;
+            break-inside: avoid;
+        }
+    </style>
+</head>
+<body>
+
+            <h1> CSS break-inside Property </h1>
+                <h3>Example</h3>
+                    <pre>
+                        @media print {
+                            img {
+                                display: block;
+                                break-inside: avoid;
+                            }
+                        }
+                    </pre>
+
+
+
+
+                <h2>Definition and Usage</h2>
+                    <p>
+                        The break-inside property specifies whether or not a page break, column break, or region break
+                        should occur inside the specified element.
+                    </p>
+                    <p>
+                        The break-inside property extends then CSS2 page-break-inside property.
+                    </p>
+                    <p>
+                        With break-inside, you can tell the browser to avoid breaks inside images, code snippets,
+                        tables, and lists.
+                    </p>
+
+
+
+                <br>
+                <br>
+                <h2>Css Syntax </h2>
+                    <pre>break-inside: auto|all|always|avoid|avoid-column|avoid-page|avoid-region|column|left|page|recto|region|right|verso|initial|inherit;
+                    </pre>
+            <div>
+
+
+
+                <br>
+                <br>
+                <h2>Values</h2>
+                    <ol>
+                        <li>auto
+                            <p>Automatic page/column/region break after the element</p>
+                        </li>
+                        <li>avoid
+                            <p>
+                                Avoid a page/column/region break inside the element
+                            </p>
+                        </li>
+                        <li>avoid-page
+                            <p>
+                                Avoid a page break after the element
+                            </p>
+                        </li>
+                        <li>avoid-column 
+                            <p>Avoid a column break after the element</p>
+                        </li>
+                        <li>avoid-region
+                            <p>Avoid a region break after the element</p>
+                        </li>
+                    </ol>
+            </div>
+    
+</body>
+</html>

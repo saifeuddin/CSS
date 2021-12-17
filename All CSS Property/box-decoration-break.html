@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+        <style>
+            span {
+            border: 5px solid red;
+            padding: 0em 1em;
+            border-radius: 16px;
+            font-size: 24px;
+            line-height: 2;
+            }
+            .div .ex1{
+                -webkit-box-decoration-break: clone;
+                -o-box-decoration-break: clone;
+                box-decoration-break: clone;
+            }
+            .div .ex2{
+                -webkit-box-decoration-break: slice;
+                -o-box-decoration-break: slice;
+                box-decoration-break: slice;
+            }
+        </style>
+
+
+</head>
+<body>
+
+            <h1>CSS box-decoration-break Property</h1>
+                <h3>Example</h3>
+                <pre>
+                    span.ex1 {
+                        -webkit-box-decoration-break: clone;
+                        -o-box-decoration-break: clone;
+                        box-decoration-break: clone;
+                    }
+
+                    span.ex2 {
+                        -webkit-box-decoration-break: slice;
+                        -o-box-decoration-break: slice;
+                        box-decoration-break: slice;
+                </pre>
+                <h2> Definition and Usage </h2>
+                    <p>The box-decoration-break property specifies how the background, padding, border, border-image,
+                        box-shadow, margin, and clip-path of an element is applied when the box for the element is
+                        fragmented(খণ্ডিত) .</p>
+                <br>
+                <br>
+
+
+                <h2>Css Syntax</h2>
+                    <pre>
+                        box-decoration-break: slice|clone|initial|inherit|unset;
+                    </pre>
+                <br>
+                <br>
+
+                
+                <h2>Property Values</h2>
+                    <ol>
+                        <li>slice
+                            <p> <b>default</b>
+                                Default. Box decorations are applied to the element as a whole and break at the edges of
+                                the element fragments
+                            </p>
+                        </li>
+                        <li>clone
+                            <p>
+                                Box decorations apply to each fragment of the element as if the fragments were
+                                individual elements. Borders wrap the four edges of each fragment of the element, and
+                                backgrounds are redrawn in full for each fragment
+                            </p>
+                        </li>
+                    </ol>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                <h3>Example:</h3>
+                    <div class="div">
+                        <h2>box-decoration-break: clone:</h2>
+                        <span class="ex1">CSS<br>is<br>easy<br>to learn</span>
+
+                        <h2>box-decoration-break: slice (default):</h2>
+                        <span class="ex2">CSS<br>is<br>easy<br>to learn</span>
+
+                        <p><strong>Note:</strong> IE/Edge do not support the box-decoration-break property.</p>
+                    </div>
+
+
+</body>
+</html>

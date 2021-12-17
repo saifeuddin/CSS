@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible"
+        content="IE=edge">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        img {
+        display: block;
+        width: 100%;
+        max-width: 300px;
+        margin: auto;
+        -webkit-mask-image: url(#mask);
+        mask-image: url(#mask);
+        }
+
+        mask {
+        mask-type: alpha;
+        }
+
+
+
+
+
+        body {
+        margin: 0;
+        min-height: 100vh;
+        }
+
+        svg {
+        display: block;
+        width: 0;
+        height: 0;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div
+        style="border: 3px solid black; padding: 20px; margin: 40px 0;">
+        <h1
+            style="background-color: blueviolet; padding: 20px;">
+            ## CSS mask-type Property
+        </h1>
+        <br>
+
+        <p> <b>
+                $$ --
+                The mask-type CSS property indicates whether the SVG &lt;mask&gt; element is treated as an alpha mask or a luminance mask.
+            </b>
+        </p>
+        <br>
+        <pre>
+            mask{
+                mask-type: luminance;
+            }
+        </pre>
+    </div>
+
+
+    <h2> Property Values</h2>
+    <pre>
+    <big>
+    <b>
+            /* Keyword values */
+            mask-type: alpha;
+                specifies that the alpha values (alpha channel) of the mask 
+                layer image should be used as the mask values.
+
+
+            mask-type: luminance;
+                specifies that the luminance values of the mask image should be used as the mask values.
+    </b>
+    </big>
+    </pre>
+
+
+
+    <h3>Example :</h3>
+    <b>Open in firefox</b>
+
+    <pre>
+    <big>
+    img {
+        display: block;
+        width: 100%;
+        max-width: 300px;
+        margin: auto;
+        -webkit-mask-image: url(#mask);
+        mask-image: url(#mask);
+    }
+
+    mask {
+        mask-type: alpha;
+    }
+
+    svg {
+        display: block;
+        width: 0;
+        height: 0;
+    }
+
+
+    &lt;svg&gt;
+        &lt;mask id="mask"&gt;
+            &lt;polygon fill="black"
+                points="150,0 174.3,74.8 253,74.8 189.4,121 213.7,195.8 150,149.6 86.4,195.8 110.7,121 47.1,74.8 125.7,74.8" /&gt;
+        &lt;/mask&gt;
+    &lt/svg &gt;
+
+    &lt;img src="https://source.unsplash.com/SttBW1mTo5w/900x588"
+        alt="" &gt;
+    </big>
+    </pre>
+    
+    <svg>
+        <mask id="mask">
+            <polygon fill="black"
+                points="150,0 174.3,74.8 253,74.8 189.4,121 213.7,195.8 150,149.6 86.4,195.8 110.7,121 47.1,74.8 125.7,74.8" />
+        </mask>
+    </svg>
+
+    <img src="https://source.unsplash.com/SttBW1mTo5w/900x588"
+        alt="" />
+
+    <br>
+    <br>
+    <br>
+    
+</body>
+
+</html>

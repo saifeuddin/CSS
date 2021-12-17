@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible"
+        content="IE=edge">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        /* body {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 100px 50vh auto 1fr;
+        gap: 1em;
+        margin: 0;
+        height: 100vh;
+        font-family: Helvetica, sans-serif;
+        --bg: #eee;
+        } */
+
+        .control {
+        grid-column: 1/-1;
+        grid-row: 1/2;
+        background-color: var(--bg);
+        }
+
+        .control-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        height: 100%;
+        width: 100%;
+        max-width: 37.5rem;
+        padding: 1em;
+        margin: auto;
+        }
+
+        input[type="range"] {
+        display: block;
+        }
+
+        .result {
+        grid-column: 1/-1;
+        grid-row: 2/3;
+        display: flex;
+        justify-content: center;
+        }
+
+        .element-container {
+        height: 100%;
+        border: 2px dashed #ccc;
+        }
+
+        img {
+        display: block;
+        max-width: 100%;
+        }
+
+        .element {
+        height: 100%;
+        max-width: 530px;
+        object-fit: cover;
+        margin: auto;
+        -webkit-mask-image:
+        url(https://i.imgur.com/NAUmQr8.png);
+        mask-image:
+        url(https://i.imgur.com/NAUmQr8.png);
+        -webkit-mask-size: 50vmin;
+        mask-size: 50vmin;
+        -webkit-mask-repeat: no-repeat;
+        mask-repeat: no-repeat;
+        -webkit-mask-position: center;
+        mask-position: center;
+        }
+
+        .code-container {
+        grid-column: 1/-1;
+        grid-row: 3/4;
+        }
+
+
+        .code-container {
+        text-align: center;
+        background-color: #272822;
+        padding: 1.3rem;
+        color: #F8F8F2;
+        text-shadow: 0 1px rgba(0, 0, 0, 0.3);
+        font-family: Consolas, Monaco, 'Andale
+        Mono', monospace;
+        }
+
+        output {
+        display: block;
+        }
+
+        .token-property {
+        color: #F92672;
+        }
+
+        .token-function {
+        color: #E6DB74;
+
+        }
+
+        .token-selector {
+        color: #a6e22e;
+        }
+
+        .source {
+        grid-column: 1/2;
+        grid-row: 4/-1;
+        }
+
+        .mask {
+        grid-column: 2/-1;
+        grid-row: 4/-1;
+        }
+
+        .source,
+        .mask {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--bg);
+        padding: 1em;
+        }
+
+        .source img,
+        .mask img {
+            width: 200px;
+            height: 125px;
+            margin: auto;
+            object-fit: contain;
+        }
+
+        .label {
+        cursor: pointer;
+        }
+
+        .label::after {
+        content: "No Mask";
+        }
+
+        #switch:checked + .label::after {
+        content: "Mask";
+        }
+    </style>
+</head>
+
+
+
+<body>
+    <div
+        style="border: 3px solid black; padding: 20px; margin: 40px 0;">
+        <h1
+            style="background-color: blueviolet; padding: 20px;">
+            ## CSS mask-size Property
+        </h1>
+        <br>
+
+        <p> <b>
+                $$ --
+                In CSS, the mask-size property specifies the size of a mask layer image. In many ways, it works very much like the background-size property.
+            </b>
+        </p>
+        <br>
+        <pre>
+            .element {
+                mask-image: url(star.svg);
+                
+                mask-position: 20px center;
+
+                mask-size: 200px 100px;
+            }
+        </pre>
+        <pre>
+        .element {
+            mask-image: url(image1.png),
+            url(image2.png), url(image3.png);
+            mask-size: 100px 100%, auto, contain;
+        }
+        </pre>
+    </div>
+
+
+    <h2> Property Values</h2>
+    <pre>
+    <big>
+    <b>
+        /* Lengths */
+            mask-size: 200px; 
+                /* width is 200px and height is auto */
+            
+            mask-size: 50% 100%; 
+                /* width is 50% and height is 100% */
+        
+        
+        /* Keywords */
+            mask-size: auto;
+            mask-size: contain;
+            mask-size: cover;
+    </b>
+    </big>
+    </pre>
+    <br>
+    <br>
+
+
+
+
+    <h3>Example :</h3>
+      <div class="control">
+          <div class="control-wrapper">
+              <div>
+                  <input type="checkbox"
+                      id="switch" checked />
+                  <label for="switch"
+                      class="label"></label>
+              </div>
+
+              <input type="range" min="0"
+                  max="100" step="1" value="50">
+          </div>
+      </div>
+
+      <div class="result">
+          <div class="element-container">
+              <img class="element"
+                  src="https://source.unsplash.com/random/1000x652?iran" />
+          </div>
+      </div>
+
+      <output class="code-container"><span
+              class="token-property">mask-size</span>:
+          <span
+              class="token-function">50vmin</span>;</output>
+
+      <div class="source">
+          <img
+              src="https://source.unsplash.com/random/1000x652?iran" />
+      </div>
+
+      <div class="mask">
+          <img src="https://i.imgur.com/NAUmQr8.png"
+              alt="iran">
+      </div>
+
+
+
+
+      <script>
+          var element =
+          document.querySelector('.element'),
+          slider =
+          document.querySelector('input[type="range"]');
+          checkbox =
+          document.querySelector('input[type="checkbox"]');
+          element.style.MaskSize = '50vmin';
+          element.style.webkitMaskSize = '50vmin';
+
+          slider.addEventListener('input',
+          function () {
+          element.style.MaskSize = this.value +
+          'vmin';
+          element.style.webkitMaskSize =
+          this.value + 'vmin';
+          document.querySelector('.token-function').textContent
+          = this.value + 'vmin';
+          }, false);
+
+
+          checkbox.addEventListener('change',
+          function () {
+          if(checkbox.checked) {
+          element.style.MaskImage =
+          'url(https://i.imgur.com/NAUmQr8.png)';
+          element.style.webkitMaskImage =
+          'url(https://i.imgur.com/NAUmQr8.png)';
+          }
+
+          else {
+          element.style.MaskImage = 'none';
+          element.style.webkitMaskImage = 'none';
+          }
+          }, false);
+
+    </script>
+
+</body>
+
+</html>

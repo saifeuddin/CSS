@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        
+    </style>
+</head>
+<body>
+
+        <div
+            style="border: 3px solid black; padding: 20px; margin: 40px 0;">
+            <h1
+                style="background-color: blueviolet; padding: 20px;">
+                ## Css contain Property
+            </h1>
+            <br>
+
+            <p> <b>
+                    $$ --
+                    The contain property in CSS
+                    indicates to the browser that
+                    the element and its
+                    descendants are considered
+                    independent of the document
+                    tree as much as possible. 
+                    <br>
+                    <br>
+                    This potentially provides
+                    performance benefits with
+                    calculations in layout, style,
+                    paint, size, or any
+                    combination for a limited area
+                    of the DOM and not the entire
+                    page.                
+                </b> 
+            </p>
+            <br>
+            <br>
+
+
+
+            <h3>Syntax</h3> 
+            <pre>
+            <big>
+            div {
+                contain: none | strict | content | size | layout | style | paint ;
+            }
+
+
+            div {
+                contain: none;      /* no containment on element */
+                contain: layout;    /* influences how element relates to other   elements in the document */
+                contain: paint;     /* influences how element is painted to screen */
+                contain: size;      /* influences how element affects size     calculations for the page */
+                contain: style;     /* is considered at-risk for removal from spec */
+
+                contain: content;   /* combines layout and paint */
+                contain: strict;    /* combines layout, paint, and size */
+            }
+            </big>
+            </pre>
+        </div>
+
+
+
+        <div
+            style="border: 3px solid black; padding: 20px; margin: 40px 0;">
+            <h2>
+                ## Property values
+            </h2>
+            <br>
+
+            <ul>
+                <li>
+                    Layout: 
+                    <p>
+                        The layout containment
+                        value informs the browser
+                        that none of the element’s
+                        descendants affect other
+                        elements on the page, nor
+                        do those other elements
+                        have any effect on the
+                        descendants of the
+                        contained element. <br>
+                        This allows the browser to
+                        potentially reduce the
+                        number of calculations
+                        necessary when creating
+                        the page layout.
+                    </p>
+                </li>
+                <li>
+                    Paint :
+                    <p>
+                        The paint containment
+                        value informs the browser
+                        that none of the
+                        descendants of the element
+                        will be painted outside of
+                        the border-box of the
+                        element. If a descendant
+                        element is positioned to
+                        have a portion of its
+                        bounding box to be clipped
+                        by the contained element’s
+                        border-box then that
+                        portion shall not be
+                        painted. If a descendant
+                        element is positioned
+                        fully outside the
+                        contained element’s
+                        border-box then it is not
+                        painted at all. This is
+                        similar to applying
+                        overflow: hidden; to the
+                        element, but without the
+                        benefits of skipping or
+                        reducing needed
+                        calculations.
+                    </p>
+                </li>
+                <li>
+                    Size :
+                    <p>
+                        The size containment value
+                        informs the browser that
+                        none of the descendants
+                        need to be considered when
+                        performing layout
+                        calculations for the page.
+                        The contained element must
+                        have height and width
+                        properties applied, or it
+                        will collapse to zero
+                        pixels square. Only the
+                        element itself needs to be
+                        considered for page layout
+                        calculations as
+                        descendants cannot
+                        influence the size of the
+                        element. The contained
+                        element’s descendants are
+                        completely skipped in such
+                        calculations; as if it had
+                        no descendants at all.
+                    </p>
+                </li>
+                <li>
+                    Style:
+                    <p>
+                        The style containment
+                        value informs the browser
+                        that some CSS properties,
+                        such as counters and
+                        quotes, will be scoped to
+                        the contained element.
+                    </p>
+                    <p>
+                        The counter-increment and
+                        counter-set properties
+                        must be scoped to the
+                        contained element’s
+                        sub-tree. If extended
+                        outside the contained
+                        element then a new counter
+                        is created.
+                    </p>
+                    <p>
+                        The content property’s
+                        values of open-quote,
+                        close-quote,
+                        no-open-quote, and
+                        no-close-quote must be
+                        scoped to the contained
+                        element’s sub-tree.
+                    </p>
+                </li>
+                <li>
+                    Content:
+                    <p>
+                        The content containment
+                        value is a combination of
+                        both the layout and paint
+                        containment values. This
+                        is the equivalent of
+                        applying containment in
+                        this manner:
+                    </p>
+                </li>
+                <li>
+                    Strict:
+                    <p>
+                        The strict containment
+                        value is a combination of
+                        the layout, paint, and
+                        size containment values.
+                        This is the equivalent of
+                        applying containment in
+                        this manner:
+                    </p>
+                    <b>
+                        As the “strictest” of the
+                        containment values, this
+                        value should be used with
+                        careful consideration.
+                        This is due to the
+                        dimension requirements it
+                        imposes on the contained
+                        element. With these
+                        requirements, this
+                        containment value does
+                        offer the most potential
+                        performance benefits of
+                        containment.
+                    </b>
+                </li>
+            </ul>
+        </div>
+    
+</body>
+</html>

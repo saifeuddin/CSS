@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible"
+        content="IE=edge">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        .demo {
+            --mouseX: 50;
+            --mouseY: 50;
+            --img-size: 520px;
+
+            display: flex;
+            flex-direction: column;
+            gap: 1em;
+            margin: 0;
+            height: 100vh;
+            font-family: Helvetica, sans-serif;
+
+            border: 1px solid #000;
+        }
+
+        .demo .result {
+            display: flex;
+            justify-content: center;
+
+            flex-grow: 1;
+            height: 100%;
+            min-height: 0;
+            padding: 1em;
+
+            /* border: 1px solid #000; */
+        }
+
+        .element-container {
+            height: 100%;
+            outline: 2px dashed #ccc;
+        }
+
+        img {
+            display: block;
+            max-width: 100%;
+        }
+
+        .element {
+            height: 100%;
+            max-width: var(--img-size);
+            object-fit: cover;
+            margin: auto;
+            cursor: move;
+
+            -webkit-mask-image: url(https://i.imgur.com/NAUmQr8.png);
+            mask-image: url(https://i.imgur.com/NAUmQr8.png);
+            -webkit-mask-size: 200px;
+            mask-size: 200px;
+            -webkit-mask-repeat: no-repeat;
+            mask-repeat: no-repeat;
+            -webkit-mask-position: calc(var(--mouseX)* 1%) calc(var(--mouseY) * 1%);
+            mask-position: calc(var(--mouseX) * 1%)calc(var(--mouseY) * 1%);
+        }
+
+
+
+
+
+        .code-container {
+            font-size: calc(16px + 6 * ((100vw - 320px) / 680));
+            text-align: center;
+            background-color: #272822;
+            padding: 1.3rem;
+            color: #F8F8F2;
+            text-shadow: 0 1px rgba(0, 0, 0, 0.3);
+            font-family: Consolas, Monaco, 'Andale Mono', monospace;
+        }
+
+        output {
+            display: block;
+        }
+
+        .token-property {
+            color: #F92672;
+        }
+
+        .token-function {
+            color: #E6DB74;
+        }
+
+        .token-selector {
+            color: #a6e22e;
+        }
+
+
+
+
+
+        .demo .shadow-wrapper {
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-grow: 1;
+            min-height: 0;
+            padding: 1em;
+        }
+
+        .shadow {
+            height: 100%;
+            background-image: url(https://i.imgur.com/NAUmQr8.png),url(https://source.unsplash.com/random/1000x652?iran);
+            background-size: 200px auto, cover;
+            background-repeat: no-repeat;
+            background-position: calc(var(--mouseX) *1%) calc(var(--mouseY) * 1%), 0 0;
+            cursor: move;
+        }
+
+        .shadow img {
+            height: 100%;
+            max-width: var(--img-size);
+            opacity: 0;
+            visibility: hidden;
+            pointer-events: none;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div
+        style="border: 3px solid black; padding: 20px; margin: 40px 0;">
+        <h1
+            style="background-color: blueviolet; padding: 20px;">
+            ## CSS mask-position Property
+        </h1>
+        <br>
+
+        <p> <b>
+                $$ --
+                In CSS, the mask-position property
+                specifies the initial position of
+                a mask layer image relative to the
+                mask position area. It works like
+                the background-position property.
+            </b>
+        </p>
+        <br>
+        <pre>
+            .element {
+                mask-image: url(star.svg);
+                
+                mask-position: 20px center;
+            }
+            </pre>
+    </div>
+
+
+    <h2> Property Values</h2>
+    <pre>
+    <big>
+    <b>
+        /* Offset keywords */
+            mask-position: top;
+            mask-position: right;
+            mask-position: bottom;
+            mask-position: left;
+            mask-position: center;
+
+        /* Length values */
+            mask-position: 100px 200px;
+            mask-position: 5rem 20%;
+            mask-position: 0 10vh;
+        
+        /* Percentage values */
+            mask-position: 25% 50%;
+    </b>
+    </big>
+    </pre>
+    <br>
+    <br>
+
+    <h3>Example :</h3>
+        <div class="demo">
+            <div class="result">
+                <div class="element-container">
+                    <img movable class="element" src="https://source.unsplash.com/random/1000x652?iran" />
+                </div>
+            </div>
+
+            <output class="code-container">
+                <span class="token-property">mask-position </span>:
+                <span class="token-function"> 50% 50%</span>;
+            </output>
+
+            <div class="shadow-wrapper">
+                <div movable class="shadow">
+                    <img src="https://source.unsplash.com/random/1000x652?iran" />
+                </div>
+            </div>
+        </div>
+
+
+        
+    <script>
+        var element = document.querySelector('.element'),
+        demo = document.querySelector('.demo'),
+        shadow = document.querySelector('.shadow'),
+        slider = document.querySelector('input[type="range"]'),
+        checkbox = document.querySelector('input[type="checkbox"]'),
+        shadowWidth = 0,
+        shadowHeight = 0;
+
+        element.addEventListener('load',function() {
+            shadowWidth = shadow.offsetWidth;
+            shadowHeight = shadow.offsetHeight;
+        });
+
+        document.addEventListener('pointermove',function (e) {
+            if (e.target.hasAttribute('movable')) {
+                demo.style.setProperty('--mouseX', e.offsetX/shadowWidth*100);
+                demo.style.setProperty('--mouseY', e.offsetY/shadowHeight*100);
+
+                document.querySelector('.token-function').textContent = Math.round(e.offsetX/shadowWidth*100) + '%' +' '+
+                Math.round(e.offsetY/shadowHeight*100) +'%';
+            }
+        });
+    </script>
+
+
+</body>
+
+</html>

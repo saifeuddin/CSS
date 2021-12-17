@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible"
+        content="IE=edge">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <style>
+        .img {
+        display: block;
+        width: 100%;
+        mask-position: center;
+        mask-repeat: no-repeat;
+        mask-size: 50%;
+        -webkit-mask-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/sun.svg);
+        mask-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/sun.svg);
+        -webkit-mask-mode: alpha;
+        mask-mode: alpha;
+        }
+
+
+        .img1 {
+          display: block;
+          width: 100%;
+          mask-position: center;
+          mask-repeat: no-repeat;
+          mask-size: 100% 100%;
+          -webkit-mask-image:
+          linear-gradient(to bottom,
+          #009485 20%, #fff 20%, #fff 40%, #f44034
+          40%, #f44034 60%, #000 60%, #000 80%,
+          #2196f3 0);
+          mask-image: linear-gradient(to bottom,
+          #009485 20%, #fff 20%, #fff 40%, #f44034
+          40%, #f44034 60%, #000 60%, #000 80%,
+          #2196f3 0);
+          -webkit-mask-mode: luminance;
+          mask-mode: luminance;
+          }
+
+
+
+          @supports not (mask-mode: luminance) {
+          body {
+          padding-top: 2em;
+          }
+
+          body::before {
+          content: "Your browser doesn't support mask-mode property";
+          display: block;
+          color: #e43;
+          font-weight: bold;
+          position: fixed;
+          top: 0;
+          left: 0;
+          right: 0;
+          z-index: 1;
+          line-height: 2em;
+          text-align: center;
+          }
+          }
+
+    </style>
+   
+</head>
+
+<body>
+    <div
+        style="border: 3px solid black; padding: 20px; margin: 40px 0;">
+        <h1
+            style="background-color: blueviolet; padding: 20px;">
+            ## CSS mask-mode Property
+        </h1>
+        <br>
+
+        <p> <b>
+                $$ --
+                The mask-mode CSS property
+                indicates whether the CSS mask
+                layer image is treated as an alpha
+                mask or a luminance mask.
+            </b>
+        </p>
+        <br>
+
+        <pre>
+            .element {
+                mask-image: url(star.svg);
+                
+                mask-position: 20px center;
+
+                mask-size: 20px;
+
+                mask-repeat: repeat;
+
+                mask-origin: content-box;
+
+                mask-clip: padding-box;
+
+                mask-mode: alpha;
+            }
+            </pre>
+        <br>
+        <br>
+        <pre>
+            .element {
+                mask-image: url(image1.png), url(image2.png), url(image3.png);
+                mask-mode: luminance, alpha, match-source;
+            }
+            </pre>
+    </div>
+
+
+    <h2> Property Values</h2>
+    <pre>
+    <big>
+    <b>
+            /* Keyword values */
+            mask-mode: alpha;
+                specifies that the alpha values (alpha channel) of the mask 
+                layer image should be used as the mask values.
+
+
+            mask-mode: luminance;
+                specifies that the luminance values of the mask image should be used as the mask values.
+
+
+            mask-mode: match-source;
+                the default value, which sets the mask mode to alpha if the mask reference 
+                of the mask-image property is a CSS &lt;image&gt; element like an image URL
+                or a gradient. However, if the mask reference of the mask-image property 
+                is an SVG mask element, the value specified by the referenced mask element’s 
+                mask-type property must be used.
+    </b>
+    </big>
+    </pre>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <h3>Example :</h3>
+    <br>
+    <br>
+
+
+    <b>
+        mask-mode: alpha;
+    </b>
+    <img class="img" src="https://images.unsplash.com/photo-1490735891913-40897cdaafd1?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1350&q=80" alt="">
+    <br>
+    <br>
+    <br>
+    <br>
+    <b>
+        mask-mode: luminance;
+    </b>
+    <br>
+    <br>
+    <b> Open in firefox</b>
+    <img class="img1" src="https://images.unsplash.com/photo-1527126887308-6cdf83c7d844?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1950&q=80"  alt="Nasir al-Mulk Mosque in Iran">
+    <br>
+
+    <img src="mode.jpg" alt="">
+
+
+    <script>
+        var element =
+            document.querySelector('.element');
+        var buttons =
+            document.querySelectorAll('button');
+
+        document.addEventListener('click',
+            function (e) {
+                if (e.target.matches(
+                    'button')) {
+                    buttons.forEach(function (
+                        ele) {
+                        ele.classList
+                            .remove(
+                                'selected'
+                                );
+                    });
+                    e.target.classList.add(
+                        'selected');
+                    element.style.MaskClip =
+                        e.target.getAttribute(
+                            'data-clip');
+                    element.style
+                        .webkitMaskClip =
+                        e.target.getAttribute(
+                            'data-clip');
+                }
+            })
+
+
+        checkbox =
+            document.querySelector('#checkbox');
+
+        checkbox.addEventListener('change',
+            function () {
+                if (checkbox.checked) {
+                    element.style.MaskRepeat =
+                        'repeat';
+                    element.style
+                        .webkitMaskRepeat =
+                        'repeat';
+                } else {
+                    element.style.MaskRepeat =
+                        'no-repeat';
+                    element.style
+                        .webkitMaskRepeat =
+                        'no-repeat';
+                }
+            }, false);
+    </script>
+</body>
+
+</html>

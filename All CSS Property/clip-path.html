@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+
+            <h1>CSS clip-path Property</h1>
+                <h3>Example</h3>
+                <pre>
+        img{
+            clip-path: circle 50%;
+        }
+                </pre>
+
+            <br>
+                
+            
+            <h2>Definition and Usage </h2>
+                    <p> 
+                        The clip-path property lets you clip an element to a basic shape or to an SVG source.
+                    </p> 
+                    <b>Note: The clip-path property will replace the deprecated clip property.</b> 
+            <br>
+            <br>
+
+
+                <h2> Syntax </h2>
+                    <pre>
+        clip: clip-source     |basic-shape    |margin-box     |border-box |padding-box    |content-box    |fill-box   |stroke-box    |view-box   |none  |initial  |inherit;
+                    </pre>
+                <br>
+
+
+
+                <h2>Property Values</h2>
+                    <ol>
+                        <li>clip-source 
+                            <p>Defines a URL to an SVG  &lt;clippath&gt; element</p>
+                        </li>
+                        <br>
+                        <li>basic-shape
+                            <p>Clips element to an basic shape: circle, ellipse, polygon or inset</p>
+                        </li>
+                        <br>
+                        <br>
+                        <li>margin-box 
+                            <p>Use margin box as the reference box</p>
+                        </li>
+                        <li>border-box 
+                            <p>Use border box as the reference box</p>
+                        </li>
+                        <li>padding-box 
+                            <p>Use padding box as the reference box</p>
+                        </li>
+                        <li>content-box 
+                            <p>Use content box as the reference box</p>
+                        </li>
+                        <br>
+                        <br>
+                        <li>fill-box 
+                            <p>Uses the object bounding box as reference box </p>
+                        </li>
+                        <li>stroke-box 
+                            <p>Uses the stroke bounding box as reference box </p>
+                        </li>
+                        <li>view-box 
+                            <p>Use SVG viewport as the reference box</p>
+                        </li>
+                    </ol>
+                    <br>
+
+
+                    <h3>Example :</h3>
+                    <pre>
+                    <big>
+        .clip-me {
+        
+        /* Example: clip away the element from the top, right, bottom, and left edges */
+            clip-path: inset(10px 20px 30px 40px); 
+        /* or "none" */
+
+        
+        /* Example: clip element into a Heptagon */
+            clip-path: polygon(50% 0%, 90% 20%, 100% 60%, 75% 100%, 25% 100%, 0% 60%, 10% 20%);
+
+
+        /* Deprecated version */
+        /* absolute or fixed positioning required */
+            position: absolute; 
+            clip: rect(110px, 160px, 170px, 60px); 
+        /* or "auto" */
+        /* values descript a top/left point and bottom/right point */
+        } 
+                    </big>
+                    </pre>
+
+
+
+    <img src="Screenshot_3.jpg" alt="">
+    <img src="Screenshot_4.jpg" alt="">
+
+
+</body>
+</html>

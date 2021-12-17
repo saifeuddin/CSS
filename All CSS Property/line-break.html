@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        p.a{
+            line-break: auto;
+            /* line-break: loose; */
+            /* line-break: normal; */
+            /* line-break: strict; */
+            /* line-break: anywhere; */
+        }
+
+    </style>
+</head>
+<body>
+    
+
+
+
+
+
+        
+    <h1>CSS line-break Property </h1>
+    <p>
+        The CSS line-break property defines how strictly to enforce rules for wrapping text wrapping on new lines,
+        particularly when working with symbols and punctuations in Chinese, Japanese or Korean (CJK) writing systems. It
+        is included in the CSS Text Module Level 3 specification, which is currently in Editor’s Draft.
+    </p>
+
+
+
+    <h2>Syntax</h2> 
+        <pre>
+            line-break: auto | loose | normal | strict | anywhere;
+        </pre>
+
+
+
+    <h2>Values </h2>    
+        <ul>
+            <li>auto</li>
+            <br>
+            <li>normal
+                <p>
+                    normal: This breaks lines of text based on the “most common” set of rules. (Note that there is no
+                    definition provided about what the most common set of rules is or what it might contain.)
+                </p>
+            </li>
+            <li>loose 
+                <p>
+                    loose: This is the lightest enforcement of line breaking rules. The spec cites short lines of text,
+                    like ones we might see in a newspaper, as an example where this value might be used.
+                </p>
+            </li>
+            <li>strict 
+                <p>
+                    strict: This enforces the strictest set of rules for line breaks.
+                </p>
+            </li>
+            <li>anywhere
+                <p>
+                    anywhere: This value enables soft wrap opportunities, which allow text to break at spaces or
+                    punctuation instead of the word boundary alone. It’s ideal for languages that might not use spaces
+                    or punctuation to separate words. The spec says that CSS does not define soft wrap opportunities,
+                    and this value recognizes and leverages them to apply line breaking rules. The spec describes the
+                    text wrapping behavior like what we typically see in a terminal.
+                </p>
+            </li>
+        </ul>
+
+
+
+
+        <h3>Example </h3>
+        <p class="a">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit reprehenderit laboriosam minima excepturi cum ea quidem ratione optio a adipisci quae molestias, nihil quod aut qui, officia iste ad ullam est aspernatur velit odit labore reiciendis amet. Delectus quibusdam quae quos mollitia quidem veniam dolorum magni, ab nisi adipisci eligendi veritatis tempora. Atque cumque aliquam quod, rerum qui blanditiis obcaecati dolore in eveniet numquam. Nulla accusantium odio facere quis aperiam similique veniam perspiciatis doloremque debitis esse fugit autem dolores architecto nemo omnis exercitationem voluptatibus ut temporibus blanditiis, adipisci cumque. Ipsam, laboriosam. Quia architecto porro illo, mollitia reprehenderit nisi vitae odio molestiae excepturi veritatis cupiditate, nostrum distinctio ab nam labore alias ipsa voluptas. Sapiente labore in illum et tempore quaerat facere, nobis temporibus dolor aut, recusandae possimus voluptatibus. Inventore sunt veritatis ipsa beatae nobis. Aliquid aut, et iste modi, reprehenderit ad quidem porro maiores officiis veritatis sint odio repudiandae ipsa deleniti cupiditate facere nisi assumenda impedit maxime laboriosam? Totam aperiam unde mollitia ipsa, laudantium ipsam obcaecati expedita nesciunt quis, velit tenetur, alias recusandae delectus quaerat temporibus tempora odio asperiores ullam illo vel porro incidunt at libero nihil. Iste unde in, iusto sit fugit libero inventore quod enim tempore modi, vitae distinctio!
+        </p>
+</body>
+</html>

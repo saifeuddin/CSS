@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible"
+        content="IE=edge">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+        box-sizing: border-box;
+        }
+
+        body {
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+        }
+
+        .demo {
+        --img-size: 100%;
+        --gap: 40px;
+        position: relative;
+        flex: 1;
+        }
+
+        img {
+        display: block;
+        width: 100%;
+        max-width: 100%;
+        }
+
+        .element {
+        height: 100%;
+        max-width: var(--img-size);
+        background-size: cover;
+        background-image:
+        url(https://source.unsplash.com/random/1000x652?iran);
+        background-size: cover;
+        background-clip: border-box;
+        background-origin: border-box;
+        background-repeat: no-repeat;
+        pointer-events: none;
+
+        
+        -webkit-mask-image:
+        url(https://i.imgur.com/NAUmQr8.png);
+        mask-image:
+        url(https://i.imgur.com/NAUmQr8.png);
+        -webkit-mask-size: 30vw;
+        mask-size: 30vw;
+        -webkit-mask-repeat: no-repeat;
+        mask-repeat: no-repeat;
+        -webkit-mask-position: 0 0;
+        mask-position: 0 0;
+        -webkit-mask-clip: content-box;
+        mask-clip: content-box;
+
+
+
+        padding: var(--gap);
+        border: var(--gap) solid transparent;
+        }
+
+        .shadow {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        opacity: .2;
+        background-clip: content-box;
+        background-origin: content-box;
+        width: var(--img-size);
+        background-image:
+        url(https://source.unsplash.com/random/1000x652?iran);
+        background-size: cover;
+        background-repeat: no-repeat;
+        }
+
+        .shadow::after {
+        box-sizing: border-box;
+        content: " ";
+        position: absolute;
+        top: var(--gap);
+        left: var(--gap);
+        right: var(--gap);
+        bottom: var(--gap);
+
+        border: var(--gap) solid hsla(0, 0%, 0%,
+        .7);
+        box-shadow: 0 0 0 var(--gap) hsl(0, 100%,
+        50%, .7);
+        }
+
+        .controls {
+        display: flex;
+        gap: 1px;
+        }
+
+        button {
+        flex: 1;
+        padding: 1em 0;
+        border: 0;
+        outline: transparent;
+        background-color: #424242;
+        color: #fff;
+        cursor: pointer;
+        font-weight: bold;
+        }
+
+        button:hover {
+        background-color: #212121;
+        }
+
+        button.selected {
+        background-color: #ff8a00;
+        }
+
+
+
+        .toggle {
+        position: absolute;
+        bottom: 30px;
+        left: 30px;
+        display: inline-flex;
+        box-sizing: border-box;
+        font-size: .5em;
+        gap: 1em;
+        align-items: center;
+        }
+
+        .toggle span {
+        display: inline-block;
+        position: relative;
+        box-sizing: border-box;
+        cursor: pointer;
+        width: 5em;
+        height: 3em;
+        border-radius: 1.5em;
+        background: #f8f8f8;
+        box-shadow: inset 0 0 0 0px #13bf11, 0 0 0
+        0.1875em #dddddd;
+        transition: 0.25s ease-in-out;
+        }
+
+        .toggle span:before {
+        content: "";
+        display: block;
+        position: absolute;
+        width: 3em;
+        height: 3em;
+        border-radius: 1.5em;
+        background: #fff;
+        box-shadow: 0 0.375em 0.375em rgba(0, 0,
+        0, 0.2), 0 0 0 0.1875em #dddddd;
+        transition: 0.25s ease-in-out;
+        }
+
+        .toggle input {
+        position: absolute;
+        top: 0;
+        left: 0;
+        box-sizing: border-box;
+        height: 100%;
+        width: 100%;
+        margin: 0;
+        border: none;
+        z-index: 1;
+        cursor: pointer;
+        -moz-appearance: none;
+        -webkit-appearance: none;
+        opacity: 0.001;
+        }
+
+        .toggle input:focus {
+        outline: none;
+        }
+
+        .toggle input:checked + span {
+        box-shadow: inset 0 0 0 1.5em #13bf11, 0 0
+        0 0.1875em #13bf11;
+        }
+
+        .toggle input:checked + span:before {
+        transform: translateX(2em);
+        box-shadow: 0 0 0 0.1875em transparent, 0
+        0.375em 0.375em rgba(0, 0, 0, 0.3);
+        }
+
+        .toggle label {
+        font-size: 16px;
+        }
+    </style>
+</head>
+
+<body>
+    <div
+        style="border: 3px solid black; padding: 20px; margin: 40px 0;">
+        <h1
+            style="background-color: blueviolet; padding: 20px;">
+            ## CSS mask-clip Property
+        </h1>
+        <br>
+
+        <p> <b>
+                $$ --
+                The mask-origin specifies the mask
+                position area of a mask layer
+                image. In other words, it defines
+                where the origin of the mask layer
+                image is, whether it’s the edge of
+                the border, padding or content
+                box.
+            </b>
+        </p>
+        <br>
+
+        <pre>
+            .element {
+                mask-image: url(star.svg);
+                
+                mask-position: 20px center;
+
+                mask-size: 20px;
+
+                mask-repeat: repeat;
+
+                mask-origin: content-box;
+
+                mask-clip: padding-box;
+            }
+            </pre>
+        <br>
+        <br>
+        <pre>
+            .element {
+                mask-image: url(image1.png), url(image2.png), url(image3.png);
+                mask-clip: padding-box, border-box, content-box;
+            }
+            </pre>
+    </div>
+
+
+    <h2> Property Values</h2>
+    <pre>
+    <big>
+    <b>
+            /* Keywords */
+            mask-clip: content-box;
+
+            mask-clip: padding-box;
+
+            mask-clip: border-box;
+
+            mask-clip: margin-box;
+
+
+            mask-clip: fill-box;
+                The painted content is clipped to the object bounding box.
+                
+                
+            mask-clip: stroke-box;
+                The painted content is clipped to the stroke bounding box.
+
+
+            mask-clip: view-box
+                Uses the nearest SVG viewport as reference box. If a viewBox attribute is specified for the SVG viewport creating element:
+                The reference box is positioned at the origin of the coordinate system established by the viewBox attribute.
+                The dimension of the reference box is set to the width and height values of the viewBox attribute.
+
+
+            no-clip: The painted content is not clipped.
+    </b>
+    </big>
+    </pre>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <h3>Example :</h3>
+    <div class="controls">
+        <button data-clip="content-box"
+            class="selected">content-box</button>
+        <button
+            data-clip="padding-box">padding-box</button>
+        <button
+            data-clip="border-box">border-box</button>
+    </div>
+    <div class="demo">
+        <div class="element"></div>
+        <div class="shadow"></div>
+        <div class="toggle">
+            <input id="checkbox"
+                type="checkbox" />
+            <span></span>
+            <label for="checkbox">Repeat</label>
+        </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+
+
+
+    <script>
+        var element =
+        document.querySelector('.element');
+        var buttons =
+        document.querySelectorAll('button');
+
+        document.addEventListener('click',
+        function (e) {
+        if(e.target.matches('button')) {
+        buttons.forEach(function(ele) {
+        ele.classList.remove('selected');
+        });
+        e.target.classList.add('selected');
+        element.style.MaskClip =
+        e.target.getAttribute('data-clip');
+        element.style.webkitMaskClip =
+        e.target.getAttribute('data-clip');
+        }
+        })
+
+
+        checkbox =
+        document.querySelector('#checkbox');
+
+        checkbox.addEventListener('change',
+        function () {
+        if(checkbox.checked) {
+        element.style.MaskRepeat = 'repeat';
+        element.style.webkitMaskRepeat = 'repeat';
+        }
+        else {
+        element.style.MaskRepeat = 'no-repeat';
+        element.style.webkitMaskRepeat =
+        'no-repeat';
+        }
+        }, false);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible"
+        content="IE=edge">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .hy{
+                -webkit-hyphens: auto;
+                -ms-hyphens: auto;
+                hyphens: auto;
+
+                -ms-hyphenate-limit-chars: 10 3 4;
+                -webkit-hyphenate-limit-chars: 1 3 4;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <h1>CSS hyphenate-limit-chars Property </h1>
+    <br>
+    <h2>Definition and Usage</h2>
+    <p>
+        The hyphenate-limit-chars property in CSS
+        tells the browser how many characters a
+        word should be before it’s hyphenated, as
+        well as the minimum number of characters
+        before and after the hyphen. This way, we
+        can avoid awkward hyphenations, giving us
+        an extra degree of control when it comes
+        to how words flow from line to line.
+    </p>
+    <br>
+    <br>
+
+
+
+    <h3> Example</h3>
+    <pre>
+        .element {
+            hyphens: auto;
+            hyphenate-limit-chars: 10 3 4;
+        }
+
+    <b>
+        In the CSS example above, the declaration indicates to the
+        browser that it should hyphenate only words of 10 
+        characters or more and, when it does, three is the minimum
+        number of characters before the hyphen and four is the 
+        minimum after the hyphen. Note that hyphens: auto; is only 
+        needed if the hyphens: none; has been set somewhere else in 
+        the stylesheet so that hyphenation is enabled.
+    </b>
+    </pre>
+
+
+
+    <br>
+    <h2>CSS Syntax</h2>
+    <pre>
+        hyphenate-limit-chars: auto | integer{1,3} 
+    </pre>
+
+
+
+    <br>
+    <h2>Property Values</h2>
+    <ol>
+        <li>auto</li>
+        <br>
+        <li>
+            integer
+        </li>
+    </ol>
+    <pre>
+    <big>
+    hyphenate-limit-chars: auto;
+    hyphenate-limit-chars: 8 2 4;
+    hyphenate-limit-chars: 8 2; /* 8 2 auto */
+    hyphenate-limit-chars: 8; /* 8 auto auto */
+    </big>
+    </pre>
+
+
+    <h3>Example :</h3>  
+        <p class="hy"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim soluta velit eligendi voluptatem, quisquam sint expedita, veniam accusamus, praesentium explicabo fugiat? Alias optio exercitationem architecto impedit laudantium nobis at et. Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias exercitationem est aspernatur natus iusto animi, reiciendis itaque id aperiam. Totam odio eius temporibus autem quo reiciendis impedit vitae minima? Esse!</p>
+
+
+</body>
+
+</html>

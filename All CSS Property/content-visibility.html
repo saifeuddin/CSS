@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible"
+        content="IE=edge">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+    </style>
+</head>
+
+<body>
+
+    <div
+        style="border: 3px solid black; padding: 20px; margin: 40px 0;">
+        <h1
+            style="background-color: blueviolet; padding: 20px;">
+            ## Css content-visibility Property
+        </h1>
+        <br>
+
+        <p> <b>
+                $$ --
+                The content-visibility property in
+                CSS indicates to the browser
+                <mark>
+                    whether or not an element’s
+                    contents should be rendered at
+                    initial load time. 
+                </mark>
+                So, as the
+                browser starts loading content and
+                is playing it on the screen. <br> <br>
+                This
+                property allows us to step in and
+                tell the browser not to load the
+                contents of an element until it’s
+                needed. Think of it sort of like
+                lazy loading in the sense that an
+                off-screen element’s children are
+                not rendered until they enter the
+                viewport.
+                <br>
+            </b>
+        </p>
+        <br>
+        <br>
+
+
+
+        <h3>Syntax</h3>
+        <pre>
+            <big>
+            content-visibility: visible | auto | hidden;
+
+            </big>
+            </pre>
+    </div>
+
+
+
+    <div
+        style="border: 3px solid black; padding: 20px; margin: 40px 0;">
+        <h2>
+            ## Property values
+        </h2>
+        <br>
+
+
+        <p>
+            The content-visibility property
+            accepts one of three values:
+        </p>
+        <ul>    
+            <li>
+                hidden:
+                <p>
+                    The element bypasses its
+                    contents (kind of similar to
+                    applying display: none; to the
+                    contents).
+                </p>
+            </li>
+            <li>
+                visible :
+                <p>
+                    There is no effect and the
+                    element is rendered as normal.
+                </p>
+            </li>
+            <li>
+                auto: 
+                <p>
+                    The element has layout,
+                    style, and paint containment.
+                    The browser gets to determine
+                    if this content is relevant to
+                    the user and, if it isn’t,
+                    then the browser will skip it.
+                    At the same time, the element
+                    is still focusable, selectable
+                    and accessible to things like
+                    tabbing and in-page search.
+                </p>
+            </li>
+        </ul>
+    </div>
+
+
+
+
+    <div
+        style="border: 3px solid black; padding: 20px; margin: 40px 0;">
+        <h1>
+            ## The contain-intrinsic-size property
+        </h1>
+        <br>
+
+        <p> <b>
+                $$ --
+            </b>
+            However, content-visibility: auto;,
+            when applied to an element, treats the
+            element as though it has an height of
+            0 (assuming the height property was
+            not explicitly set). When the user
+            scrolls and the element comes into
+            view (and the browser starts to paint
+            it), the actual height is calculated
+            and this causes a layout shift on the
+            page. Scrolling might make the webpage
+            a little janky too — something known
+            as Cumulative Layout Shift (CLS) which
+            is considered a big deal for search
+            engine optimization, as Google now
+            includes it in its Core Web Vitals
+            metrics for measuring the performance
+            of a site. <br> <br> <br>
+            <b>
+                The solution to big layout shifts
+                is to pair content-visibility:
+                auto; with contain-intrinsic-size,
+                giving the browser a predictable
+                height to use as a placeholder for
+                the element when it paints.
+            </b>
+            <pre>
+            <big>
+            .off-screen-parent {
+                content-visibility: auto;
+                contain-intrinsic-size: 4800px; 
+                    /* A guess at the height of it */
+            }
+            </big>
+            </pre>
+            <br>
+
+            <p>
+                contain-intrinsic-size acts as a
+                placeholder for the
+                not-yet-rendered content. Thereby
+                curbing the scroll and layout
+                shift issues. So if you know the
+                exact height, you can use that as
+                the value. If not, make an
+                estimate. When the section is
+                being rendered, if the height you
+                set is not the actual height, then
+                there will be a little layout
+                shift but it will not be as
+                pronounced as without the
+                contain-intrinsic-size property.
+            </p>
+        </p>
+    </div>
+
+</body>
+
+</html>

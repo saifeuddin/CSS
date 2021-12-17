@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+
+            <h1>CSS counter-increment Property </h1>
+                <h3>Example</h3>
+                    <pre>
+                        body {
+                        /* Set "my-sec-counter" to 0 */
+                        counter-reset: my-sec-counter;
+                        }
+
+                        h2::before {
+                        /* Increment "my-sec-counter" by 1 */
+                        counter-increment: my-sec-counter;
+                        content: "Section " counter(my-sec-counter) ". ";
+                        }
+                    </pre>
+                <h2>Definition and Usage </h2>
+                    <p>
+                        The counter-increment property increases or decreases the value of one or more CSS counters.
+                    </p>
+                    <b>The counter-increment property is usually used together with the counter-reset property and the
+                        content property.</b>
+                <br>
+                <br>
+
+
+
+                <h2>Syntax</h2> 
+                    <pre>
+            counter-increment: none | id | initial| inherit;
+                    </pre>
+                <br>  
+                <br>
+                
+                
+
+                <h2>Values </h2>
+                    <ol>
+                        <li>none</li>
+                        <br>
+                        <li>id number 
+                            <p>
+                                The id defines which counter to increment. The number sets how much the counter will
+                                increment on each occurrence of the selector. The default increment is 1. Negative
+                                values are allowed. If id refers to a counter that has not been initialized by
+                                counter-reset, the default initial value is 0
+                            </p>
+                        </li>
+                    </ol>
+                <br>
+                <br>
+
+
+
+                <h3>More Example</h3>
+                <pre>
+                body {
+                /* Set "my-sec-counter" to 0 */
+                    counter-reset: my-sec-counter;
+                }
+
+                h2::before {
+                /* Decrement "my-sec-counter" by 1 */
+                    counter-increment: my-sec-counter -1;
+                    content: "Section " counter(my-sec-counter) ". ";
+                }
+                </pre>
+                <br>
+
+
+                <pre>
+                body {
+                /* Set "section" to 0 */
+                    counter-reset: section;
+                }
+
+                h1 {
+                /* Set "subsection" to 0 */
+                    counter-reset: subsection;
+                }
+
+                h1::before {
+                /* Increment "section" by 1 */
+                counter-increment: section;
+                content: "Section " counter(section) ": ";
+                }
+
+                h2::before {
+                /* Increment "subsection" by 1 */
+                counter-increment: subsection;
+                content: counter(section) "." counter(subsection) " ";
+                }
+                </pre>
+                <br>
+
+                
+                <pre>
+                body {
+                    /* Set "my-sec-counter" to 0 */
+                    counter-reset: my-sec-counter;
+                }
+                h2::before {
+                /* Increment "my-sec-counter" by 1 */
+                    counter-increment: my-sec-counter;
+                    content: counter(my-sec-counter, upper-roman) ". ";
+                }
+                </pre>
+
+</body>
+</html>

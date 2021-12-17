@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible"
+        content="IE=edge">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .article {
+            counter-reset : section;
+        }
+
+        .article section h1:first-of-type::before {
+            counter-set: section 100 section2 101;
+        }
+
+
+        .article section h1{
+            counter-set: section2 102;
+        }
+
+        
+        .article section h1{
+            counter-reset: section2;
+        }
+
+        .article section h1::before{
+            counter-increment: section;
+
+            content: counter(section) '.' counter(section2) ' :';
+        }
+
+        .article section h2::before{
+            counter-increment: section2;
+
+            content: counter(section)"." counter(section2) ' : ';
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <div
+        style="border: 3px solid black; padding: 20px; margin: 40px 0;">
+        <h1
+            style="background-color: blueviolet; padding: 20px;">
+            ## Css counter-set Property
+        </h1>
+        <br>
+
+            <b>$$ --
+                The counter-set CSS property, true
+                to its name, sets the starting
+                value for a CSS counter.
+            </b>
+            <h3>Example</h3>
+            <pre>
+            .article {
+                counter-reset : section;
+            }
+
+            .article section h1:first-of-type::before {
+                    counter-set: section 100;
+            }
+
+            .article section h1{
+                counter-reset: section2;
+            }
+
+            .article section h1::before{
+                counter-increment: section;
+
+                content: counter(section) '.'
+                counter(section2) ' :';
+            }
+
+            .article section h2::before{
+                counter-increment: section2;
+
+                content: counter(section)"."
+                counter(section2) ' : ';
+            }
+            </pre>
+            <br>
+            <div class="article">
+                <section>
+                    <h1> Lorem ipsum dolor sit amet.</h1>
+                    <h2>Lorem, ipsum dolor.</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate rerum fugiat nesciunt laboriosam pariatur consectetur modi odio, distinctio inventore possimus labore nam exercitationem expedita sequi earum autem explicabo sit corporis?
+                    </p>
+
+
+                    <h1> Lorem ipsum dolor sit
+                        amet.</h1>
+                    <h2>
+                        Lorem, ipsum dolor.
+                    </h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit vel repellat, dolores iste, id consectetur alias incidunt, impedit aliquid assumenda a! Modi sed distinctio eligendi beatae et sunt quasi eius!</p>
+                </section>
+            </div>
+        </div>
+
+            <br>
+            <br>
+            <br>
+
+
+
+
+
+        <h3>More Example</h3>
+        <pre>
+            /* Set "awesome-counter" to 0 */
+        counter-set: awesome-counter;
+
+
+            /* Set "awesome-counter" to -10 */
+        counter-set: awesome-counter -10;
+
+
+            /* Set "awesome1" to 0, and "awesome2" to 2 */
+        counter-set: awesome1 awesome2 2;
+
+
+            /* Wipe out any other settings that may have been declared elsewhere */
+        counter-set: none;
+        </pre>
+                       
+
+</body>
+
+</html>

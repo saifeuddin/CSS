@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+        <h1>CSS image-rendering Property </h1>  
+            <p>
+                The image-rendering property defines how the browser should render an image if it is scaled up or down
+                from its original dimensions. By default, each browser will attempt to apply aliasing to this scaled
+                image in order to prevent distortion, but this can sometimes be a problem if we want the image to
+                preserve its original pixelated form.
+            </p>
+            <pre>
+                img {
+                    image-rendering: auto;
+                    image-rendering: crisp-edges;
+                    image-rendering: pixelated;
+                }
+            </pre>
+
+
+            <br>
+            <br>
+            <h2>Values   </h2>  
+                <ol>
+                    <li>
+                        auto 
+                        <p>
+                            auto: default value that uses the browser’s standard algorithm to maximize the appearance of
+                            an image.
+                        </p>
+                    </li>
+                    <li>crisp-edges:
+                        <p>
+                            The contrast, colors and edges of the image will be preserved without any
+                            smoothing or blurring. According to the spec this was specifically intended for pixel art.
+                            This value applies to images scaled up or down.
+                        </p>
+                    </li>
+                    <li>pixelated 
+                        <p>
+                            As the image changes size the browser will preserve its pixelated style by using
+                            nearest-neighbour scaling. This value only applies to images that are scaled up.
+                        </p>
+                    </li>
+                </ol>
+                <img src="rendering.jpg" alt="">
+
+
+
+                <br>
+                <br>
+                <p>
+                    This property can be applied to
+                    <b>
+                        background-images, canvas elements as well inline images. 
+                    </b>
+                    It’s
+                    important to note however that testing these values at this time is particularly confusing because
+                    of the lack of consistent browser support.
+                </p>
+
+
+</body>
+</html>

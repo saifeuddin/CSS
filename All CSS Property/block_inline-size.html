@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        .control{
+            display: block;
+            margin: 2rem;
+        }
+
+
+
+        #container{
+            border: 1px solid #000;
+            padding: 1.5rem;
+            max-block-size: 100%;
+            min-inline-size: 97%;
+
+        }
+
+        #container .a{
+            background-color: rgb(200, 179, 221);
+            width: 300px;
+            padding: 1.2rem;
+            display: inline-block;
+            margin: 1rem;
+
+        }
+        #container .b{
+            background-color: rgb(203, 183, 221);
+            display: inline-block;
+            /* width: 100px; */
+
+            block-size: 400px;
+            inline-size: 100px;
+
+            padding: 1.2rem;
+            margin: 1rem;
+        }
+
+        .mode-vrl {
+            writing-mode: vertical-rl;
+        }
+
+
+        
+
+        
+
+        .toolbar {
+            margin-block-end: 2rem;
+        }
+
+        #text-container {
+            inline-size: 400px;
+            background-color: MediumTurquoise;
+            padding: 2rem;
+        }
+
+        .horizontal-tb {
+            writing-mode: horizontal-tb;
+        }
+        .vertical-rl {
+            writing-mode: vertical-rl;
+        }
+        .vertical-lr {
+            writing-mode: vertical-lr;
+        }
+    </style>
+</head>
+
+<body>
+
+
+
+
+
+    <div style="border: 3px solid black; padding: 20px; margin: 40px 0;">
+        <h1 style="background-color: blueviolet; padding: 20px;"> 
+            ## Css inline-size Property 
+        </h1>
+        <h1 style="background-color: blueviolet; padding: 20px;"> 
+            ## Css block-size Property 
+        </h1>
+        <br>
+
+        <p> <b>
+                $$ --
+            </b>
+            block / inline-size is a logical property that defines 
+            <b>
+                the height / width 
+            </b>
+            of an element 
+            <b>
+                when the writing-mode is horizontal,
+            </b>
+            or 
+            <b>
+                the width / height
+            </b>
+            of the element 
+            <b>
+                when the writing-mode is vertical.
+            </b>
+        </p>
+        <br>
+
+        <h3>Example :</h3>
+        <pre>
+        <big>
+        .element {
+            block-size: 200px;
+            inline-size: 700px;
+            writing-mode: vertical-lr;
+        }
+        </big>
+        </pre>
+    </div>
+
+
+
+
+
+
+
+
+    <div style="border: 3px solid black; padding: 20px; margin: 40px 0;">
+        <h2> ## Syntax and Values </h2>
+        <pre>
+            block-size : width;
+            inline-size : width;
+        </pre>
+
+
+        <ul>
+            <li>
+                <b>
+                    length
+                </b>
+            </li>
+            <br>
+            <li>
+                <b>
+                    auto
+                </b>
+            </li>
+            <br>
+            <li>
+                <b>
+                    fit-content( 5rem )
+                </b>
+                <p>
+                    This function allows a
+                    container to grow until a
+                    desired size, then make the
+                    text wrap, effectively
+                    clamping the content to the
+                    provided size value. It can be
+                    used on Grid containers, as
+                    well as box sizing.
+                </p>
+            </li>
+            <br>
+            <li>
+                <b>
+                    min-content
+                </b>
+            </li>
+            <br>
+            <li>
+                <b>
+                    max-content
+                </b>
+            </li>
+            <br>
+
+            <li>
+                <b>
+                    unset
+                </b>
+            </li>
+        </ul>
+    </div>
+
+
+    <h3>
+        Example :
+    </h3>
+
+    <div class="control">
+        <button type="" class="" id="toggle"> Toggle vertical mode</button>
+    </div>
+    <div id="container">
+        <div class="a">
+            <h2> Without</h2>
+            <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Atque, deserunt! Culpa maiores porro ratione explicabo a quasi maxime, laudantium deserunt. Autem earum iste ut minima porro mollitia ea reprehenderit provident.
+            </p>
+        </div>
+        <div class="b">
+            <h2> With block / inline-size</h2>
+            <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Atque, deserunt! Culpa maiores porro ratione explicabo a quasi maxime, laudantium deserunt. Autem earum iste ut minima porro mollitia ea reprehenderit provident.
+            </p>
+        </div>
+    </div>
+    <br>
+    <br>
+    <div class="toolbar">
+        <label for="writing-mode-select">Choose
+            writing mode:</label>
+        <select name="writing-modes"
+            id="writing-mode-selec">
+            <option value="horizontal-tb">
+                horizontal top to bottom</option>
+            <option value="vertical-rl">vertical
+                right to left</option>
+            <option value="vertical-lr ">vertical
+                lft to right</option>
+        </select>
+    </div>
+    <p id="text-container" class="horizontal-rl">
+        Lorem ipsum dolor, sit amet consectetur
+        adipisicing elit. Voluptate esse
+        asperiores iste nam. Accusantium odio
+        error illo dolor corrupti rerum aut iste,
+        dolore architecto eligendi maxime nulla
+        incidunt molestias hic.
+    </p>
+    <br>
+    <br>
+    <script>
+        const example = document.getElementById(
+            'container').classList;
+
+        const button = document.getElementById(
+            'toggle');
+
+
+        function changeMode() {
+            if (example.contains('mode-vrl')) {
+                example.remove('mode-vrl');
+            } else {
+                example.add('mode-vrl');
+            }
+        }
+
+        button.addEventListener('click', changeMode);
+
+
+        document.getElementById('writing-mode-selec').onchange = (e) => {
+            var className = e.target.value;
+            document.getElementById('text-container').className = className;
+        }
+
+    </script>
+
+
+</body>
+</html>

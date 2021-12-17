@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+        <h1>CSS font-optical-sizing Property</h1>
+            <h2>Definition and Usage</h2>
+                <p>
+                    The font-optical-sizing CSS
+                    property allows the browser to
+                    adjust the outline of font
+                    glyphs to make them more
+                    legible at different sizes.
+                </p>
+                <b>
+                    For example, smaller text may
+                    get a thicker outline to
+                    increase its contrast.
+                </b>
+                
+
+
+            <br>
+            <br>
+            <br>
+            <h2>CSS  Syntax</h2>
+                <pre>
+                    font-kerning: auto | none
+                </pre>
+
+
+            <pre>
+            <big>
+    .element {
+        font-optical-sizing: none;
+    }
+            </big>
+            </pre>
+
+            <h2>Property Values </h2>
+                <ol>
+                    <li>auto 
+                        <p>
+                            This is the default
+                            value. It allows
+                            browsers to optimize
+                            text at different font
+                            sizes for legibility.
+                        </p>
+                    </li>
+                    <li>none 
+                        <p>
+                            This prevents browsers
+                            from modifying text.
+                        </p>
+                    </li>
+                </ol>
+                <br>
+                <br>
+                
+                <h2>This only works on fonts that
+                    support optical sizing</h2>
+                    <p>
+                        And the fonts that support
+                        optical sizing are
+                        variable fonts, including
+                        Roboto Delta, a variable
+                        version of Google’s
+                        classic Roboto. Another
+                        supporting font is
+                        Amstelvar. Both fonts are
+                        maintained by Type
+                        Network.
+                        <br>
+                        <br>
+                        Even if a font is
+                        variable, it must
+                        explicitly support optical
+                        sizing as a feature.
+                    </p>
+
+
+                
+                <br>
+                <br>
+                <br>
+                <h2>Another way to optical size fonts</h2>
+                    <p>
+                        <b>
+                            The font-optical-sizing
+                            property is the most
+                        </b>
+                        efficient way to optically
+                        size a font that supports
+                        it. <br> <br>
+                        <b>
+                            Another way is to use
+                            the
+                            font-variation-settings
+                        </b>
+                        property, which allows you
+                        to control optical sizing
+                        with opsz, which is the
+                        keyword for optical sizing
+                        on variable fonts that
+                        support it.
+                    </p>
+                    <b>
+                        Note that using
+                        font-variation-settings
+                        requires you to set the
+                        opsz in accordance to the
+                        font size so everything
+                        scales properly.
+                    </b>
+                    <pre>
+                    <big>
+                    .element {
+                        font-size: 18px;
+                        font-variation-settings: 'opsz', 18;
+                    }
+                    </big>
+                    </pre>
+</body>
+</html>

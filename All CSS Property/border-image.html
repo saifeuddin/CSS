@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        div .border{
+            background-color: blue;
+            width: 200px;
+            height: 100px;
+            border: 20px solid pink;
+
+            border-image: repeating-linear-gradient( 45deg, pink, pink 1%, purple 1%, purple 8%) 10;
+        }
+    </style>
+
+</head>
+<body>
+
+    <div style="border: 3px solid black; padding: 20px; margin: 40px 0;">
+        <h1 style="background-color: blueviolet; padding: 20px;"> ## Css border- image Property </h1>
+        <br>
+        <br>
+
+
+        <p>
+            <b>
+                $$ --
+            </b>
+            border-image is a shorthand property that lets you 
+            <b>
+                <mark>
+                    use an image or CSS gradient as the border of an element.
+                </mark>
+            </b>
+        </p>
+        <br>
+        <br>
+        <b>
+            The border-image property can be applied to any element, except internal table elements (e.g. tr, th, td)
+            when border-collapse is set to collapse.
+        </b>
+    </div>
+
+
+
+
+
+    <div style="border: 3px solid black; padding: 20px; margin: 40px 0;">
+        <h2> ## Property Values </h2>
+        <br>
+        <br>
+
+
+        <ul>
+            <li>
+                <b>
+                    border-image-source :
+                </b>
+                <pre>
+                    .module { 
+                        border-image-source: url(border.png);
+                    }
+                </pre>
+                This property specifies the source for the border image. <br>
+                This can be a URL, data URI, CSS gradient, or
+                inline SVG (though support is limited for inline SVG, see SVG usage notes).
+            </li>
+
+                <br>
+
+            <li>
+                <b>
+                    border-image-slice :
+                </b>
+                <pre>
+                    .module {
+                        border-image-source: url(border.png);
+                        border-image-slice: 20 30;
+                    }
+                </pre>
+                The values of this property tell the browser where to “slice” the image to create the pieces of the
+                border. The image is divided into 9 sections — the four corners, the four sides, and the center. <br>
+                <b>
+                    The property accepts up to four positive unitLess numbers or percentages, and an optional fill
+                    keyword. The initial value is 100%.
+                </b>
+            </li>
+                <br>
+            <li>
+                <b>
+                    border-image-width :
+                </b>
+                <pre>
+                .module {
+                    border-image-source: url(border.png);
+                    border-image-slice: 20;
+                    border-image-width: 20px;
+                }
+                </pre>
+                This property sets the width of the border image. It accepts a percentage value, a positive unitLess
+                number, or the keyword auto.
+            </li>
+                <br>
+            <li>
+                <b>
+                    border-image-outset :
+                </b>
+                The value for this property specifies how far the border image area extends past the border box. <br>
+                The property accepts up to four positive length values or unitLess numbers.
+                <pre>
+                    .module {
+                    border-image-source: url(border.png);
+                    border-image-slice: 20;
+                    border-image-width: 20;
+                    border-image-outset: 1;
+                    }
+                </pre>
+            </li>
+                <br>
+            <li>
+                <b>
+                    border-image-repeat :
+                </b>
+                This property controls how the image is repeated to fill the area of the border.
+                <pre>
+                    .module {
+                    border-image-source: url(border.png);
+                    border-image-slice: 20;
+                    border-image-width: 20;
+                    border-image-outset: 1;
+                    border-image-repeat: round;
+                    }
+                </pre>
+                <b>Values</b>
+                <ul>
+
+                    <li>
+                        <b>
+                            stretch:
+                        </b>
+                        the initial value. The border image is stretched as needed to fill the area.
+                    </li>
+                    <br>
+                    <li>
+                        <b>
+                            repeat:
+                        </b>
+                        the image tiles to fill the area, dividing tiles if necessary.
+                    </li>
+                    <br>
+                    <li>
+                        <b>
+                            round:
+                        </b>
+                        the image tiles to fill the area, and is rescaled if necessary to avoid dividing tiles.
+                    </li>
+                    <br>
+                    <li>
+                        <b>
+                            space:
+                        </b>
+                        the image tiles to fill the area. If the area can’t be filled with whole tiles, space is inserted
+                        around the tiles for an even fit. Note: this value is not implemented by any browser yet.
+                    </li>
+                    <br>
+                </ul>
+                </li>
+            </ul>
+    </div>
+
+
+
+
+    <div style="border: 3px solid black; padding: 20px; margin: 40px 0;">
+        <h2> ## Using Gradients for Border Images </h2>
+        <br>
+        <br>
+
+
+        <h3> 
+            Example :
+        </h3>
+            <div class="border">
+
+            </div>
+    </div>
+    
+    
+    
+    
+    
+    
+    <div style="border: 3px solid black; padding: 20px; margin: 40px 0;">
+        <h2> ## Using SVG for Border Images </h2>
+        <br>
+        <br>    
+            <p>
+                SVG in an Image Source URL
+            </p>
+            <pre>
+                <big>
+                .module {
+                    border-image-source: url(border.svg);
+                    }
+                </big>
+            </pre>
+            <p>Inline Svg</p>
+                <img src="svg.jpg" alt="">
+    </div>
+
+</body>
+
+</html>

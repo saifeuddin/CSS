@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible"
+        content="IE=edge">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+</head>
+
+<body>
+
+    <div
+        style="border: 3px solid black; padding: 20px; margin: 40px 0;">
+        <h1
+            style="background-color: blueviolet; padding: 20px;">
+            ## Css overflow-anchor Property
+        </h1>
+        <br>
+
+        <p> <b>$$ --
+                The overflow-anchor property enables us to opt out of Scroll Anchoring, which is a browser feature intended to allow content to load above the user’s current DOM location without changing the user’s location once that content has been fully loaded.
+            </b>
+        </p>
+        <b>
+            Scroll Anchoring prevents that “jumping” experience by locking the user’s position on the page while changes are taking place in the DOM above the current location. This allows the user to stay anchored where they are on the page even as new elements are loaded to the DOM.
+        </b>
+        <br>
+        <br>
+
+
+
+        <pre
+            style="border: 3px solid rgb(67, 200, 67); border-left-width: 20px; ">
+            <big>
+            
+        article {
+            overflow-anchor: auto | none ;
+        }
+                
+        body {
+            overscroll-behavior: contain / none;
+        }
+            </big>
+            </pre>
+    </div>
+    <br>
+
+    <div
+        style="border: 3px solid black; padding: 20px; margin: 40px 0;">
+        <h2>
+            ## Property Values
+        </h2>
+        <br>
+
+        <ul>
+            <li>
+                auto :
+                <p>
+                    Enables scroll anchoring on the portion of the page or element on which it is applied.
+                </p>
+            </li>
+            <li>
+                none :
+                <p>
+                    Disables scroll anchoring in part or all of a webpage, or excludes portions of the DOM from the being anchored, allowing content to reflow.
+                </p>
+            </li>
+        </ul>
+        <b>
+            You’d probably apply this to the body, but you can scope it to any selector, and it will take effect if that element scrolls.
+        </b>
+    </div>
+
+
+
+    <br>
+    <h3>Example :</h3>
+    <a href="https://css-tricks.com/almanac/properties/o/overflow-anchor/"> Examples </a>
+    <br>
+    <br>
+
+</body>
+</html>

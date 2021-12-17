@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .article {
+        margin: 0.5rem;
+        display: grid;
+        grid-template-columns: repeat(auto-fit,
+        minmax(30ch, 1fr));
+        gap: 0.5rem;
+        }
+
+        .img--container {
+        width: 20ch;
+        border: 1ch solid #1e88e5;
+        background: salmon;
+        }
+
+        img {
+        width: 100%;
+        display: block;
+        object-fit: none;
+        }
+
+        .image-1 {
+        object-position: 50% 50%;
+        }
+
+        .image-2 {
+        object-position: left bottom;
+        }
+
+        .image-3 {
+        object-position: 20% 80%;
+        }
+
+        .image-4 {
+        object-position: 40px 60px;
+        }
+
+        .image-5 {
+        object-position: right 75%;
+        }
+
+        .image-6 {
+        object-position: 10px center;
+        }
+
+
+
+
+
+
+
+
+
+        article {
+        margin: 0.5rem;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+        }
+
+        .video--container {
+        width: 270px;
+        height: 161px;
+        border: 0.75rem solid #1e88e5;
+        background: salmon;
+        overflow: hidden;
+        }
+
+        video,
+        iframe {
+        display: block;
+        object-fit: none;
+        }
+
+        #video-default {
+        object-position: center center;
+        }
+
+        #video-right-bottom {
+        object-position: right bottom;
+        }
+
+        #iframe-default {
+        object-position: center center;
+        }
+
+        #iframe-movee {
+        object-position: bottom;
+        }
+    </style>
+</head>
+<body>
+
+        <div
+            style="border: 3px solid black; padding: 20px; margin: 40px 0;">
+            <h1
+                style="background-color: blueviolet; padding: 20px;">
+                ## CSS object-position Property
+            </h1>
+            <br>
+
+            <p> <b>$$ --
+                    The CSS property
+                    object-position is used to
+                    align any selected replaced
+                    element (e.g., an <img>)
+                    <mark>
+                    within the box that contains
+                    it.
+                    </mark>
+                </b>
+            </p>
+            <b>
+                While it’s probably most common to
+                see object-position used on
+                &lt;img&gt;
+                elements, it can be used on other
+                types of replaced elements, like
+                &lt;iframe&gt;, &lt;video&gt;,
+                and
+                    &lt;embed&gt;.
+            </b>
+
+
+            <pre>
+            <big>
+            <b>
+            img {
+                object-position: right bottom;
+            }
+            </b>
+            </big>
+            </pre>
+            <img src="ob-position.jpg" alt="">
+        </div>
+        
+
+
+        <div
+            style="border: 3px solid black; padding: 20px; margin: 40px 0;">
+            <h2>
+                ## Css all Property
+            </h2>
+            <br>
+
+            <pre> <big>
+        /* Positional values */
+            object-position: 50% 50%;       /* default position */
+
+            object-position: right bottom;
+
+            object-position: 20px 95px;
+
+            object-position: center 20px;   /* mix and match */
+
+            object-position: 60% top;       /* mix and match */
+                </big>
+            </pre>
+        </div>
+
+
+
+
+
+        <br>
+        <br>
+        <br>
+        <br>
+        <h3>Here is demo</h3>
+        <article class="artical">
+            <div class="container">
+                <h3>1. Default Value</h3>
+                <div class="img--container">
+                    <img class="image-1"
+                        src="https://images.unsplash.com/photo-1610641987870-d6d8998274a4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MXwxNDU4OXwwfDF8cmFuZG9tfHx8fHx8fHw&ixlib=rb-1.2.1&q=80&w=150" />
+                </div>
+            </div>
+            <div class="container">
+                <h3>2. object-position: left
+                    bottom;</h3>
+                <div class="img--container">
+                    <img class="image-2"
+                        src="https://images.unsplash.com/photo-1610641987870-d6d8998274a4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MXwxNDU4OXwwfDF8cmFuZG9tfHx8fHx8fHw&ixlib=rb-1.2.1&q=80&w=150" />
+                </div>
+            </div>
+            <div class="container">
+                <h3>3. object-position: 20% 80%;
+                </h3>
+                <div class="img--container">
+                    <img class="image-3"
+                        src="https://images.unsplash.com/photo-1610641987870-d6d8998274a4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MXwxNDU4OXwwfDF8cmFuZG9tfHx8fHx8fHw&ixlib=rb-1.2.1&q=80&w=150" />
+                </div>
+            </div>
+            <div class="container">
+                <h3>4. object-position: 40px 60px;
+                </h3>
+                <div class="img--container">
+                    <img class="image-4"
+                        src="https://images.unsplash.com/photo-1610641987870-d6d8998274a4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MXwxNDU4OXwwfDF8cmFuZG9tfHx8fHx8fHw&ixlib=rb-1.2.1&q=80&w=150" />
+                </div>
+            </div>
+            <div class="container">
+                <h3>5. object-position: right 75%;
+                </h3>
+                <div class="img--container">
+                    <img class="image-5"
+                        src="https://images.unsplash.com/photo-1610641987870-d6d8998274a4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MXwxNDU4OXwwfDF8cmFuZG9tfHx8fHx8fHw&ixlib=rb-1.2.1&q=80&w=150" />
+                </div>
+            </div>
+            <div class="container">
+                <h3>6. object-position: 10px
+                    center;</h3>
+                <div class="img--container">
+                    <img class="image-6"
+                        src="https://images.unsplash.com/photo-1610641987870-d6d8998274a4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MXwxNDU4OXwwfDF8cmFuZG9tfHx8fHx8fHw&ixlib=rb-1.2.1&q=80&w=150" />
+                </div>
+            </div>
+        </article>
+
+
+
+
+        <br>
+        <br>
+        <br>
+        <br>
+
+
+        <article>
+            <div class="container">
+                <h3>1. &lt;video&gt;</h3>
+                <p>object-position: center center;
+                </p>
+                <div class="video--container">
+                    <video id="video-default"
+                        width="560" height="315"
+                        controls>
+                        <source
+                            src="https://assets.codepen.io/1958314/prairie-trim.mov">
+                        Your browser doesn't
+                        support embedded videos.
+                        😔
+                    </video>
+                </div>
+            </div>
+
+            <div class="container">
+                <h3>2. &lt;video&gt;</h3>
+                <p>object-position: right bottom;
+                </p>
+                <div class="video--container">
+                    <video id="video-right-bottom"
+                        width="560" height="315"
+                        controls>
+                        <source
+                            src="https://assets.codepen.io/1958314/prairie-trim.mov">
+                        Your browser doesn't
+                        support embedded videos.
+                        😔
+                    </video>
+                </div>
+            </div>
+
+
+            <div class="container">
+                <h3>3. &lt;iframe&gt;</h3>
+                <p>object-position: center center; </p>
+                    <div class="video--container">
+                        <iframe
+                            id="iframe-default"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10500.902039752316!2d2.2913300332815276!3d48.85391001696464!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66e2964e34e2d%3A0x8ddca9ee380ef7e0!2sEiffel%20Tower!5e0!3m2!1sen!2sus!4v1614636016821!5m2!1sen!2sus"
+                            width="600"
+                            height="450"
+                            style="border:0;"
+                            allowfullscreen=""
+                            loading="lazy"></iframe>
+                    </div>
+            </div>
+
+
+            <div class="container">
+                <h3>4. &lt;iframe&gt;</h3>
+                <p>object-position: -40px 3ch;</p>
+                <div class="video--container">
+                    <iframe id="iframe-movee"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10500.902039752316!2d2.2913300332815276!3d48.85391001696464!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66e2964e34e2d%3A0x8ddca9ee380ef7e0!2sEiffel%20Tower!5e0!3m2!1sen!2sus!4v1614636016821!5m2!1sen!2sus"
+                        width="600" height="450"
+                        style="border:0;"
+                        allowfullscreen=""
+                        loading="lazy"></iframe>
+                </div>
+            </div>
+        </article>
+
+</body>
+</html>

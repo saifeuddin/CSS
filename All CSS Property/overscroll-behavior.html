@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .ex p {
+            height: 100px;
+            width: 100px;
+            overflow: scroll;
+            margin: 20px;
+            display: inline-block;
+        }
+
+        .ex p:nth-child(2) {
+            overscroll-behavior: contain;
+        }
+    </style>
+</head>
+<body>
+
+        <div
+            style="border: 3px solid black; padding: 20px; margin: 40px 0;">
+            <h1
+                style="background-color: blueviolet; padding: 20px;">
+                ## Css overscroll-behavior Property
+            </h1>
+            <br>
+
+            <p> <b>$$ --
+                    The overscroll-behavior property in CSS controls whether an element will use “scroll chaining” or not. You have likely experienced this behavior before and perhaps took it for granted that scrolling works like this on the web! If you are inside of an element that has it’s own scrolling (say it’s vertical) and you have scrolled down to the bottom of it, then by default, the next parent element up (maybe the page itself) starts to scroll in that direction. If you don’t want that default, overscroll-behavior is what controls it.
+                </b>
+            </p>
+
+
+
+            <pre
+                style="border: 3px solid rgb(67, 200, 67); border-left-width: 20px; ">
+            <big>
+            
+        .stop-scroll-chaining {
+            overscroll-behavior: contain / none;
+        }
+                
+        body {
+            overscroll-behavior: contain / none;
+        }
+            </big>
+            </pre>
+        </div>
+        <br>
+
+        <div
+            style="border: 3px solid black; padding: 20px; margin: 40px 0;">
+            <h2>
+                ## Property Values
+            </h2>
+            <br>
+
+            <ul> 
+                <li>
+                    auto 
+                </li>
+                <li>
+                    contain 
+                </li>
+                <li>
+                    none 
+                </li>
+            </ul>
+        </div>
+
+
+
+        <br>
+        <h3>Example :</h3>
+        <div class="ex">
+            <p><strong>Default!</strong> Lorem
+                ipsum, dolor sit amet consectetur
+                adipisicing elit. Fugiat placeat
+                qui praesentium. Earum itaque
+                architecto laboriosam voluptates
+                beatae dolore molestiae quas magni
+                quo non vel doloribus, accusamus
+                repellendus quaerat aut!</p>
+            <p><strong>Contain!</strong>
+                Perspiciatis dolorum corporis
+                minus soluta! Culpa aspernatur non
+                facilis porro. Magni qui cumque
+                eligendi ducimus neque dolor
+                minima, provident quod nihil?
+                Nostrum deleniti laudantium illum
+                corporis iure quasi error earum?
+            </p>
+        </div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+    
+</body>
+</html>

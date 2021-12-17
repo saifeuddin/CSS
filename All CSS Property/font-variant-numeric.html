@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible"
+        content="IE=edge">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <h1>CSS font-variant-numeric Property </h1>
+    <h2>Definition and Usage</h2>
+    <p>
+        The font-variant-numeric property in CSS
+        supports the OpenType font format by
+        specifying which numeric glyphs to use on
+        a class, including variations for
+        fractions, ordinal markers and styled
+        variations among others.
+    </p>
+    <br>
+
+
+
+    <h3> Example</h3>
+    <pre>
+                    .fraction {
+                        font-variant-numeric: diagonal-fractions;
+                    }
+            <hr>
+            <b>
+                Older browsers won’t recognize
+                that, but they do accept
+                font-feature-settings which unlock
+                the same features with different
+                values. We can pair the two
+                properties for deeper support:
+            </b>
+                    .fraction {
+                        font-feature-settings: frac;
+                        font-variant-numeric: diagonal-fractions;
+                    }
+                    .fraction {
+                        font-feature-settings: frac;
+                    }
+            <hr>
+            <b>
+                Or, we can tailor this to
+                sniff out browser support
+                using @supports so that
+                the new property is only
+                served to supporting
+                browsers:
+            </b>
+                    @supports (font-variant-numeric:diagonal-fractions) {
+                        .fraction {
+                            font-feature-settings: frac;
+                            font-variant-numeric: diagonal-fractions;
+                        }
+                    }
+                </pre>
+
+
+
+
+
+
+    <h2>Property Values</h2>
+    <img src="va.jpg" alt="">
+    <img src="va1.jpg" alt="">
+    <img src="va2.jpg" alt="">
+    <img src="va3.jpg" alt="">
+
+
+
+
+
+</body>
+
+</html>

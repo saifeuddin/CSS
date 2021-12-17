@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .c {
+            border: 1px solid #000;
+        }
+
+        .c .el{
+            width: 100vw;
+            height: 100vh;
+            padding: 1rem;
+
+            background-image:
+            url(https://images.unsplash.com/photo-1528287942171-fbe365d1d9ac?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&w=1200&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ);
+            background-size: cover;
+            background-repeat: no-repeat;
+
+            -webkit-mask-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/sun.svg);
+            mask-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/sun.svg);
+            -webkit-mask-size : 100vmin;
+            mask-size : 100vmin;
+            -webkit-mask-repeat: no-repeat;
+            mask-repeat: no-repeat;
+            -webkit-mask-position: center;
+            mask-position: center;
+        }
+
+
+        .c .el1{
+            width: 100vw;    
+            height: 100vh;
+            padding: 1rem;
+
+            background-image:
+            url(https://images.unsplash.com/photo-1528287942171-fbe365d1d9ac?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&w=1200&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ);
+            background-size: cover;
+            background-repeat: no-repeat;
+
+            -webkit-mask-image: linear-gradient(to bottom, transparent 30%, black);
+            mask-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/sun.svg);
+        }
+    </style>
+
+
+
+    <style>
+        .c1 {
+            margin: 0;
+            background: linear-gradient(to right, red,blue);
+            background-position-x: 0;
+            animation: size 3s infinite linear;
+        }
+
+        @keyframes size {
+            to {
+                background-position-x: 100vw;
+            }
+        }
+
+
+        .c1 .el2 {
+            width: 100vw;
+            height: 100vh;
+
+            background-image: url(https://images.unsplash.com/photo-1528287942171-fbe365d1d9ac?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&w=1200&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ);
+            background-size: cover;
+            background-position: center;
+
+            -webkit-mask-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/chris-mask.png);
+            mask-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/chris-mask.png);
+            -webkit-mask-size: contain;
+            mask-size: contain;
+            -webkit-mask-position: center;
+            mask-position: center;
+            /* -webkit-mask-repeat: no-repeat;
+            mask-repeat: no-repeat; */
+        }
+    </style>
+</head>
+<body>
+        <div
+            style="border: 3px solid black; padding: 20px; margin: 40px 0;">
+            <h1
+                style="background-color: blueviolet; padding: 20px;">
+                ## CSS mask-image Property
+            </h1>
+            <br>
+
+            <p> <b>
+                    $$ --
+                    A mask in CSS hides part of
+                    the element is applied to.
+                </b> <br> <br> <br>
+            </p>
+            <pre> 
+            .element {
+                mask-image: url(star.svg);
+            }
+            </pre>
+        </div>
+
+
+        <h3>Example :</h3>
+        <div class="c">
+            <div class="el"></div>
+            <hr>
+            <br>
+            <br>
+            <hr>
+            <div class="el1"></div>
+        </div>
+        <br>
+        <div class="c1">
+            <div class="el2"></div>
+        </div>
+        
+    
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible"
+        content="IE=edge">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+        box-sizing: border-box;
+        }
+       
+        .el {
+        width: 100vw;
+        height: 100vh;
+        padding: 1rem;
+        margin: 30px;
+
+        background-image:
+        url(https://images.unsplash.com/photo-1506798274179-6c3cd6a3cbc1?ixlib=rb-1.2.1&q=85&w=1500&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+
+        -webkit-mask-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/sun.svg);
+        mask-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/sun.svg);
+        mask-size: 200px;
+        mask-repeat: repeat;
+        mask-position: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div
+        style="border: 3px solid black; padding: 20px; margin: 40px 0;">
+        <h1
+            style="background-color: blueviolet; padding: 20px;">
+            ## CSS mask-position Property
+        </h1>
+        <br>
+
+        <p> <b>
+                $$ --
+                In CSS, the mask-repeat property tells a mask if it should repeated or not and in which directions. It’s a lot like background-repeat. The default is repeat.
+            </b>
+        </p>
+        <br>
+
+        <pre>
+            .element {
+                mask-image: url(star.svg);
+                
+                mask-position: 20px center;
+
+                mask-size: 20px;
+
+                mask-repeat: repeat;
+            }
+            </pre>
+    </div>
+
+
+    <h2> Property Values</h2>
+    <pre>
+    <big>
+    <b>
+            mask-repeat: repeat;
+
+            mask-repeat: repeat-x;
+
+            mask-repeat: repeat-y;
+    </b>
+    </big>
+    </pre>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <h3>Example :</h3>
+    <div class="el"></div>
+
+</body>
+
+</html>

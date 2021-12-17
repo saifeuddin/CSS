@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+
+
+        <div
+            style="border: 3px solid black; padding: 20px; margin: 40px 0;">
+            <h1
+                style="background-color: blueviolet; padding: 20px;">
+                ## Css bleed Property
+            </h1>
+            <br>
+
+            <p> <b>
+                    $$ --
+                    The bleed property in CSS is
+                    for specifying space outside
+                    of the page box boundary when
+                    determining the size of a
+                    <mark>
+                    printed page.
+                    </mark>
+                </b>
+            </p>
+            <pre>
+            <big>
+            @page :left {
+                bleed : 10pt;
+            }
+            
+            @page : top{
+                bleed : 10pt;
+            }
+            </big>
+            </pre>
+        </div>
+
+
+        <div
+        style="border: 3px solid black; padding: 20px; margin: 40px 0;">
+        <h1>
+            ## Property Values
+        </h1>
+        <br>
+        
+        <ul> <li>
+            <b>
+                auto
+            </b>
+            <p>
+                Default is zero unless a crop value
+                has been set on the marks property
+                which creates a default of 6pt.
+            </p>
+        </li>
+        <li>
+            <b>
+                length
+            </b>
+            <p>
+                Sets how far outside the bleed
+                area is in each direction.
+                Negative values are accepted, but
+                there is no standard for how they
+                would be implemented. Note that
+                print size units (i.e. pt, cm and
+                in) are accepted.
+            </p>
+        </li>
+    </ul>
+    <img src="bleed.jpg" alt="">
+</div>
+
+
+</body>
+</html>

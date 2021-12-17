@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Filters</title>
+
+    <style>
+        img {
+            width: 33%;
+            height: auto;
+            float: left;
+            max-width: 235px;
+        }
+
+
+        .blur{
+            filter: blur(4px);
+
+                    /*  Not Work  */
+            filter: blur(40%);
+            filter: blur(4);
+        }
+
+
+
+        .brightness{
+            filter: brightness(200%);
+            /* filter: brightness(200); */
+
+
+                    /* Pixels Doesn't Work  */
+            filter: brightness(200px);
+        }
+
+
+
+
+
+
+
+
+        .contrast{
+            filter: contrast(100);
+            filter: contrast(3600%);
+
+
+                    /* Percentages Not Work  */
+            filter: contrast(10px);
+        }
+
+
+
+
+        .saturate{
+            filter: saturate(500%);
+            filter: saturate(10);
+
+
+
+
+            /* Pixels Doesn't Work */
+            /* filter: saturate(10px); */
+        }
+
+
+
+
+
+        .grayscale{
+            /* filter: grayscale(); */
+            filter: grayscale(800%);
+            filter: grayscale(3);
+
+
+
+                   /* Pixels Doesn't Work */
+            /* filter: grayscale(900px); */
+            /* filter: grayscale(900px); */
+        }
+
+
+        .sepia{
+            /* filter: sepia(); */
+            /* filter: sepia(100%); */
+            filter: sepia(100);
+        
+                /* Doesn't Work  */
+            filter: sepia(100px);
+        }
+
+
+
+
+
+
+
+        .huerotate{
+            filter: hue-rotate(180deg);
+
+
+                    /* Doesn't Work  */
+            /* filter: hue-rotate(180); */
+        }
+
+
+        .invert{
+            /* filter: invert(); */
+            /* filter: invert(30%); */
+            /* filter: invert(300%); */
+            filter: invert(300);
+
+
+                    /* Pixels Doesn't Work */
+            /* filter: invert(300px); */
+        }
+
+
+
+
+
+
+
+
+
+
+        .opacity{
+            /* filter: opacity(30%); */
+            /* filter: opacity(1); */
+            filter: opacity(.2);
+
+
+
+
+                    /* Doesn't Work  */
+            filter: opacity(90px);
+            filter: opacity(1px);
+        }
+
+
+
+
+
+
+
+
+
+        .shadow{
+            filter: drop-shadow(15px 20px 5px  green);
+        }
+    </style>
+</head>
+<body>  
+
+        <div
+            style="border: 3px solid black; padding: 20px; margin: 40px 0;">
+      
+            <h1
+                style="background-color: blueviolet; padding: 20px;">
+                ## JavaScript JSON
+            </h1>
+            <br>
+
+            <p> <b>
+                $$ --
+            </b> 
+            The CSS filter property provides
+            access to effects like blur or color
+            shifting on an element’s rendering
+            before the element is displayed.
+            Filters are commonly used to adjust
+            the rendering of an image, a
+            background, or a border.
+            </p>
+            <br>
+            <br>
+
+
+            <pre>
+                <big>
+            .filter-me {
+                filter: blur(3px);
+                filter: grayscale(1);
+                filter: saturate(2.2);
+
+                filter: none; /* remove existing filter */
+            }
+                </big>
+            </pre>
+            <b>
+                Multiple functions can be used,
+                space separated.
+            </b>
+            <pre>
+                <big>
+            .do-more-things {
+                filter: blur(20px) grayscale(20%);
+            }
+                </big>
+            </pre>
+        </div>
+
+
+
+        <div
+            style="border: 3px solid black; padding: 20px; margin: 40px 0;">
+            <h2>
+                ## property Values
+            </h2>
+            <br>
+
+            <ul>
+                <li>
+                    blur()
+                </li>
+                <li>brightness()</li>
+                <li>
+                    contrast()
+                </li>
+                <li>
+                    drop-shadow()
+                </li>
+                <li>
+                    grayscale()
+                </li>
+                <li>
+                    hue-rotate()
+                </li>
+                <li>
+                    invert()
+                </li>
+                <li>
+                    opacity()
+                </li>
+                <li>
+                    saturation()
+                </li>
+                <li>
+                    sepia()
+                </li>
+                <li>
+                    url() - for applying svg filters
+                    <p>
+                        The url() function takes
+                        the location of an XML
+                        file that specifies an SVG
+                        filter, and may include an
+                        anchor to a specific
+                        filter element.
+                    </p>
+                    <pre>
+                img {
+                    -webkit-filter: url(#svg-blur);
+                }
+                    </pre>
+                </li>
+                <li>
+                    custom() 
+                </li>
+            </ul>
+            
+        </div>
+
+
+            <h1>Image Filters</h1>
+                <p><strong>Note:</strong> The filter property is not supported in Internet Explorer or Edge 12.</p>
+
+                <img src="pineapple.jpg" alt="Pineapple" width="300" height="300">
+                <img class="blur" src="pineapple.jpg" alt="Pineapple" width="300" height="300">
+                <img class="brightness" src="pineapple.jpg" alt="Pineapple" width="300" height="300">
+                <img class="contrast" src="pineapple.jpg" alt="Pineapple" width="300" height="300">
+                <img class="grayscale" src="pineapple.jpg" alt="Pineapple" width="300" height="300">
+                <img class="huerotate" src="pineapple.jpg" alt="Pineapple" width="300" height="300">
+
+                <img class="invert" src="pineapple.jpg" alt="Pineapple" width="300" height="300">
+                <img class="opacity" src="pineapple.jpg" alt="Pineapple" width="300" height="300">
+                <img class="saturate" src="pineapple.jpg" alt="Pineapple" width="300" height="300">
+                <img class="sepia" src="pineapple.jpg" alt="Pineapple" width="300" height="300">
+                <img class="shadow" src="pineapple.jpg" alt="Pineapple" width="300" height="300">
+    
+</body>
+</html>
