@@ -1,0 +1,263 @@
+/* Table System Centering  */
+.display-table{
+    display: table;
+    /* display: list-item; */
+    border: 3px solid red;
+}
+
+.display-table p{
+    /* display: table-caption; */
+    /* display: table-header-group; */
+    /* display: table-column-group; */
+    /* display: table-row-group; */
+    /* display: table-footer-group; */
+    /* display: table-row; */
+    display: table-cell;
+    
+    
+    height: 200px;
+    width: 200px;
+    /* padding: 100px; */
+    
+    text-align: center;
+    /* text-align: left; */
+    /* text-align: right; */
+    
+                /* This property only works with display: table;  */
+    /* vertical-align:baseline; */
+    /* vertical-align: top; */
+    vertical-align: middle;
+    /* vertical-align: bottom; */
+
+                /* These Does not work on it */
+    /* vertical-align:sub; */
+    /* vertical-align:super; */
+    /* vertical-align:text-top; */
+    /* vertical-align:text-bottom; */
+}
+/* Table System Centering  */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Normal Centering  without height and width center "only the text" "not hole div" */
+.normal{
+    border: 3px solid red;
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Normal Centering 2 with width and height center the hole div */
+.normal2{
+    border: 3px solid #000;
+    width: 300px;
+    height: 600px;
+    margin: auto;
+    text-align: center;
+}
+.normal2 p{
+    padding-top: 300px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Center with FlexBox  */
+.flex{
+    border: 4px solid #000;
+
+    height: 300px;
+    width: 300px;
+
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Centering With grid  */
+.grid{
+        border: 4px solid #000;
+
+        height: 300px;
+        /* width: 300px; */
+
+        display: grid;
+        justify-content: center;
+        align-items: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Centering With position */
+.position{
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        border: 4px solid #000;
+        width: 100%;
+        height: 500px;
+
+        position: relative;
+}
+.position p{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%);
+    -webkit-transform: translate(-50%);
+    -moz-transform: translate(-50%);
+    -ms-transform: translate(-50%);
+    -o-transform: translate(-50%);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

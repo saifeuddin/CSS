@@ -1,0 +1,39 @@
+/* 
+
+*, *::before, *::after{
+    box-sizing: inherit;
+}
+html,body{
+    box-sizing: border-box;
+} */
+
+
+
+
+.scale{
+    background-color: rgb(190, 185, 190);
+    padding: 100px 0;
+}
+.scale .div1{
+    background-color: rgb(81, 89, 90);
+    width: 100px;
+    height: 100px;
+    padding: 20px;
+    margin: 20px;
+}
+.scale .div2{
+    background-color: rgb(156, 101, 156);
+    width: 100px;
+    height: 100px;
+    padding: 20px;
+    margin: 20px;
+    box-sizing: border-box;
+}
+.scale .div3{
+    background-color: rgb(134, 23, 134);
+    width: 100px;
+    height: 100px;
+    padding: 20px;
+    margin: 20px;
+    box-sizing: content-box;
+}

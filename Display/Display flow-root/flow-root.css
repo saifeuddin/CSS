@@ -1,0 +1,39 @@
+.container{
+    border: 3px solid black;
+
+                /* Remove this to see the change  */
+    display: flow-root;
+}
+.flow img{
+    height: 300px;
+    width: 400px;
+    float: left;
+    margin: 20px;
+}
+/* .flow-text p{
+    clear: left;
+    display: block;
+} */
+
+.flow-text p{
+    margin: 20px;
+    text-align: justify;
+}
+
+
+
+
+h1{
+    position: absolute;
+    top: 600px;
+    border:  solid ;
+    padding: 60px;
+    height: auto; 
+    width: 200px;
+    text-align: center;
+    transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+}

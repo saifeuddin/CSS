@@ -1,0 +1,1157 @@
+/* Bootstrap Icon CDN for Css
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css");     */
+
+
+
+
+
+/* Flaticon CDN 
+@import url('https://cdn-uicons.flaticon.com/uicons-solid-straight/css/uicons-solid-straight.css') */
+
+
+
+
+
+
+
+
+/* h2 {
+        color: blueviolet;
+} */
+
+
+
+
+
+
+
+/* You can use double class name 
+.style1 {
+    color: blue;
+}
+.style2 {
+    font-size: 50px;
+}   */
+
+
+
+
+
+
+
+
+/* Text Decoration 
+h1{
+    /* text-decoration: underline ; 
+    /* text-decoration: line-through; 
+    text-decoration: overline;
+}       */
+
+
+
+
+
+
+
+/* Text Indent  
+p{
+    text-indent: 100px;
+}       */
+
+
+
+
+
+
+
+
+/* Text Align  
+p{
+    /* text-align: center; 
+    /* text-align: justify; 
+    /* text-align: unset; 
+    /* text-align: right; 
+}
+
+*/
+
+
+
+
+
+
+ /* Text Shadow   
+h1{
+    text-shadow: 5px 10px grey;
+}
+
+*/
+
+
+
+
+
+
+
+
+/* Style Emoji 
+span{
+    color: red;
+}
+*/
+
+
+
+
+
+
+
+
+/* body{
+    background: url('5073463.jpg');
+    background-repeat: no-repeat;
+    background-size:cover;
+} */
+
+
+
+
+
+
+
+
+
+/* .container h1{
+    width: 600px;
+}
+
+.containr h1{
+   max-width: 400px;
+} */
+
+
+
+
+
+
+
+
+
+/* .gradient-style{
+    height: 400px;
+    width: 100%;
+    background-image: linear-gradient(to right, red, green);
+} 
+
+
+.gradient-style{
+    height: 400px;
+    width: 100%;
+    background-image:radial-gradient(circle, red, green, yellow, orange);
+}*/
+
+
+
+
+
+
+
+
+
+
+
+
+/* Box sizing and Opacity  
+
+.div1{
+    background-color: red;
+    width: 300px;
+    height: 50%;
+    box-sizing: border-box;
+    border: 5px solid black;
+
+}
+
+.div2{
+    background-color: green;
+    width: 300px;
+    height: 50%;
+    border: 5px solid black;
+    opacity: 0.5;
+}
+.div2:hover{
+    opacity: 1;
+    
+}
+
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Overflow and Tooltip  
+.ww p{
+    height: 20px;
+    width: 250px;
+    background-color: green;
+    border: 5px solid black;
+    /* overflow: auto; 
+    overflow: hidden;
+}
+
+a{
+    position: absolute;
+}
+a span{
+    visibility: hidden;
+    width: 150px;
+    color: aliceblue;
+    background-color: blue;
+    padding: 10px;
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+a:hover span{
+    visibility: visible;
+}   */
+
+
+
+
+
+
+
+
+
+
+
+
+/* Table  
+table{
+    border: 1px solid red;
+    border-collapse: collapse;
+}
+tr, th, td{
+    border: 1px solid red;
+    -webkit-border-radius:;
+    -moz-border-radius:;
+    -ms-border-radius:;
+    -o-border-radius:;
+}
+
+th{
+    background-color: blueviolet;
+    color: aliceblue;
+    text-align: center;
+}
+th:hover{
+    text-align: left;
+    padding: 20px;
+    transition: 0.5s;
+    -webkit-transform:;
+    -moz-transform:;
+    -ms-transform:;
+    -o-transform:;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -o-transition: 0.5s;
+}
+tr{
+    text-align: center;
+}
+
+tr:nth-child(odd):hover{
+    background-color: black;
+}
+tr:nth-child(even):hover{
+    background-color: red;
+    text-align: right;
+}   */
+
+
+
+
+
+
+
+
+
+/* Pseudo Class  
+.inpt:focus{
+    border: 2px solid blue;
+}   */
+
+
+
+
+
+
+
+
+
+
+
+/* Pseudo Class and Element  
+p:hover{
+    background-color: red;  
+}
+p:first-child:hover{
+    background-color: black;
+}
+
+
+.demo p:nth-child(3n+1){
+    background-color: green;
+}
+
+
+
+p::selection{
+    background: greenyellow;
+}
+
+*/
+
+
+
+
+
+
+
+
+
+
+/* List item with Icon 
+.course-item{
+    background-color: antiquewhite;
+    padding: 20px;
+}
+.course-item ul li{
+    list-style-type: none;
+}
+.course-item li::before{
+    content: '\1F604';
+    font-family: 'Font Awesome';
+}
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+/* Google Icons  
+
+/* Rules for sizing the icon. 
+.material-icons{
+    font-size: 48px;
+}
+
+/* Rules for using icons as white on a red background
+.material-icons{
+    background-color: red;
+    color: aliceblue;
+}   */
+
+
+
+
+
+
+
+
+/* Style links and Navigation Menu 
+#nav-menu{
+    width:500px ;
+    height: 70px;
+    background-color: red;
+}
+
+#nav-menu ul li{
+    list-style-type: none;
+    margin: 20px;
+    float: left;
+}
+
+#nav-menu ul li a{
+    text-decoration: double;
+    font-size: 25px;
+    color: aliceblue;
+    cursor: help;
+}
+#nav-menu ul li a:hover{
+    text-decoration: underline;
+}
+
+*/
+
+
+
+
+
+
+
+
+
+
+
+/* Css positioning 
+.container{
+    box-sizing: border-box;
+    border: 2px solid blue;
+    padding: 5px;
+    margin-bottom: 10px;
+    position: fixed;
+    top: 0px;
+    left: 0px;  
+}
+
+
+.positioning1{
+    box-sizing: border-box;
+    border: 2px solid blue;
+    padding: 5px;
+    margin-bottom: 10px;
+    position: static;
+    top: 20px;
+}
+.positioning2{
+    box-sizing: border-box;
+    border: 2px solid blue;
+    padding: 5px;
+    margin-bottom: 110px;
+    position: relative;
+    top: 10px;
+    left: 300px
+}
+
+
+.positioning3 {
+    box-sizing: border-box;
+    border: 2px solid blue;
+    padding: 5px;
+    height: 400px;
+    width: auto;
+    position: relative;
+}
+.positioning4 {
+    box-sizing: border-box;
+    border: 2px solid yellow;
+    padding: 5px;
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    right: 50px;
+}
+*/
+
+
+
+
+
+
+
+
+
+
+/* CSS Z-index  CSS3 variable(does not support in Internet Explorer) 
+
+:root{
+    --primary-color: yellow;
+    --secondary-color: red;
+}
+
+
+div{
+    height: 100px;
+    width: 100px;
+}
+.div1{
+    background-color: var(--primary-color,/*Fallback Color green);
+    position: absolute;
+    z-index:3;
+    /* opacity: 0.8; 
+}
+.div2{
+    background-color: var(--secondary-color) ;
+    position: absolute;
+    left: 80px;
+    top: 80px;
+    z-index:2;
+}
+
+@media screen  and (max-width: 600px){
+    :root{
+        --primary-color:red;
+        --secondary-color:yellow;
+    }
+}
+
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+/* Css Flexbox 
+.flex-cont{
+    height: 300px;
+    display: flex;
+
+     /* flex-wrap: wrap;              To responsive flex items */
+     /* flex-wrap: wrap-reverse; */
+     /* flex-direction: row; */
+     /* flex-direction: row-reverse; */
+     /* flex-direction: column; */
+     /* flex-direction: column-reverse; 
+
+
+     flex-flow: wrap row ;
+     /* flex-flow: wrap column ;
+
+
+     justify-content: center;
+     /* justify-content: start-end; 
+     /* justify-content: space-between; 
+     /* justify-content: space-around; 
+     /* justify-content: flex-end; 
+
+
+     align-items: center;
+     /* align-items: start-end; 
+     /* align-items: flex-end; 
+    background-color: lightcoral;
+}
+
+.flex-cont > div{
+    background-color: aliceblue;
+    font-size: 20px;
+    margin: 20px;
+    padding: 20px;
+
+}
+
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Css Shadow 
+h1{
+    text-shadow: 95px 25px 2px  red;
+}
+
+div{
+    width: 200px;
+    background-color: green;
+    /* box-shadow: 30px 15px teal;         /*offset 
+    box-shadow: inset 30px 15px teal;      /* inset
+}
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* CSS Card  Design 
+
+    .card-containrs{
+        display: flex;
+        flex-wrap: wrap;
+        background-color: antiquewhite;
+        padding: 10px;
+        justify-content: center;
+        align-items: center;
+    }
+    .card{
+        width: 300px;
+        margin: 10px;
+        padding: 10px;
+        box-sizing: border-box;
+        background-color: rgb(177, 172, 176);
+    }
+    .card img{
+        height: 200px;
+        width: 100%;
+    }
+
+    .card .cad-body .card-body-title{
+        font-size: 30px;
+        background-color: red;
+        color: aliceblue;
+        text-align: center;
+    }
+
+    .card-body-desc{
+        text-align: justify;
+        line-height: 0.9;
+    }
+
+    .card:hover{
+        box-shadow: 1px 2px 4px black;
+    }
+
+    */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Css Calculator Design  
+*{
+    margin: 0;
+    padding: 0;
+}
+
+h1{
+    background-color: black;
+    color: aliceblue;
+    text-align: center;
+}
+
+
+.card{
+    box-sizing: border-box;
+    margin: 0 auto;
+    max-width: 350px;
+    margin-top: 10px;
+    margin-bottom: 100px;
+    background-color: antiquewhite;
+    text-align: center;
+    box-shadow: 4px 2px 3px black;
+    transition: 0.5s;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -o-transition: 0.5s;
+    font-size: 0;
+}
+.card:hover{
+        box-shadow: -4px 6px 8px black
+}
+
+
+.cal-head #result{
+    width: 335px;
+    height: 70px;
+    font-size: 35px;
+    font-weight: bold;
+    text-align: right;
+    padding: 5px;
+    letter-spacing: 3px;
+}
+
+.cal-body .btn{
+    width: 85px;
+    height: 70px;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    background-color: #1f2326;
+}
+.cal-body .btn-style{
+    background-color: #5F4BB6;
+}
+
+.cal-body .btn:hover{
+    background-color: cadetblue;
+    border: 2px solid blue;
+}
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* CSS Gride layout  
+
+.grid-container{
+    /* background-color: black; 
+    display: grid;
+    
+    
+    /* grid-template-columns: 300px auto auto auto auto; 
+    grid-template-columns: auto auto auto auto auto;
+    /* grid-template-rows: 100px auto 200px; */
+
+
+    /* grid-column-gap: 10px; */
+    /* grid-row-gap: 10px; 
+    grid-gap: 10px 10px;
+
+
+    justify-content: center;
+    align-items: center;
+}
+
+
+.grid-container > div{
+    background-color: red;
+    color: white;
+    padding: 5px;
+    text-align: center;
+    border: 2px solid black;
+}
+
+.item1{
+    /* grid-column-start: 1;
+    grid-column-end: 4; */
+
+    /* grid-row-start: 1;
+    grid-row-end: 4; */
+
+
+    
+    /* U can use these properties in one property  
+    grid-column: 1 /span 3;
+    grid-row: 1 /span 3;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.container{
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto;
+}
+
+.container > div{
+        background-color: antiquewhite;
+        border: 1px solid green;
+        text-align: center;
+}
+
+.container .item1 h1 {
+    grid-column: 1 / span 7;
+}
+
+.item1{
+    grid-column: 1/7;
+}
+.item2{
+    grid-column: 1/2;
+    grid-row: 2/4;
+}
+.item3{
+    grid-column: 2/6;
+}
+.item4{
+    grid-column: 6/7;
+}
+.item5{
+    grid-column: 2/7;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Grid Area
+.item1{grid-area: header;}
+.item2{grid-area: menu;}
+.item3{grid-area: main;}
+.item4{grid-area: aside;}
+.item5{grid-area: footer;}
+
+.container {
+    display: grid;
+    grid-template-areas: 'header header header header header header'
+                            'menu main main  main main aside'
+                            'footer footer footer footer footer footer';
+    text-align: center;
+}
+
+.container > div {
+    background-color: antiquewhite;
+    border: 1px solid green;
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* .container{
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto;
+
+    /* grid-template-columns: repeat(4,25%); *
+    /* grid-template-columns: repeat(5, 1fr); 
+
+    /* grid-template-columns: 2fr 1fr 1fr 1fr; 
+
+    grid-template-columns:auto-full, minmax(600px, 1fr);
+}
+
+.container>div{
+    border: solid;
+    padding: 5px;
+    margin: 1px;
+} 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    background-color: brown ;
+    display: grid;
+    grid-template-rows: min-content auto min-content ;
+    grid-template-areas:    'h'
+                            'm'
+                            'm'
+                            'm'
+                            'f';
+}
+
+header{
+    grid-area: h;
+    background-color: pink;
+    width: 100%;
+    height: 100%;
+    border: 2px solid #000;
+}
+main{
+    grid-area: m;
+    width: 100%;
+    height: 100%;
+    background-color: chocolate;
+
+}
+main article{
+    height: 100%;
+    display: grid;
+    grid-template-areas: 's1 a1'
+    's2 a2'
+    's3 .';
+
+
+}
+main article section{
+    border: solid #000;
+}
+main article aside{
+    background-color: coral;
+    border: solid;
+}
+footer{
+    grid-area: f;
+    width: 100%;
+    display: grid;
+    grid-template-areas: 'n1 n2';
+    background-color: darkgoldenrod;
+    border: solid;
+}
+
+#sec1{
+    grid-area: s1;
+}
+#sec2{
+    grid-area: s2;
+}
+#sec3{
+    grid-area: s3;
+}
+#aside1{
+    grid-area: a1;
+}
+#aside2{
+    grid-area: a2;
+}
+#nav1{
+    grid-area: n1;
+}
+#nav2{
+    grid-area: n2;
+}
+
+
+
+
+
+@media screen and (max-width: 600px){
+    footer{
+        grid-template-areas:    'n1'
+                                'n2';
+    }
+    main article{
+        grid-template-areas: 's1'
+        's2'
+        's3'
+        'a1'
+        'a2';
+    }
+} */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    /* Centering Elements  */
+
+
+                        /* Block Element 
+.main{
+    height: 200px;
+    background-color: antiquewhite;
+}
+.main h1{
+    background-color:aqua;
+    text-align: center;
+}
+
+*/
+
+
+
+
+
+
+                    /* Block element er khetre Jdi ami "width set kore diye" thaki tahole amk evhaby center krte hbe  
+.main{
+    background-color: antiquewhite;
+    width: 500px;
+    height: 300px;
+
+}
+.main h1{
+    width: 80%;
+    background-color: red;
+    margin: 0 auto;
+}
+
+
+
+.main{
+    background-color: antiquewhite;
+    width: 500px;
+    height: 300px;
+
+}
+.main h1{
+    width: 80%;
+    background-color: red;
+    margin: 0 auto;
+    text-align: center;
+}
+
+*/
+
+
+
+
+
+                    /* Center Horizontally and Vertically 
+.main{
+    background-color: red;
+    width: 500px;
+    height: 400px;
+    margin: auto;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.main h1{
+    background-color: yellow;
+    height: 50%;
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+*/
+
+
+
+
+
+                            /* Centering With Position  
+.main {
+    background-color: red;
+    width: 500px;
+    height: 400px;
+    margin: auto;
+
+    position: relative;
+
+}
+
+/* .main h1 {
+    background-color: yellow;
+    height: 50%;
+    width: 60%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+} 
+
+// Or
+
+.main h1 {
+    background-color: yellow;
+    height: 50%;
+    width: 60%;
+    position: absolute;
+    top: 87px;
+    left: 100px;
+}
+
+*/
+
+
+
+
