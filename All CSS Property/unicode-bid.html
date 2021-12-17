@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+            <h1>CSS unicode-bidi Property</h1>
+                <b>
+                    The unicode-bidi property is used together with the direction property to set or return whether the
+                    text should be overridden to support multiple languages in the same document.
+                </b>
+                <pre>
+                <big>
+            .bilingual-excerpt {
+                direction: rtl;
+                unicode-bidi: embed;
+            }
+
+                </big>
+                </pre>
+
+            <h2>Css Syntax</h2> 
+                <pre>
+                    unicode-bidi: normal|embed|bidi-override|initial|inherit;
+                </pre>
+
+
+            <h2>Values</h2>
+                <ol>
+                    <li>normal 
+                        <p>
+                            The element does not open an additional level of embedding. This is default
+                        </p>
+                    </li>
+                    <li>embed 
+                        <p>
+                            For inline elements, this value opens an additional level of embedding
+                        </p>
+                    </li>
+                    <li>bidi-override
+                        <p>
+                            For inline elements, this creates an override. For block elements, this creates an override
+                            for inline-level descendants not within another block element
+                        </p>
+                    </li>
+                    <li>isolate 
+                        <p>
+                            The element is isolated from its siblings
+                        </p>
+                    </li>
+                    <li>isolate-override </li>
+                    <br>
+                    <li>plaintext </li>
+                </ol>
+
+
+</body>
+</html>

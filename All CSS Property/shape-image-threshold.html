@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        
+        .wrapper .shape {
+            /* border: 1px solid #000; */
+
+            background-image: linear-gradient( 45deg,#0277bd,transparent 50%,transparent);
+            
+            shape-outside : linear-gradient( 45deg,#0277bd,transparent 50%,transparent);
+
+            display: flex;
+            justify-content: center;
+            
+            float: left;
+            height: 300px;
+            width: 300px; 
+        }
+
+        
+
+        .threshold {
+            shape-image-threshold: 0.15;
+        }
+
+        .wrapper h1 {
+            font-size: 20px;
+            transform: rotate(270deg);
+        }
+        
+        
+        
+
+
+
+
+        
+        .wrap .shap {
+            background: url("https://assets.codepen.io/9632/css-tricks-logo-shadow_1.png") no-repeat;
+
+            float: right;
+            height: 350px;
+            width: 350px;
+            justify-content: center;
+
+            shape-outside:url("https://assets.codepen.io/9632/css-tricks-logo-shadow_1.png");
+        }
+
+
+
+        .wrap .thres {
+            shape-image-threshold: 0.15;
+        }
+            
+        .wrap h1 {
+            font-size: 20px;
+            transform: rotate(270deg);
+        }
+    </style>
+</head>
+<body>
+
+        <div
+            style="border: 3px solid black; padding: 20px; margin: 40px 0;">
+            <h1 style="background-color: blueviolet; padding: 20px;">
+                ## CSS shape-image-threshold Property
+            </h1>
+            <br>
+
+            <p> <b>
+                    $$ --
+                    The CSS shape-image-threshold property sets which pixels are included in the shape of an image when shape-outside is used to define the float area of a CSS element.
+                </b>
+            </p>
+            <pre>
+            <big>
+            .threshold {
+                shape-image-threshold: 0.15;
+            }
+            </big>
+            </pre>
+
+            <h2>Values </h2>
+            <b>
+                The shape-image-threshold property accepts a single alpha value between 0 and 1, where 0 is the equivalent of an opacity level of 0% (fully transparent) and 1 is the equivalent of an opacity level of 100% (no transparency). The initial value is 0.0.
+            </b>
+        </div>
+
+
+
+        <br>
+
+
+
+        <h3>Example :</h3>
+        <div class="wrapper">
+            <div class="shape">
+                <h1>No Threshold</h1>
+            </div>
+            <div class="shape threshold">
+                <h1>Threshold</h1>
+            </div>
+
+            <p>Lorem ipsum dolor sit amet
+                consectetur adipisicing elit.
+                Omnis, esse vel? Dolorem
+                cupiditate sunt dolor nesciunt
+                molestias eligendi aliquid, quae
+                eaque maiores expedita a error,
+                explicabo, id magnam praesentium
+                sit. Lorem ipsum dolor sit amet
+                consectetur adipisicing elit.
+                Rerum eligendi reiciendis
+                aspernatur eaque fugit commodi
+                doloremque aut soluta dolor,
+                quaerat amet blanditiis quibusdam
+                rem! Nesciunt nostrum dignissimos
+                ad commodi reiciendis.</p>
+            <p>Lorem ipsum dolor sit amet
+                consectetur adipisicing elit.
+                Omnis, esse vel? Dolorem
+                cupiditate sunt dolor nesciunt
+                molestias eligendi aliquid, quae
+                eaque maiores expedita a error,
+                explicabo, id magnam praesentium
+                sit. Lorem ipsum dolor sit amet
+                consectetur adipisicing elit.
+                Rerum eligendi reiciendis
+                aspernatur eaque fugit commodi
+                doloremque aut soluta dolor,
+                quaerat amet blanditiis quibusdam
+                rem! Nesciunt nostrum dignissimos
+                ad commodi reiciendis.</p>
+            <p>Lorem ipsum dolor sit amet
+                consectetur adipisicing elit.
+                Omnis, esse vel? Dolorem
+                cupiditate sunt dolor nesciunt
+                molestias eligendi aliquid, quae
+                eaque maiores expedita a error,
+                explicabo, id magnam praesentium
+                sit. Lorem ipsum dolor sit amet
+                consectetur adipisicing elit.
+                Rerum eligendi reiciendis
+                aspernatur eaque fugit commodi
+                doloremque aut soluta dolor,
+                quaerat amet blanditiis quibusdam
+                rem! Nesciunt nostrum dignissimos
+                ad commodi reiciendis.</p>
+            <p>Lorem ipsum dolor sit amet
+                consectetur adipisicing elit.
+                Omnis, esse vel? Dolorem
+                cupiditate sunt dolor nesciunt
+                molestias eligendi aliquid, quae
+                eaque maiores expedita a error,
+                explicabo, id magnam praesentium
+                sit. Lorem ipsum dolor sit amet
+                consectetur adipisicing elit.</p>
+        </div>
+        
+        <br>
+        <br>
+        <br>
+        
+        <h3>Example </h3>
+        <div class="wrap">
+            <div class="shap ">
+                <h1>No Threshold</h1>
+            </div>
+            <div class="shap thres">
+                <h1>Threshold</h1>
+            </div>
+
+            <p>Lorem ipsum dolor sit amet
+                consectetur adipisicing elit.
+                Omnis, esse vel? Dolorem
+                cupiditate sunt dolor nesciunt
+                molestias eligendi aliquid, quae
+                eaque maiores expedita a error,
+                explicabo, id magnam praesentium
+                sit. Lorem ipsum dolor sit amet
+                consectetur adipisicing elit.
+                Rerum eligendi reiciendis
+                aspernatur eaque fugit commodi
+                doloremque aut soluta dolor,
+                quaerat amet blanditiis quibusdam
+                rem! Nesciunt nostrum dignissimos
+                ad commodi reiciendis.</p>
+            <p>Lorem ipsum dolor sit amet
+                consectetur adipisicing elit.
+                Omnis, esse vel? Dolorem
+                cupiditate sunt dolor nesciunt
+                molestias eligendi aliquid, quae
+                eaque maiores expedita a error,
+                explicabo, id magnam praesentium
+                sit. Lorem ipsum dolor sit amet
+                consectetur adipisicing elit.
+                Rerum eligendi reiciendis
+                aspernatur eaque fugit commodi
+                doloremque aut soluta dolor,
+                quaerat amet blanditiis quibusdam
+                rem! Nesciunt nostrum dignissimos
+                ad commodi reiciendis.</p>
+            <p>Lorem ipsum dolor sit amet
+                consectetur adipisicing elit.
+                Omnis, esse vel? Dolorem
+                cupiditate sunt dolor nesciunt
+                molestias eligendi aliquid, quae
+                eaque maiores expedita a error,
+                explicabo, id magnam praesentium
+                sit. Lorem ipsum dolor sit amet
+                consectetur adipisicing elit.
+                Rerum eligendi reiciendis
+                aspernatur eaque fugit commodi
+                doloremque aut soluta dolor,
+                quaerat amet blanditiis quibusdam
+                rem! Nesciunt nostrum dignissimos
+                ad commodi reiciendis.</p>
+            <p>Lorem ipsum dolor sit amet
+                consectetur adipisicing elit.
+                Omnis, esse vel? Dolorem
+                cupiditate sunt dolor nesciunt
+                molestias eligendi aliquid, quae
+                eaque maiores expedita a error,
+                explicabo, id magnam praesentium
+                sit. Lorem ipsum dolor sit amet
+                consectetur adipisicing elit.</p>
+        </div>
+
+
+    
+</body>
+</html>

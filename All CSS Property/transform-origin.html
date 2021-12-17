@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        @import
+        url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300&display=swap");
+
+        .cc{
+            background-color: #3b2c85;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            padding: 100px;
+        }
+
+        .origin {
+        margin-right: 15px;
+        width: 1em;
+        height: 1em;
+        font-size: 13vmin;
+        position: relative;
+        background: rgba(0, 0, 0, 0.4);
+        -webkit-animation: spin 6s
+        cubic-bezier(0.8, 0, 0.2, 1) infinite;
+        animation: spin 6s cubic-bezier(0.8, 0,
+        0.2, 1) infinite;
+        }
+        @-webkit-keyframes spin {
+        50% {
+        transform: rotate(180deg);
+        }
+        100% {
+        transform: rotate(360deg);
+        }
+        }
+        @keyframes spin {
+        50% {
+        transform: rotate(180deg);
+        }
+        100% {
+        transform: rotate(360deg);
+        }
+        }
+        .origin:before, .origin:after {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        border: solid 1px red;
+        transform-origin: inherit;
+        }
+        .origin:before {
+        -webkit-animation: inherit;
+        animation: inherit;
+        animation-direction: reverse;
+        text-shadow: 0 1px 0 #000;
+        font-size: 0.11em;
+        font-family: "JetBrains Mono", monospace;
+        padding: 0.2em;
+        content: attr(style);
+        display: flex;
+        text-align: center;
+        word-break: keep-all;
+        align-items: center;
+        z-index: 2;
+        }
+        .origin:after {
+        background: red;
+        transform: scale(0.1);
+        }
+
+
+        .origin {
+        background: #3b2c85;
+        background: rgba(133, 207, 203, 0.3);
+        }
+        .origin:before {
+        border: solid 1px #db3951;
+        color: rgba(255, 255, 255, 0.8);
+        z-index: 5;
+        }
+        .origin:after {
+        background: #db3951;
+        }
+
+        *,
+        *::before,
+        *::after {
+        box-sizing: border-box;
+        }
+
+        
+    </style>
+</head>
+<body>
+    <div
+        style="border: 3px solid black; padding: 20px; margin: 40px 0;">
+        <h1
+            style="background-color: blueviolet; padding: 20px;">
+            ## CSS transform-origin Property
+        </h1>
+        <br>
+
+        <p> <b>
+                $$ --
+                The transform-origin property is used in conjunction with CSS transforms, letting you change the point of origin of a transform.
+            </b>
+        </p>
+        <br>
+        Values can be lengths, percentages or the keywords top, left, right, bottom, and center.
+        <br>
+        <br>
+        <p>
+            As indicated above, the transform-origin property can take up to 
+            <b>
+                <mark>
+                    two space-separated keyword or length values 
+                </mark>
+                for a 2D transform and 
+                <mark>
+                    up to three values 
+                </mark>
+                for a 3D transform.
+            </b>
+        </p>
+    </div>
+
+
+    <br>
+    <br>
+    <br>
+    <h3>Example :</h3>
+    <div class="cc">
+    <div class="origin"
+        style="transform-origin: top left"></div>
+    <div class="origin"
+        style="transform-origin: top center">
+    </div>
+    <div class="origin"
+        style="transform-origin: top right"></div>
+
+    <div class="origin"
+        style="transform-origin: center left">
+    </div>
+    <div class="origin"
+        style="transform-origin: center center">
+    </div>
+    <div class="origin"
+        style="transform-origin: center right">
+    </div>
+
+    <div class="origin"
+        style="transform-origin: bottom left">
+    </div>
+    <div class="origin"
+        style="transform-origin: bottom center">
+    </div>
+    <div class="origin"
+        style="transform-origin: bottom right">
+    </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            border: 1px solid #000;
+            width: 300px;
+
+            writing-mode: vertical-rl;
+            /* writing-mode: vertical-rl; */
+
+                    /* For Firefox only */
+            /* writing-mode: sideways-rl; */
+            /* writing-mode: sideways-lr; */
+
+
+                    /* Support not yet */
+            /* text-orientation: sideways; */
+            /* text-orientation: sideways; */
+
+
+
+            text-orientation: sideways;
+            text-orientation: sideways-right;
+            text-orientation: mixed;
+            
+            text-orientation: upright;
+        }      
+    </style>
+</head>
+<body>
+    
+        <h1>Css Text Orientation Property </h1> 
+
+            <p>
+                <b>
+                    $$ --
+                    The text-orientation property in CSS aligns text in a line when working with a vertical writing-mode. Basically, it rotates either the line by 90° clockwise to help control how vertical languages are displayed — much like the way text-combine-upright rotates groups of characters within a line of text in a vertical script, but for full lines of text.
+                </b>
+            </p>
+
+
+            <h2>Syntax</h2>
+            <pre>
+            <big>
+            <b>
+        text-orientation: mixed | upright | sideways
+            </b>
+            </big>
+            </pre>
+
+            <h2>Values </h2>    
+                <ol>
+                    <li>mixed 
+                        <p>
+                            Default 
+                        </p>
+                    </li>
+                    <li>upright 
+                        <p>Like Vertical</p>
+                    </li>
+                    <b> No browser support yet</b>
+                    <li>sideways </li>
+                    <li>sideways-right </li>
+                </ol>
+                <pre>
+                <big>
+            <h3></h3>
+        /* Keyword values */
+            text-orientation: mixed;    /* default */
+            text-orientation: upright;
+            text-orientation: sideways;
+            text-orientation: sideways-right;
+
+                </big>
+                </pre>
+
+
+            <br>
+            <br>
+            <h3>Example</h3>    
+                <div>
+                    <h2>Example</h2>
+                    <p>
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Modi dolorem illum velit, ullam tempora id ipsum repellat repellendus natus cumque quas molestiae harum, consequatur atque deserunt, consectetur quam omnis illo!
+                    </p>
+                </div>
+
+
+
+
+
+</body>
+</html>

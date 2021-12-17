@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        div {
+        padding: 20px;
+        margin: 20px;
+        background: #eee;
+        }
+
+        .no-copy p {
+        -webkit-user-select: none; /* Chrome all /
+        Safari all */
+        -moz-user-select: none; /* Firefox all */
+        -ms-user-select: none; /* IE 10+ */
+        user-select: none; /* Likely future */
+        }
+
+        .all-copy p {
+        -webkit-user-select: all; /* Chrome all /
+        Safari all */
+        -moz-user-select: all; /* Firefox all */
+        -ms-user-select: all; /* IE 10+ */
+        user-select: all; /* Likely future */
+        }
+    </style>
+</head>
+<body>  
+        <h1>CSS user-select Property </h1>
+            <p>In web browsers, if you double-click on some text it will be selected/highlighted. This property can be
+                used to prevent this.</p>
+            <p>
+                In web browsers, if you double-click on some text it will be selected/highlighted. This property can be
+                used to prevent this.
+            </p>
+            <pre>
+            <big>
+        .force-select {
+            -webkit-user-select: all;   /* Chrome 49+ */
+            -moz-user-select: all;      /* Firefox 43+ */
+            -ms-user-select: all;       /* No support yet */
+            user-select: all;           /* Likely future */
+        }
+            </big>
+            </pre>
+
+        <h2>CSS Syntax</h2>
+            <pre>
+                user-select: auto|none|text|all;
+            </pre>
+        <h2>Values</h2>
+            <ol>
+                <li>auto 
+                    <p>
+                        Default. Text can be selected if the browser allows it
+                    </p>
+                </li>
+                <li>none 
+                    <p>
+                        Prevent text selection
+                    </p>
+                </li>
+                <li>text 
+                    <p>
+                        The text can be selected by the user
+                    </p>
+                </li>
+                <li>all
+                    <p>
+                        Text selection is made with one click instead of a double-click
+                    </p>
+                </li>
+            </ol>
+
+
+
+            <h3>EXample :</h3>
+            <div class="no-copy">
+                <p>You can't copy me.</p>
+            </div>
+
+            <div class="no-copy">
+                .
+                <p>But you can accidently copy me
+                    (in Safari/WebKit only, not
+                    Blink or Gecko) by selecting
+                    the periods around me.</p>
+                .
+            </div>
+
+            <div class="all-copy">
+                <p>One click selects all this.</p>
+            </div>
+
+
+</body>
+</html>

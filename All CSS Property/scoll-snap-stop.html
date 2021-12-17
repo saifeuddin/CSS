@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible"
+        content="IE=edge">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .no-support {
+        text-align: center;
+        padding: 5px;
+        width: 450px;
+        margin-left: auto;
+        margin-right: auto;
+        background: #ee6620;
+        color: #fff;
+        font-size: 16px;
+        }
+
+        @supports(scroll-snap-stop: always) {
+        .no-support {
+        display: none;
+        }
+        }
+
+        .example-wrapper {
+        text-align: center;
+        width: 400px;
+        margin-left: auto;
+        margin-right: auto;
+        }
+
+        .container {
+        width: 320px;
+        height: 320px;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 10px;
+        margin-bottom: 10px;
+        border: 2px solid #333;
+        overflow: scroll;
+        position: relative;
+        }
+
+        .element {
+        width: 300px;
+        height: 300px;
+        /* scroll-margin: 10px; */
+        scroll-snap-align: start;
+        scroll-snap-stop: normal;
+        color: white;
+        font-size: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        }
+
+        .element code {
+        font-size: 13px;
+        }
+
+        .element:nth-child(4n + 1) {
+        background: #1d1e21;
+        }
+
+        .element:nth-child(2) {
+        background: #ee6620;
+        }
+
+        .element:nth-child(3) {
+        background: #777ba0;
+        }
+
+        .element:nth-child(4) {
+        background: #da1e62;
+        }
+
+        .y-mandatory {
+        scroll-snap-type: y mandatory;
+        }
+
+        .y-scroll .element {
+        margin-bottom: 10px;
+        }
+
+        .snap-stop-always {
+        scroll-snap-stop: always;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <div
+        style="border: 3px solid black; padding: 20px; margin: 40px 0;">
+        <h1
+            style="background-color: blueviolet; padding: 20px;">
+            ## CSS scroll-snap-stop Property
+        </h1>
+        <br>
+
+        <p> <b>$$ --
+                scroll-snap-stop is an optional property for a scroll-snapping element within a scroll-snapping container.
+            </b>
+        </p>
+        <p>
+            By setting scroll-snap-stop you can tell the browser that it must stop on a particular element before allowing the user past it.
+        </p>
+        <pre>
+            <big>
+        /* Assuming this element is a child of a container with `scroll-snap-type` set */
+
+        .element {
+            scroll-snap-stop: always;
+        }
+            </big>
+            </pre>
+    </div>
+
+
+
+    <div
+        style="border: 3px solid black; padding: 20px; margin: 40px 0;">
+        <h2>
+            ## Syntax
+        </h2>
+        <br>
+
+        <pre> <big>
+        scroll-snap-stop: normal | always;
+                </big>
+            </pre>
+
+        <h2>Values </h2>
+        <ul>
+            <li>
+                normal 
+                <p>
+                    s the default value and allows an element to be scrolled past without snapping.
+                </p>
+            </li>
+            <li>
+                always 
+                <p>
+                    will force the browser to snap
+                    to this element, even if the
+                    scroll would normally go past
+                    this element
+                </p>
+            </li>
+        </ul>
+    </div>
+
+
+
+    <h3>Example:</h3>
+    <div class="no-support">
+        <p>Heads up: It doesn't look like your
+            browser supports
+            <code>scroll-snap-top</code>! Check <a
+                href="https://caniuse.com/#feat=css-snappoints">Can
+                I use</a> for current browser
+            support. Maybe try opening this
+            CodePen in a different browser, like
+            Chrome?</p>
+    </div>
+
+    <div class="example-wrapper">
+        <p>Please note that Chrome <a
+                href="https://bugs.chromium.org/p/chromium/issues/detail?id=823998&q=scroll-snap-stop&colspec=ID%20Pri%20M%20Stars%20ReleaseBlock%20Component%20Status%20Owner%20Summary%20OS%20Modified">may
+                not
+                support</a><br><code>scroll-snap-stop:
+                always;</code></p>
+        <p>Scroll slowly to "feel" the snap
+            points.</p>
+
+        <div
+            class="container y-scroll y-mandatory">
+            <div class="wrapper">
+                <div class="element">
+                    <code>scroll-snap-stop:
+                        normal;</code></div>
+                <div
+                    class="element snap-stop-always">
+                    <code>scroll-snap-stop:
+                        always;</code></div>
+                <div class="element">
+                    <code>scroll-snap-stop:
+                        normal;</code></div>
+                <div
+                    class="element snap-stop-always">
+                    <code>scroll-snap-stop:
+                        always;</code></div>
+                <div class="element">
+                    <code>scroll-snap-stop:
+                        normal;</code></div>
+            </div>
+        </div>
+    </div>
+
+
+    
+
+
+    <br>
+    <br>
+    <br>
+
+
+</body>
+
+</html>

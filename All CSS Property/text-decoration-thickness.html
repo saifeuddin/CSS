@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible"
+        content="IE=edge">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <h1>CSS text-decoration-thickness Property
+    </h1>
+    <p>
+        The text-decoration-thickness property in CSS sets the stroke thickness of the decoration line that is used on text in an element. The text-decoration-line value needs to be either underline, line-through, or overline to reflect the thickness property.
+    </p>
+
+    <pre>
+    <big>
+    .text {
+        text-decoration-line: underline;
+        text-decoration-thickness: 2px;
+    }
+
+
+
+    
+    .link {
+        text-decoration: underline solid green 1px;
+    }
+    
+        /* The longhand equivalent */
+    .link {
+        text-decoration-line: underline;
+        text-decoration-style: solid;
+        text-decoration-color: green,
+        text-decoration-thickness: 1px;
+    </big>
+    </pre>
+
+    <h2>Syntax</h2>
+    <pre>
+    <big>
+    auto | from-font | length | percentage
+    </big>
+    </pre>
+
+    <h2>Values</h2>
+    <ol>
+        <li>auto
+            <p>
+                is the default value and will
+                “skip” underlines/overlines when
+                passing through a character.
+            </p>
+        </li>
+        <li>from-font
+            <p>
+                If the first available font has metrics specifying a preferred thickness, it uses that thickness; otherwise it behaves like the auto value.
+            </p>
+        </li>
+        <li>length</li>
+        <br>
+        <li>percentage</li>
+    </ol>
+    <br>
+    <br>
+    <br>
+
+</body>
+
+</html>

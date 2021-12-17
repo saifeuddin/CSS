@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .map {
+        margin: 1rem;
+        width: 300px;
+        height: 300px;
+        overflow: scroll;
+        position: relative;
+        margin-bottom: 15px;
+        }
+        .map img {
+        width: 1200px;
+        height: 1200px;
+        }
+        .map-desc {
+        position: absolute;
+        width: 100%;
+        text-align: center;
+        font-weight: bold;
+        top: 130px;
+        font-size: 24px;
+        }
+        .touch-auto {
+        touch-action: auto;
+        }
+        .touch-none {
+        touch-action: none;
+        }
+        .touch-pan-x {
+        touch-action: pan-x;
+        }
+        .touch-pan-y {
+        touch-action: pan-y;
+        }
+        .touch-pan-right {
+        touch-action: pan-right;
+        }
+        .touch-manipulation {
+        touch-action: manipulation;
+        }
+
+    </style>
+</head>
+<body>
+
+        <div
+            style="border: 3px solid black; padding: 20px; margin: 40px 0;">
+            <h1
+                style="background-color: blueviolet; padding: 20px;">
+                ## CSS touch-action Property
+            </h1>
+            <br>
+
+            <p> <b>
+                    $$ --
+                    The touch-action property in CSS gives you control over the effect of touchscreen interactions with an element, similar to the more widely-used pointer-events property used to control mouse interactions.
+                </b> <br> <br> <br>
+                    The touch-action property is useful primarily for interactive UI elements that need slightly different behavior depending on the type of device being used. When your users might expect an element to behave a particular way with a mouse, and slightly different behavior on a touch screen, touch-action will come in handy.
+            </p>
+
+
+            <pre>
+            <big>
+    #element {
+        touch-action: pan-right pinch-zoom;
+    }
+            </big>
+            </pre>
+
+            <b>
+                By default, a browser will handle touch interactions automatically: Pinch to zoom, swipe to scroll, etc. Setting touch-action to none will disable all browser handling of these events, leaving them up to you to implement (via JavaScript). If you only want to take over one interaction, tell the browser to handle the rest. For example, if you wrote some JavaScript that only handles zooming, you can tell the browser to handle everything else with this property: touch-action: pan-x pan-y;.
+            </b>
+        </div>
+
+
+        <div
+            style="border: 3px solid black; padding: 20px; margin: 40px 0;">
+            <h2>
+                ##Values
+            </h2>
+            <br>
+            <img src="touch-action.jpg" alt="">
+        </div>
+
+
+
+
+
+
+        <h2>Example :</h2>
+        <div class="map touch-auto">
+            <img src="https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ">
+            <code class="map-desc">touch-action:
+                auto;</code>
+        </div>
+
+        <div class="map touch-none">
+            <img src="https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ">
+            <code class="map-desc">touch-action:
+                none;</code>
+        </div>
+
+        <div class="map touch-pan-x">
+            <img src="https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ">
+            <code class="map-desc">touch-action: pan-x;</code>
+        </div>
+
+        <div class="map touch-pan-y">
+            <img src="https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ">
+            <code class="map-desc">touch-action:
+                pan-y;</code>
+        </div>
+
+        <div class="map touch-pan-right">
+            <img src="https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ">
+            <code class="map-desc">touch-action:
+                pan-right;</code>
+        </div>
+
+        <div class="map touch-manipulation">
+            <img src="https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ">
+            <code class="map-desc">touch-action:
+                manipulation;</code>
+        </div>
+</body>
+</html>

@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible"
+        content="IE=edge">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .no-support {
+        text-align: center;
+        padding: 5px;
+        width: 450px;
+        margin-left: auto;
+        margin-right: auto;
+        background: #ee6620;
+        color: #fff;
+        font-size: 16px;
+        }
+
+        @supports(scroll-snap-type: both
+        mandatory) {
+        .no-support {
+        display: none;
+        }
+        }
+
+        .example-wrapper {
+        text-align: center;
+        width: 360px;
+        margin-left: auto;
+        margin-right: auto;
+        }
+
+        .container {
+        width: 360px;
+        height: 360px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 10px;
+        border: 2px solid #333;
+        overflow: auto ;
+        position: relative;
+        }
+
+        .element {
+        width: 300px;
+        height: 300px;
+        scroll-snap-align: start;
+        scroll-snap-stop: normal;
+        color: white;
+        font-size: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        }
+        .element:nth-child(1) {
+        background: #1d1e21;
+        }
+        .element:nth-child(2) {
+        background: #ee6620;
+        }
+        .element:nth-child(3) {
+        background: #777ba0;
+        }
+        .element:nth-child(4) {
+        background: #da1e62;
+        }
+
+        .both-mandatory {
+        scroll-snap-type: both mandatory;
+        }
+
+        .scroll-wrapper {
+        position: relative;
+        }
+
+        .scroll-padding-top,
+        .scroll-padding-left {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 360px;
+        background: pink;
+        opacity: 0.5;
+        display: block;
+        z-index: 2;
+        }
+
+        .scroll-padding-top {
+        top: 2px;
+        }
+
+        .both-scroll .wrapper {
+        width: 620px;
+        height: 100%;
+        display: grid;
+        grid-template-columns: 300px 300px;
+        grid-gap: 10px;
+        padding: 100px 100px 400px 100px; /* To
+        give more space to scroll */
+        }
+
+        .padding-0px {
+        scroll-padding: 0px 0px 0px 0px;
+        }
+
+        .padding-50px {
+        scroll-padding: 50px 0px 0px 50px;
+        }
+
+        .padding-100px {
+        scroll-padding: 100px 0px 0px 100px;
+        }
+
+        .scroll-wrapper-50px .scroll-padding-top,
+        .scroll-wrapper-50px .scroll-padding-left
+        {
+        height: 50px;
+        line-height: 50px;
+        }
+
+        .scroll-wrapper-50px .scroll-padding-left
+        {
+        transform: rotate(-90deg);
+        left: calc(-1 * 360px / 2 + 50px / 2 +
+        2px);
+        top: calc(360px / 2 - 50px / 2 + 2px);
+        }
+
+        .scroll-wrapper-100px .scroll-padding-top,
+        .scroll-wrapper-100px .scroll-padding-left
+        {
+        height: 100px;
+        line-height: 100px;
+        }
+
+        .scroll-wrapper-100px .scroll-padding-left
+        {
+        transform: rotate(-90deg);
+        left: calc(-1 * 360px / 2 + 100px / 2 +
+        2px);
+        top: calc(360px / 2 - 100px / 2 + 2px);
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <div
+        style="border: 3px solid black; padding: 20px; margin: 40px 0;">
+        <h1
+            style="background-color: blueviolet; padding: 20px;">
+            ## CSS scroll-padding Property
+        </h1>
+        <br>
+
+        <p> <b>$$ --
+                scroll-padding is used to adjust the snapping container’s optimal viewing region. This is useful if the container has elements such as a fixed header that would obscure elements inside or if the scrollable container needs some space to give the interior elements room to breathe once they’ve been “snapped” into position.
+            </b>
+        </p>
+        <p>
+            scroll-padding is an optional property for any scroll-snapping container
+        </p>
+
+
+
+        <br>
+        <br>
+        <br>
+        <p>
+            A simple example would be using scroll-padding to create some fixed spacing of 50px at the top and left of the container:
+        </p>
+        <pre>
+            <big>
+        .element {
+            scroll-padding: 50px 0 0 50px;
+        }
+            </big>
+            </pre>
+            <img src="scrooll.jpg" alt="">
+    </div>
+
+
+
+    <div
+        style="border: 3px solid black; padding: 20px; margin: 40px 0;">
+        <h2>
+            ## Syntax
+        </h2>
+        <br>
+
+        <pre> <big>
+            /* Shorthand */
+        scroll-padding: length-percentage | auto;
+
+            /* Longhands */
+        scroll-padding-top:    length-percentage | auto;
+        scroll-padding-right:  length-percentage | auto;
+        scroll-padding-bottom: length-percentage | auto;
+        scroll-padding-left:   length-percentage | auto;
+
+            /* inline-specific and block-specific properties as well */
+        scroll-padding-block : length-percentage | auto ;
+        scroll-padding-inline: length-percentage | auto ;
+                </big>
+            </pre>
+    </div>
+
+    <h3>Example:</h3>
+    <div class="no-support">
+        <p>Heads up: It doesn't look like your
+            browser supports scroll snapping!
+            Check <a
+                href="https://caniuse.com/#feat=css-snappoints">Can
+                I use</a> for current browser
+            support. Maybe try opening this
+            CodePen in a different browser, like
+            Chrome?</p>
+    </div>
+
+
+
+
+    <div class="example-wrapper">
+        <p>On all examples, scroll slowly to
+            "feel" the snap points.</p>
+
+        <p><code>scroll-padding: 0px 0px 0px
+                0px;</code></p>
+
+        <div
+            class="container both-scroll both-mandatory padding-0px">
+            <div class="wrapper">
+                <div class="element">1</div>
+                <div class="element">2</div>
+                <div class="element">3</div>
+                <div class="element">4</div>
+            </div>
+        </div>
+
+        <p><code>scroll-padding: 50px 0px 0px
+                50px;</code></p>
+
+        <div
+            class="scroll-wrapper scroll-wrapper-50px">
+            <div class="scroll-padding-top">
+                scroll-padding-top</div>
+            <div class="scroll-padding-left">
+                scroll-padding-left</div>
+            <div
+                class="container both-scroll both-mandatory padding-50px">
+                <div class="wrapper">
+                    <div class="element">1</div>
+                    <div class="element">2</div>
+                    <div class="element">3</div>
+                    <div class="element">4</div>
+                </div>
+            </div>
+        </div>
+
+        <p><code>scroll-padding: 100px 0px 0px
+                100px;</code></p>
+
+        <div
+            class="scroll-wrapper scroll-wrapper-100px">
+            <div class="scroll-padding-top">
+                scroll-padding-top</div>
+            <div class="scroll-padding-left">
+                scroll-padding-left</div>
+            <div
+                class="container both-scroll both-mandatory padding-100px">
+                <div class="wrapper">
+                    <div class="element">1</div>
+                    <div class="element">2</div>
+                    <div class="element">3</div>
+                    <div class="element">4</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <br>
+    <br>
+    <br>
+
+
+</body>
+
+</html>

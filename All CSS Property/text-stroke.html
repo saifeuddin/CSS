@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible"
+        content="IE=edge">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <style>
+        .c {
+            -webkit-text-stroke: 1px yellow;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div
+        style="border: 3px solid black; padding: 20px; margin: 40px 0;">
+        <h1
+            style="background-color: blueviolet; padding: 20px; ">
+            ## CSS text-stroke Property
+        </h1>
+        <br>
+
+        <p> <b>
+                $$ --
+                text-stroke is an experimental property that provides text decoration options similar to those found in Adobe Illustrator or other vector drawing applications.
+            </b>
+        </p>
+        <br>
+        <b>
+            The text-stroke property is actually shorthand for two other properties:
+        </b>
+        <ol>
+            <li>
+                <b>
+                    text-stroke-width :
+                </b>
+                <p> 
+                    which takes unit value (1px, 0.125em, 4in, etcetera) and describes the thickness of the stroke effect.
+                </p>
+            </li>
+            <li>
+                <b>
+                    text-stroke-color :
+                </b>
+                <p>
+                    which takes a color value (hex, rgb/rgba, hsl/hsla, etcetera)
+                </p>
+
+            </li>
+        </ol>
+        <br>
+
+
+        <b>
+            text-stroke also has a companion property, 
+            <mark>
+                text-fill-color,
+            </mark>
+            which will override the color property, allowing for a graceful fallback to a different text color in browsers that do not support text-stroke.
+        </b>
+    </div>
+
+
+    <div
+        style="border: 3px solid black; padding: 20px; margin: 40px 0;">
+
+        <h2 class="c">Syntax</h2>
+        <pre>
+                    <big>
+        text-stroke : width color;
+                    </big>
+                    </pre>
+
+        <h2>
+            ## Values
+        </h2>
+        <br>
+
+        <ul>
+            <li>
+                width
+            </li>
+            <li>
+                color
+            </li>
+        </ul>
+
+
+        <br>
+        <br>
+        <h3 style="-webkit-text-stroke:2px red ">Example :</h3>
+        <pre>
+                <big>
+        h1 {
+            text-stroke: 2px red;
+        }
+                </big>
+                </pre>
+    </div>
+
+
+
+</body>
+
+</html>

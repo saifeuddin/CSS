@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+        <div
+            style="border: 3px solid black; padding: 20px; margin: 40px 0;">
+            <h1
+                style="background-color: blueviolet; padding: 20px;">
+                ## CSS text-overflow Property
+            </h1>
+            <br>
+
+            <p> <b>
+                    $$ --
+                    The text-overflow property in CSS deals with situations where text is clipped when it overflows the element’s box. It can be clipped (i.e. cut off, hidden), display an ellipsis (‘…’, Unicode Range Value U+2026) or display an author-defined string (no current browser support for author-defined strings).
+                </b> <br> <br> <br> <br>
+                <b> 
+                    Note that text-overflow only occurs when the container’s overflow property has the value 
+                    <mark>
+                        hidden, scroll or auto and white-space: nowrap;.
+                    </mark>
+                </b>
+            </p>
+        </div>
+
+
+            <div
+                style="border: 3px solid black; padding: 20px; margin: 40px 0;">
+
+                <h2>Syntax</h2>
+                    <pre>
+                    <big>
+                text-overflow : clip / ellipsis / ellipsis-word / string
+                    </big>
+                    </pre>
+
+                <h2>
+                    ## Values
+                </h2>
+                <br>
+
+                <ul> 
+                    <li>
+                        clip 
+                        <p>
+                             { text-overflow: clip; }
+                        </p>
+                    </li>
+                    <li>
+                        ellipsis 
+                        <p>
+                             { text-overflow: ellipsis; }
+                        </p>
+                    </li>
+                    <li>
+                        ellipsis -word
+                        <p>
+                             { text-overflow: ellipsis-word; }
+                        </p>
+                    </li>
+                    <li>
+                        string 
+                        <p>
+                             { text-overflow: '.....'; }
+                        </p>
+                    </li>
+                </ul>
+
+                
+                <br>
+                <br>
+                <h3>Example :</h3>
+                <pre>
+                <big>
+        .ellipsis {
+            text-overflow: ellipsis;
+
+        /* Required for text-overflow to do anything */
+
+            white-space: nowrap;
+            overflow: hidden;
+        }
+                </big>
+                </pre>
+            </div>
+    
+</body>
+</html>

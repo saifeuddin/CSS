@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        <div
+            style="border: 3px solid black; padding: 20px; margin: 40px 0;">
+            <h1
+                style="background-color: blueviolet; padding: 20px;">
+                ## CSS text-justify Property
+            </h1>
+            <br>
+
+
+        <p> <b>
+                $$ --
+                The text-justify property in CSS is a companion to the text-align property that is used to set the justification method of text when text-align is set to the justify value.
+            </b>
+        </p>
+    </div>
+
+
+        <div
+            style="border: 3px solid black; padding: 20px; margin: 40px 0;">
+            <h2>
+                ## Syntax
+            </h2>
+            <br>
+
+            <pre>
+                <b>
+        p {
+            text-align: justify;
+            text-justify: inter-word;
+        }
+                </b>
+            </pre>
+
+
+
+            <h2>Property Values</h2>
+            <ul>
+                <li>auto
+                    <p>
+                        Allows the browser to determine whether justification is better handled as inter-word or inter-character. This can be helpful in multi-lingual scenarios where the content language is unknown until rendered, allowing the browser user agent to choose accordingly based on which method better fits the language context.
+                    </p>
+                </li>
+                <li>
+                    inner-word 
+                    <p>
+                        Specifies that text is justified by adjusting the spacing between words, effectively creating additional word spacing. This is effectively a variation of the word-spacing property.
+                    </p>
+                </li>
+                <li>
+                    inner-character 
+                    <p>
+                        pecifies that text is justfiied by adjusting the spacing between characters, effectively creating additional character spacing. This is effectively a variation of the letter-spacing property.
+                    </p>
+                </li>
+                <li>
+                    none 
+                    <p>
+                        Disables justification methods, effectively removing any justification opportunities, or overriding where a justification method may occur in the cascade.
+                    </p>
+                </li>
+            </ul>
+            <img src="text-justify.jpg" alt="">
+        </div>
+
+</body>
+</html>

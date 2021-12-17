@@ -1,0 +1,75 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+        <h1>CSS text-underline-position Property </h1>  
+            <p>
+                The text-underline-position property sets the placement of the underline on links or on text with
+                text-decoration: underline; applied.
+            </p>
+            <pre>
+            <big>
+        .element {
+            text-underline-position: under;
+        }
+            </big>
+            </pre>
+            <h2>Values</h2>
+                <ol>
+                    <li>auto 
+                        <p>
+                            auto: the default. The browser will decide between placing the underline at the text’s
+                            baseline or under it.
+                        </p>
+                    </li>
+                    <li>under 
+                        <p>
+                            under: places the underline under the text with extra space to prevent crossing descenders.
+                        </p>
+                    </li>
+                    <li>left 
+                            <p>
+                                left: for vertical writing modes. This places the line to the left of the text.
+                            </p>
+                    </li>
+                    <li> right
+                        <p>
+                            right: for vertical writing modes. This places the line to the right of the text.
+                        </p>
+                    </li>
+                </ol>
+            <b>Microsoft uses a different set of values for Internet Explorer:</b>
+                <ol>
+                    <li>auto 
+                        <p>
+                            auto: the default. Places the underline below the text for all languages except Japanese
+                        </p>
+                    </li>
+                    <li>
+                        above 
+                        <p>
+                            above: positions the underline above the text. Visually identical to text-decoration:overline;
+                        </p>
+                    </li>
+                    <li>below
+                        <p>
+                            below: positions the underline below the text. Note that this is different from under — it will not clear descenders.
+                        </p>
+                    </li>
+                    <li>auto-pos 
+                        <p>
+                            auto-pos works the same as the MS implementation of auto.
+                        </p>
+                    </li>
+                </ol>
+
+
+</body>
+</html>

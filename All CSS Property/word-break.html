@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        <h1>CSS word-break Property</h1>
+            <p>
+                The word-break property specifies how words should break when reaching the end of a line.
+            </p>
+            <h2>CSS Syntax </h2>
+                <pre>
+                    word-break: normal | break-all | keep-all |break-word | initial | inherit;
+                </pre>
+            <h2>Property Values</h2>
+                <ol>
+                    <li>normal 
+                        <p>
+                            Default value.Uses default line brake rules
+                        </p>
+                    </li>
+                    <li>keep-all 
+                        <p>
+                            Word breaks should not be used for Chinese/Japanese/Korean (CJK) text. Non-CJK text behavior
+                            is the same as value "normal"
+                        </p>
+                    </li>
+                    <li>break-all 
+                        <p>To prevent overflow, word may be broken at any character</p>
+                    </li>
+                    <li>break-word 
+                        <p>
+                            To prevent overflow, word may be broken at arbitrary points
+                        </p>
+                    </li>
+                </ol>
+                <b>
+                    word-break can be used in CJK 
+                    content, the spec says: “To
+                    enable additional break
+                    opportunities only in the case
+                    of overflow, see
+                    overflow-wrap“.
+                </b>
+                <br>
+                <br>
+                <b>
+                    From this, we can surmise that
+                    word-break is best used with
+                    non-English content that
+                    requires specific
+                    word-breaking rules, and that
+                    might be interspersed with
+                    English content.
+                </b>
+
+                
+
+
+
+
+</body>
+</html>

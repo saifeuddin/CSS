@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible"
+        content="IE=edge">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div
+        style="border: 3px solid black; padding: 20px; margin: 40px 0;">
+        <h1
+            style="background-color: blueviolet; padding: 20px;">
+            ## CSS text-rendering Property
+        </h1>
+        <br>
+
+            <p> <b>
+                    $$ --
+                    The text-rendering CSS property provides information to the rendering engine about what to optimize for when rendering text. The browser makes trade-offs among speed, legibility, and geometric precision.
+                </b> <br> <br> <br> <br>
+                <b> 
+                    The text-rendering property is not defined in any CSS standard. It’s actually an SVG property. However, Gecko/WebKit/Blink browsers let you apply this property to HTML elements.
+                </b>
+            </p>
+        </div>
+
+
+            <div
+                style="border: 3px solid black; padding: 20px; margin: 40px 0;">
+
+                <h2>Syntax</h2>
+                    <pre>
+                    <big>
+        text-rendering :auto / optimizeSpeed / optimizeLegibility / geometricPrecision
+                    </big>
+                    </pre>
+
+                <h2>
+                    ## Values
+                </h2>
+                <br>
+
+                <ul> 
+                    <li>
+                        auto 
+                        <p>
+                            The browser makes educated guesses about when to optimize for speed, legibility, and geometric precision while drawing text. Be aware that different browsers interpret this value differently.
+                        </p>
+                    </li>
+                    <li>
+                        optimizeSpeed
+                        <p>
+                            The browser emphasizes rendering speed over legibility and geometric precision when drawing text. It disables kerning and ligatures.
+                        </p>
+                    </li>
+                    <li>
+                        optimizeLegibility
+                        <p>
+                            The browser emphasizes legibility over rendering speed and geometric precision. This enables the use of special kerning and optional ligature information that may be contained in the font file for certain fonts.
+                        </p>
+                    </li>
+                    <li>
+                        geometricPrecision
+                        <p>
+                            The browser emphasizes geometric precision over rendering speed and legibility. Certain aspects of fonts—such as kerning—don’t scale linearly, so geometricPrecision can make text using those fonts look good. When SVG font is scaled, the browser calculates pixel size, then rounds to the nearest integer. The geometricPrecision property allows for more fluid scaling. Note: Only WebKit browsers apply this fluid value, Gecko treats the value just like optimizeLegibility.
+                        </p>
+                    </li>
+                </ul>
+
+                
+                <br>
+                <br>
+                <h3>Example :</h3>
+                <pre>
+                <big>
+        body {
+            text-rendering: optimizeLegibility;
+        }
+
+        p.legibility {
+            text-rendering: optimizeLegibility;
+        }
+
+        p.speed {
+            text-rendering: optimizeSpeed;
+        }
+                </big>
+                </pre>
+            </div>
+    
+
+
+</body>
+
+</html>

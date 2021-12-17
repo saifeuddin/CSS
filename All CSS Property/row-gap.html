@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible"
+        content="IE=edge">
+    <meta name="viewport" content="width=device-width,
+        initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        :root {
+        --row-gap: 0;
+        }
+
+        body {
+        padding: 2rem;
+        }
+
+        .grid {
+        display: grid;
+        grid-template-rows: repeat(3, 1fr);
+        grid-row-gap: var(--row-gap);
+        row-gap: var(--row-gap);
+        }
+
+        .grid-item {
+        background: orange;
+        padding: 2rem;
+        text-align: center;
+        }
+
+        .controls {
+        background-color: #eaeaea;
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: repeat(2, 1fr);
+        justify-content: center;
+        padding: 25px 0;
+        text-align: center;
+        width: 100%;
+        }
+
+        .controls__wrapper {
+        margin: 0 auto;
+        width: 50%;
+        }
+
+        input {
+        margin-right: 15px;
+        width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div
+        style="border: 3px solid black; padding: 20px; margin: 40px 0;">
+        <h1
+            style="background-color: blueviolet; padding: 20px;">
+            ## Css row gap Property
+        </h1>
+        <br>
+
+        <p> <b>$$ --
+                The row-gap property in CSS sets space (formally called “gutters”) between rows in CSS Grid, Flexbox, and CSS Columns layouts.
+            </b>
+        </p>
+        <pre>
+            <big>
+        .something {
+            display: grid;
+            grid-template-rows: repeat(3, 1fr);
+            grid-row-gap: 2rem; 
+                    /* Will be used instead by browsers that do not support `row-gap` */
+            row-gap: 2rem; 
+                    /* Used by browsers that support `row-gap` */
+        }
+            </big>
+            </pre>
+    </div>
+
+
+
+    <div
+        style="border: 3px solid black; padding: 20px; margin: 40px 0;">
+        <h2>
+            ## Syntax
+        </h2>
+        <br>
+
+        <pre> <big>
+        row-gap: normal | length-percentage
+                </big>
+            </pre>
+
+
+
+
+        <h2>Property Values</h2>
+        <pre>
+            <big>
+        /* Default value */
+            row-gap: normal;
+
+        /* length values */
+            row-gap: 50px;
+            row-gap: 2rem;
+            row-gap: 1.5em;
+            row-gap: 5vw;
+            row-gap: 25ch;
+
+        /* percentage value */
+            row-gap: 15%;
+
+            </big>
+            </pre>
+    </div>
+
+
+
+    <h3>Example :</h3>
+    <div class="controls">
+        <p>Slide to update the
+            <code>row-gap</code> value</p>
+        <div class="controls__wrapper">
+            <input id="slider" type="range"
+                min="0" max="100" step="1"
+                oninput="sliderChange(this.value)">
+            <output id="output"></output>
+        </div>
+    </div>
+
+    <div class="grid">
+        <div class="grid-item">1</div>
+        <div class="grid-item">2</div>
+        <div class="grid-item">3</div>
+    </div>
+    <script>
+        let root = document.documentElement;
+
+        const grid =
+        document.getElementsByClassName("grid");
+        const slider =
+        document.getElementById("slider");
+        const output =
+        document.getElementById("output");
+
+        function sliderChange(val) {
+        root.style.setProperty("--row-gap", val +
+        "px");
+        output.innerHTML = val + "px";
+        }
+
+        slider.value = 0;
+    </script>
+</body>
+
+</html>

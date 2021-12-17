@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .middle > * {
+        vertical-align: middle;
+        }
+
+        .top > * {
+        vertical-align: top;
+        }
+
+        .bottom > * {
+        vertical-align: bottom;
+        }
+
+        .sub > * {
+        vertical-align: sub;
+        }
+
+        .super > * {
+        vertical-align: super;
+        }
+
+        .text-top > * {
+        vertical-align: text-top;
+        }
+
+        .text-bottom > * {
+        vertical-align: text-bottom;
+        }
+
+        .baseline > * {
+        vertical-align: baseline;
+        }
+
+        .pixel > * {
+        vertical-align: 30px;
+        }
+
+        .percentage > * {
+        vertical-align: -500%;
+        }
+
+
+        body {
+        padding: 20px;
+        background: #eee;
+        }
+
+        h2 {
+        display: inline-block;
+        margin: 0;
+        width: 150px;
+        text-align: right;
+        font: bold 20px Sans-Serif;
+        }
+
+        div {
+        margin: 0 0 30px 0;
+        padding: 10px;
+        background: white;
+        white-space: nowrap;
+        }
+    </style>
+</head>
+<body>
+
+        <h1>CSS vertical-align Property</h1>    
+            <h3>Definition and Usage</h3>
+                <p>
+                    The vertical-align property sets the vertical alignment of an element.
+                </p>
+                <b>
+                    In order for this to work, the elements need to be set along a baseline. As in, inline (e.g. &lt;span&gt;, &lt;img&gt;) or inline-block (e.g. as set by the display property) elements.
+                </b><br> <br>
+                <pre>
+                <big>
+        img {
+            vertical-align: middle;
+        }
+                </big>
+                </pre>
+                <img src="vertical-align.jpg" alt="">
+
+                <br>
+                <br>
+                <b>
+                    Note that vertical-align is useful on table-cell elements as well, aligning the content within them. Sticking to top, middle, and bottom is the best bet though, as the other values have inconsistent cross-browser results.
+                </b>
+
+                
+            <h3>CSS Syntax </h3>
+                <pre>
+        vertical-align: baseline|length|sub|super|top|text-top|middle|bottom|text-bottom|initial|inherit;
+                </pre>
+
+            <h3>Property Values</h3>
+                <ol>
+                    <li>baseline 
+                        <p>
+                            The element is aligned with the baseline of the parent. This is default
+                        </p>
+                    </li>
+                    <li>length
+                        <p>
+                            Raises or lower an element by the specified length. Negative values are allowed.  
+                        </p>
+                    </li>
+                    <li> % 
+                        <p>
+                            Raises or lower an element in a percent of the "line-height" property. Negative values are
+                            allowed
+                        </p>
+                    </li>
+                    <li> sub
+                        <p>
+                            The element is aligned with the subscript baseline of the parent
+                        </p>
+                    </li>
+                    <li> super 
+                        <p>
+                            The element is aligned with the superscript baseline of the parent
+                        </p>
+                    </li>
+                    <li> top 
+                        <p>
+                            The element is aligned with the top of the tallest element on the line
+                        </p>
+                    </li>
+                    <li> text-top 
+                        <p>
+                            The element is aligned with the top of the parent element's on the line
+                        </p>
+                    </li>
+                    <li> middle 
+                        <p>
+                            The element is placed in the middle of the parent element
+                        </p>
+                    </li>
+                    <li>  bottom 
+                        <p>
+                            The element is aligned with the lowest element on the line
+                        </p>
+                    </li>
+                    <li> text-bottom 
+                        <p>
+                            The element is aligned with the top of the parent element's on the line
+                        </p>
+                    </li>
+                </ol>
+
+
+
+
+
+
+        <h3>Example :</h3>
+
+        <div class="middle">
+            <h2>Middle</h2>
+            <img
+                src="http://placekitten.com/100/100">
+            <img
+                src="http://placekitten.com/200/150">
+            <img
+                src="http://placekitten.com/220/80">
+        </div>
+
+        <div class="top">
+            <h2>Top</h2>
+            <img
+                src="http://placekitten.com/100/100">
+            <img
+                src="http://placekitten.com/200/150">
+            <img
+                src="http://placekitten.com/220/80">
+        </div>
+
+        <div class="bottom">
+            <h2>Bottom</h2>
+            <img
+                src="http://placekitten.com/100/100">
+            <img
+                src="http://placekitten.com/200/150">
+            <img
+                src="http://placekitten.com/220/80">
+        </div>
+
+        <div class="sub">
+            <h2>Sub</h2>
+            <img
+                src="http://placekitten.com/100/100">
+            <img
+                src="http://placekitten.com/200/150">
+            <img
+                src="http://placekitten.com/220/80">
+        </div>
+
+        <div class="super">
+            <h2>Super</h2>
+            <img
+                src="http://placekitten.com/100/100">
+            <img
+                src="http://placekitten.com/200/150">
+            <img
+                src="http://placekitten.com/220/80">
+        </div>
+
+        <div class="text-top">
+            <h2>Text Top</h2>
+            <img
+                src="http://placekitten.com/100/100">
+            <img
+                src="http://placekitten.com/200/150">
+            <img
+                src="http://placekitten.com/220/80">
+        </div>
+
+        <div class="text-bottom">
+            <h2>Text Bottom</h2>
+            <img
+                src="http://placekitten.com/100/100">
+            <img
+                src="http://placekitten.com/200/150">
+            <img
+                src="http://placekitten.com/220/80">
+        </div>
+
+        <div class="baseline">
+            <h2>Baseline</h2>
+            <img
+                src="http://placekitten.com/100/100">
+            <img
+                src="http://placekitten.com/200/150">
+            <img
+                src="http://placekitten.com/220/80">
+        </div>
+
+        <div class="pixel">
+            <h2>30px</h2>
+            <img
+                src="http://placekitten.com/100/100">
+            <img
+                src="http://placekitten.com/200/150">
+            <img
+                src="http://placekitten.com/220/80">
+        </div>
+
+        <div class="percentage">
+            <h2>-500%</h2>
+            <img
+                src="http://placekitten.com/100/100">
+            <img
+                src="http://placekitten.com/200/150">
+            <img
+                src="http://placekitten.com/220/80">
+        </div>
+</body>
+</html>

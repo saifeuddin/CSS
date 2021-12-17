@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible"
+        content="IE=edge">
+    <meta name="viewport" content="width=device-width,
+        initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+        <div
+            style="border: 3px solid black; padding: 20px; margin: 40px 0;">
+            <h1
+                style="background-color: blueviolet; padding: 20px;">
+                ## Css place-content Property
+            </h1>
+            <br>
+
+            <p> <b>$$ --
+                    The place-content property in CSS is shorthand for the align-content and justify-content properties, combining them into a single declaration in CSS Grid and Flexbox layouts.
+                </b>
+            </p>
+            <pre>
+            <big>
+        .element {
+            display: flex;
+            place-content: start space-evenly;
+        }
+
+
+
+        .item {
+            display: grid;
+            place-content: self-start center;
+        }
+
+
+        .item {
+            align-content: self-start;
+            justify-content: self-start;
+        }
+            </big>
+            </pre>
+        </div>
+
+
+
+        <div
+            style="border: 3px solid black; padding: 20px; margin: 40px 0;">
+            <h2>
+                ## Syntax
+            </h2>
+            <br>
+
+            <pre> <big>
+                    place-content: align-content justify-content
+                </big>
+            </pre>
+
+
+
+
+            <h2>Property Values</h2>
+            <pre>
+            <big>
+        /* Positional alignment */
+        /* align-content does not take left and right values */
+
+        place-content: center       center;
+        place-content: flex-start   flex-end;
+        place-content: flex-end     flex-end;
+
+
+
+        /* Baseline alignment */
+        /* justify-content does not take baseline values */
+
+        place-content: baseline         none;
+        place-content: first baseline   none;
+        place-content: last baseline    none;
+
+
+
+        /* Distributed alignment */
+
+        place-content: space-between    space-between;
+        place-content: space-around     space-around;
+        place-content: space-evenly     space-evenly;
+        place-content: stretch          stretch;
+            </big>
+            </pre>
+        </div>
+
+
+</body>
+
+</html>

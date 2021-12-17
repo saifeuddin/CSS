@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body {
+        padding: 14px;
+        }
+
+        table {
+        text-align: center;
+        width: 100%;
+        margin: 20px auto;
+        table-layout: auto;
+        }
+
+        .fixed {
+        table-layout: fixed;
+        }
+
+        table,
+        td,
+        th {
+        border-collapse: collapse;
+        }
+
+        th,
+        td {
+        padding: 10px;
+        border: solid 1px;
+        text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+            <h1>CSS table-layout Property</h1>
+                <h2>Example</h2>
+
+                <pre>
+                    table.a {
+                    table-layout: auto;
+                    width: 180px;
+                    }
+
+                    table.b {
+                    table-layout: fixed;
+                    width: 180px;
+                    }
+                </pre>
+            <h2>Definition and Usage </h2>
+                <p>
+                    The table-layout property defines the algorithm used to lay out table cells, rows, and columns.
+                </p>
+                <b>
+                    Tip: The main benefit of table-layout: fixed; is that the table renders much faster. On large
+                    tables, users will not see any part of the table until the browser has rendered the whole table. So,
+                    if you use table-layout: fixed, users will see the top of the table while the browser loads and
+                    renders rest of the table. This gives the impression that the page loads a lot quicker!
+                </b>
+            <h2>CSS Syntax</h2>
+                <pre>table-layout: auto|fixed|initial|inherit;</pre>
+            <h2>Values </h2>
+                <ol>
+                    <li>auto 
+                        <p>Browsers use an automatic table layout algorithm. The column width is set by the widest
+                            unbreakable content in the cells. The content will dictate the layout</p>
+                    </li>
+                    <li>fixed 
+                        <p>
+                            Sets a fixed table layout algorithm. The table and column widths are set by the widths of
+                            table and col or by the width of the first row of cells. Cells in other rows do not affect
+                            column widths. If no widths are present on the first row, the column widths are divided
+                            equally across the table, regardless of content inside the cells
+                        </p>
+                    </li>
+                </ol>
+
+
+
+
+
+                <h3>Example :</h3>
+                <h2>Using the
+                    <code>table-layout</code>
+                    property</h2>
+
+                <table id="t">
+                    <thead>
+                        <tr>
+                            <th>Example text</th>
+                            <th>Example text</th>
+                            <th>Example text</th>
+                            <th>Example text</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>A much longer
+                                piece of content
+                                for demo purposes.
+                                More goes here.
+                            </td>
+                            <td>Example text</td>
+                            <td>Example text</td>
+                            <td>Example text</td>
+                        </tr>
+                        <tr>
+                            <td>Example text</td>
+                            <td>Example text</td>
+                            <td>Example text</td>
+                            <td>Example text</td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td>Example text</td>
+                            <td>Example text</td>
+                            <td>Example text</td>
+                            <td>Example text</td>
+                        </tr>
+                    </tfoot>
+                </table>
+
+                <button class="tl"><b>Toggle
+                        table-layout:
+                        fixed</b></button>
+                
+
+                <script>
+                    var tlBtn =
+                    document.querySelector('.tl'),
+                    tbl =
+                    document.getElementById('t');
+
+                    tlBtn.addEventListener('click',
+                    function() {
+                    tbl.classList.toggle('fixed');
+                    }, false);
+                </script>
+
+</body>
+</html>

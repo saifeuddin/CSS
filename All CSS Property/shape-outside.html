@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+        box-sizing: border-box;
+        }
+
+        .div {
+            shape-outside: circle(50% at 60px 320px) padding-box;
+
+            width: 300px;
+            height: 500px;
+            float: left;
+            opacity: .2;
+            background-color: purple;
+        }
+        
+
+
+
+        .div1 {
+            shape-outside: ellipse(100px 200px at 50% 50%);
+            clip-path: ellipse(110px 190px at 40% 50%);
+
+            width: 300px;
+            height: 500px;
+            float: left;
+            opacity: .2;
+            background-color: purple;
+        }
+
+
+        .div2{
+            shape-outside: inset(100px 30px 50px 0px);
+
+            width: 200px;
+            height: 300px;
+            float: left;
+            background-color: aqua;
+            opacity: .8;
+        }
+
+        .div3{
+            shape-outside: polygon(0 0, 0 200px, 200px 300px);
+
+            width: 300px;
+            height: 200px;
+            float: left;
+            opacity: .2;
+            /* background-color: rgb(28, 73, 73); */
+        }
+
+
+
+        .img {
+            width: 300px;
+            shape-outside: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/14179/circle.png');
+        }
+
+        .left {
+        float: left;
+        }
+
+        .right {
+        float: right;
+        }
+    </style>
+</head>
+<body>
+
+        <div
+            style="border: 3px solid black;     padding: 20px; margin: 40px 0;">
+            <h1
+                style="background-color: blueviolet; padding: 20px;">
+                ## CSS shape-outside Property
+            </h1>
+            <br>
+
+            <p> <b>
+                    $$ --
+                    The shape-outside property controls how content will wrap around a floated element’s bounding-box. Typically this is so that text can reflow over a shape such as a circle, ellipse or a polygon:
+                </b>
+            </p>
+
+
+
+            <pre>
+            <big>
+        .element {
+            float: left;
+            shape-outside: circle(50%);
+            width: 200px;
+            height: 200px;
+        }
+            </big>
+            </pre>
+        </div>
+
+
+        <div
+            style="border: 3px solid black; padding: 20px; margin: 40px 0;">
+            <h1>
+                ## Value
+            </h1>
+            <br>
+
+            <ul> 
+                <li>
+                    circle()
+                    <p>
+                        for making circular shapes.
+                    </p>
+                </li>
+                <li>
+                    ellipse()
+                    <p>
+                        for making elliptical shapes.
+                    </p>
+                </li>
+                <li>
+                    inset()
+                    <p>
+                        for making rectangular shapes.
+                    </p>
+                </li>
+                <li>
+                    polygon()
+                    <p>
+                        for creating any shape with 3 or more vertices.
+                    </p>
+                </li>
+                <li>
+                    url()
+                    <p>
+                        identifies which image should be used to wrap text around.
+                    </p>
+                </li>
+            </ul>
+            <br>
+
+            <p> <b>
+                    $$ --
+                    The following values identify which reference of the box model should be used for positioning the shape within:
+                </b>
+            </p>
+            <ul>
+                <li>
+                    margin-box
+                </li>
+                <li>
+                    border-box
+                </li>
+                <li>
+                    padding-box
+                </li>
+            </ul>
+            <p>
+                These values should be appended to the end, for instance: 
+                
+                <code>
+                    <b>
+                        shape-outside: circle(50% at 0 0) padding-box.
+                    </b>
+                </code>
+                By default the margin-box reference will be used.
+            </p>
+        </div>
+
+
+
+        <h3>Example :</h3>
+        <b>
+            circle()
+        </b>
+        <pre>
+        <big>
+            shape-outside: circle(50% at 60px 320px) padding-box;
+        </big>
+        </pre>
+        <div class="div"></div>
+        <p>Lorem ipsum dolor sit amet, consectetur
+            adipisicing elit. Officiis impedit
+            libero esse odio excepturi fuga est ut
+            itaque a quod suscipit, rerum
+            asperiores. Consequuntur voluptates
+            illo rerum recusandae pariatur
+            asperiores, aspernatur, saepe ipsum
+            error dolorem, quod inventore possimus
+            modi deleniti tenetur et officiis.
+            Nemo ab in totam ratione sequi error,
+            ea dolorum repudiandae omnis, eaque
+            facere impedit fugiat. Dolorum
+            distinctio autem sequi enim quidem
+            esse accusamus repudiandae voluptatum
+            nobis, velit, molestiae. Eaque
+            maiores, harum. Saepe esse repellendus
+            sint. Labore provident optio quis
+            commodi quod quaerat quo similique
+            perspiciatis libero facere. Suscipit
+            odit quas nemo, enim laudantium,
+            provident repellendus natus nostrum
+            facilis expedita adipisci qui, harum
+            minus quidem officia cupiditate
+            repellat ut praesentium. Possimus
+            corporis, error atque ex adipisci,
+            illum suscipit pariatur saepe impedit
+            aliquam amet eos reiciendis quidem
+            hic, nisi. Sint nobis modi, nesciunt
+            quasi placeat quia. Veniam inventore
+            corrupti quisquam illum debitis vitae
+            accusamus nobis alias cum iste error
+            magnam, cupiditate earum! Incidunt at
+            consequuntur, rem ipsa odio ipsum
+            deleniti repudiandae blanditiis harum
+            ut in, fugit officia rerum ad,
+            corporis dolore! Commodi repellendus
+            esse quibusdam enim qui totam ipsum,
+            consequuntur officia vel dolores, quod
+            corrupti eveniet maiores minus
+            explicabo, sapiente ratione doloribus
+            laboriosam impedit nesciunt a
+            obcaecati quam veritatis! Placeat,
+            velit possimus delectus, atque
+            voluptate iste alias illo, dolor odit
+            ipsa facere quibusdam? Non omnis
+            aliquid eveniet fuga labore dolores,
+            autem blanditiis, dolorem error ex
+            enim fugiat quisquam aut reprehenderit
+            delectus, nihil accusamus eaque at
+            odit natus accusantium sunt asperiores
+            unde? Tempora dolorem, ad quidem quis
+            adipisci dolores tempore. Lorem ipsum
+            dolor sit amet, consectetur
+            adipisicing elit. Officiis impedit
+            libero esse odio excepturi fuga est ut
+            itaque a quod suscipit, rerum
+            asperiores. Consequuntur voluptates
+            illo rerum recusandae pariatur
+            asperiores, aspernatur, saepe ipsum
+            error dolorem, quod inventore possimus
+            modi deleniti tenetur et officiis.
+            Nemo ab in totam ratione sequi error,
+            ea dolorum repudiandae omnis, eaque
+            facere impedit fugiat. Dolorum
+            distinctio autem sequi enim quidem
+            esse accusamus repudiandae voluptatum
+            nobis, velit, molestiae. Eaque
+            maiores, harum. Saepe esse repellendus
+            sint. Labore provident optio quis
+            commodi quod quaerat quo similique
+            perspiciatis libero facere. Suscipit
+            odit quas nemo, enim laudantium,
+            provident repellendus natus nostrum
+            facilis expedita adipisci qui, harum
+            minus quidem officia cupiditate
+            repellat ut praesentium. Possimus
+            corporis, error atque ex adipisci,
+            illum suscipit pariatur saepe impedit
+            aliquam amet eos reiciendis quidem
+            hic, nisi. Sint nobis modi, nesciunt
+            quasi placeat quia. Veniam inventore
+            corrupti quisquam illum debitis vitae
+            accusamus nobis alias cum iste error
+            magnam, cupiditate earum! Incidunt at
+            consequuntur, rem ipsa odio ipsum
+            deleniti repudiandae blanditiis harum
+            ut in, fugit officia rerum ad,
+            corporis dolore! Commodi repellendus
+            esse quibusdam enim qui totam ipsum,
+            consequuntur officia vel dolores, quod
+            corrupti eveniet maiores minus
+            explicabo, sapiente ratione doloribus
+            laboriosam impedit nesciunt a
+            obcaecati quam veritatis! Placeat,
+            velit possimus delectus, atque
+            voluptate iste alias illo, dolor odit
+            ipsa facere quibusdam? Non omnis
+            aliquid eveniet fuga labore dolores,
+            autem blanditiis, dolorem error ex
+            enim fugiat quisquam aut reprehenderit
+            delectus, nihil accusamus eaque at
+            odit natus accusantium sunt asperiores
+            unde? Tempora dolorem, ad quidem quis
+            adipisci dolores temporeNon omnis
+            aliquid eveniet fuga labore dolores,
+            autem blanditiis, dolorem error ex
+            enim fugiat quisquam aut reprehenderit
+            delectus, nihil accusamus eaque at
+            odit natus accusantium sunt asperiores
+            unde? Tempora dolorem, ad quidem quis
+            adipisci dolores temporeNon omnis
+            aliquid eveniet fuga labore dolores,
+            autem blanditiis, dolorem error ex
+            enim fugiat quisquam aut reprehenderit
+            delectus, nihil accusamus eaque at
+            odit natus accusantium sunt asperiores
+            unde? Tempora dolorem, ad quidem quis
+            adipisci dolores temporeNon omnis
+            aliquid eveniet fuga labore dolores,
+            autem blanditiis, dolorem error ex
+            enim fugiat quisquam aut reprehenderit
+            delectus, nihil accusamus eaque at
+            odit natus accusantium sunt asperiores
+            unde? Tempora dolorem, ad quidem quis
+            adipisci dolores temporeNon omnis
+            aliquid eveniet fuga labore dolores,
+            autem blanditiis, dolorem error ex
+            enim fugiat quisquam aut reprehenderit
+            delectus, nihil accusamus eaque at
+            odit natus accusantium sunt asperiores
+            unde? Tempora dolorem, ad quidem quis
+            adipisci dolores temporeNon omnis
+            aliquid eveniet fuga labore dolores,
+            autem blanditiis, dolorem error ex
+            enim fugiat quisquam aut reprehenderit
+            delectus, nihil accusamus eaque at
+            odit natus accusantium sunt asperiores
+            unde? Tempora dolorem, ad quidem quis
+            adipisci dolores tempore</p>
+        
+        <br>
+        <br>
+        <br>
+        <br>
+        <b>
+            Ellips()
+        </b>
+        <pre>
+    <big>
+    shape-outside: ellipse(100px 200px at 50% 50%);
+    clip-path: ellipse(110px 190px at 40% 50%);
+    </big>
+        </pre>
+        <div class="div1"></div>
+        <p>Lorem ipsum dolor sit amet, consectetur
+            adipisicing elit. Officiis impedit
+            libero esse odio excepturi fuga est ut
+            itaque a quod suscipit, rerum
+            asperiores. Consequuntur voluptates
+            illo rerum recusandae pariatur
+            asperiores, aspernatur, saepe ipsum
+            error dolorem, quod inventore possimus
+            modi deleniti tenetur et officiis.
+            Nemo ab in totam ratione sequi error,
+            ea dolorum repudiandae omnis, eaque
+            facere impedit fugiat. Dolorum
+            distinctio autem sequi enim quidem
+            esse accusamus repudiandae voluptatum
+            nobis, velit, molestiae. Eaque
+            maiores, harum. Saepe esse repellendus
+            sint. Labore provident optio quis
+            commodi quod quaerat quo similique
+            perspiciatis libero facere. Suscipit
+            odit quas nemo, enim laudantium,
+            provident repellendus natus nostrum
+            facilis expedita adipisci qui, harum
+            minus quidem officia cupiditate
+            repellat ut praesentium. Possimus
+            corporis, error atque ex adipisci,
+            illum suscipit pariatur saepe impedit
+            aliquam amet eos reiciendis quidem
+            hic, nisi. Sint nobis modi, nesciunt
+            quasi placeat quia. Veniam inventore
+            corrupti quisquam illum debitis vitae
+            accusamus nobis alias cum iste error
+            magnam, cupiditate earum! Incidunt at
+            consequuntur, rem ipsa odio ipsum
+            deleniti repudiandae blanditiis harum
+            ut in, fugit officia rerum ad,
+            corporis dolore! Commodi repellendus
+            esse quibusdam enim qui totam ipsum,
+            consequuntur officia vel dolores, quod
+            corrupti eveniet maiores minus
+            explicabo, sapiente ratione doloribus
+            laboriosam impedit nesciunt a
+            obcaecati quam veritatis! Placeat,
+            velit possimus delectus, atque
+            voluptate iste alias illo, dolor odit
+            ipsa facere quibusdam? Non omnis
+            aliquid eveniet fuga labore dolores,
+            autem blanditiis, dolorem error ex
+            enim fugiat quisquam aut reprehenderit
+            delectus, nihil accusamus eaque at
+            odit natus accusantium sunt asperiores
+            unde? Tempora dolorem, ad quidem quis
+            adipisci dolores tempore. Lorem ipsum
+            dolor sit amet, consectetur
+            adipisicing elit. Officiis impedit
+            libero esse odio excepturi fuga est ut
+            itaque a quod suscipit, rerum
+            asperiores. Consequuntur voluptates
+            illo rerum recusandae pariatur
+            asperiores, aspernatur, saepe ipsum
+            error dolorem, quod inventore possimus
+            modi deleniti tenetur et officiis.
+            Nemo ab in totam ratione sequi error,
+            ea dolorum repudiandae omnis, eaque
+            facere impedit fugiat. Dolorum
+            distinctio autem sequi enim quidem
+            esse accusamus repudiandae voluptatum
+            nobis, velit, molestiae. Eaque
+            maiores, harum. Saepe esse repellendus
+            sint. Labore provident optio quis
+            commodi quod quaerat quo similique
+            perspiciatis libero facere. Suscipit
+            odit quas nemo, enim laudantium,
+            provident repellendus natus nostrum
+            facilis expedita adipisci qui, harum
+            minus quidem officia cupiditate
+            repellat ut praesentium. Possimus
+            corporis, error atque ex adipisci,
+            illum suscipit pariatur saepe impedit
+            aliquam amet eos reiciendis quidem
+            hic, nisi. Sint nobis modi, nesciunt
+            quasi placeat quia. Veniam inventore
+            corrupti quisquam illum debitis vitae
+            accusamus nobis alias cum iste error
+            magnam, cupiditate earum! Incidunt at
+            consequuntur, rem ipsa odio ipsum
+            deleniti repudiandae blanditiis harum
+            ut in, fugit officia rerum ad,
+            corporis dolore! Commodi repellendus
+            esse quibusdam enim qui totam ipsum,
+            consequuntur officia vel dolores, quod
+            corrupti eveniet maiores minus
+            explicabo, sapiente ratione doloribus
+            laboriosam impedit nesciunt a
+            obcaecati quam veritatis! Placeat,
+            velit possimus delectus, atque
+            voluptate iste alias illo, dolor odit
+            ipsa facere quibusdam? Non omnis
+            aliquid eveniet fuga labore dolores,
+            autem blanditiis, dolorem error ex
+            enim fugiat quisquam aut reprehenderit
+            delectus, nihil accusamus eaque at
+            odit natus accusantium sunt asperiores
+            unde? Tempora dolorem, ad quidem quis
+            adipisci dolores temporeNon omnis
+            aliquid eveniet fuga labore dolores,
+            autem blanditiis, dolorem error ex
+            enim fugiat quisquam aut reprehenderit
+            delectus, nihil accusamus eaque at
+            odit natus accusantium sunt asperiores
+            unde? Tempora dolorem, ad quidem quis
+            adipisci dolores temporeNon omnis
+            aliquid eveniet fuga labore dolores,
+            autem blanditiis, dolorem error ex
+            enim fugiat quisquam aut reprehenderit
+            delectus, nihil accusamus eaque at
+            odit natus accusantium sunt asperiores
+            unde? Tempora dolorem, ad quidem quis
+            adipisci dolores temporeNon omnis
+            aliquid eveniet fuga labore dolores,
+            autem blanditiis, dolorem error ex
+            enim fugiat quisquam aut reprehenderit
+            delectus, nihil accusamus eaque at
+            odit natus accusantium sunt asperiores
+            unde? Tempora dolorem, ad quidem quis
+            adipisci dolores temporeNon omnis
+            aliquid eveniet fuga labore dolores,
+            autem blanditiis, dolorem error ex
+            enim fugiat quisquam aut reprehenderit
+            delectus, nihil accusamus eaque at
+            odit natus accusantium sunt asperiores
+            unde? Tempora dolorem, ad quidem quis
+            adipisci dolores temporeNon omnis
+            aliquid eveniet fuga labore dolores,
+            autem blanditiis, dolorem error ex
+            enim fugiat quisquam aut reprehenderit
+            delectus, nihil accusamus eaque at
+            odit natus accusantium sunt asperiores
+            unde? Tempora dolorem, ad quidem quis
+            adipisci dolores tempore</p> 
+
+
+
+
+        <br>
+        <br>
+        <br>
+        <br>
+        
+        
+        <b>
+            inset()
+        </b>
+        <pre>
+            <big>
+                shape-outside: inset(100px 30px 50px 0px);
+            </big>
+        </pre>
+        <div class="div2"></div>
+        <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ut, ad expedita? Quaerat impedit quos, minima ducimus animi ea! Dolorum quo amet officia excepturi, quam quibusdam accusantium ipsum a modi natus reiciendis minus distinctio non culpa libero fuga rem similique. Et provident praesentium earum perspiciatis sunt a alias quas aspernatur porro. Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus voluptate harum minus magnam accusantium ratione magni, sunt, tempora corporis iure et dignissimos nisi facere totam! Provident quod, cum omnis vel odio non rerum beatae quas maiores, corrupti aliquid tempore. Voluptas nesciunt maxime, sapiente ut, mollitia libero non placeat minima voluptate, facilis ad. Reiciendis, deserunt, at voluptate vero cum explicabo alias expedita minus voluptas ad distinctio hic ipsam ratione sint et debitis porro quam culpa. Nisi eveniet inventore omnis hic enim ea maiores ipsa, magni excepturi ad sequi laborum. Quae a blanditiis sint. Dolor nesciunt eos cumque aut fugiat? Necessitatibus, nihil. Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi rem fuga, quasi pariatur facilis excepturi earum quidem delectus. Laboriosam, qui eos. Sequi optio asperiores aliquid iste natus alias, officiis ipsa laudantium repudiandae doloribus sunt consequuntur incidunt placeat ad ut ullam molestias fugiat aperiam magnam commodi quisquam voluptatibus rem? Asperiores, recusandae earum natus sequi cum cumque praesentium mollitia ab quam! Ad ducimus incidunt eaque natus nulla eius rerum enim quos? Quasi molestias laboriosam dicta corrupti, autem dolores dignissimos natus, eum eveniet voluptas, ipsa vitae esse tenetur ullam tempora. Alias adipisci quisquam, totam corrupti dolore, incidunt, unde ex laborum eveniet dolorem ut. Vel ab provident beatae fuga, illo nam cumque odio voluptatum dolor sapiente inventore, suscipit eos veniam fugiat accusantium qui ea tempore velit corrupti animi possimus nobis repellat, ipsum ad? Iste qui blanditiis eos nihil quidem reiciendis explicabo maxime enim suscipit laborum quis expedita repellat, odio illum mollitia. Sapiente magnam temporibus facilis veritatis modi repellat voluptatem sit atque alias dolorem laboriosam totam magni voluptate porro necessitatibus culpa maxime rem, est doloremque nulla, tenetur voluptates amet unde! Earum mollitia incidunt sapiente omnis numquam, eum velit illum consectetur perferendis quisquam a? Placeat, iure delectus vitae harum deserunt assumenda dignissimos enim fuga velit totam.
+        </p>
+
+
+
+        <br>
+        <br>
+        <br>
+        <br>
+        <b>
+            url('')
+        </b>
+        <pre>
+        <big>
+    shape-outside: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/14179/circle.png');
+        </big>
+        </pre>
+        <img class="left img" src="circle.png" alt="">
+        <img class="right img" src="circle.png" alt="">
+        <p>
+            Lorem ipsum dolor sit amet, consectetur
+            adipisicing elit. Officiis impedit
+            libero esse odio excepturi fuga est ut
+            itaque a quod suscipit, rerum
+            asperiores. Consequuntur voluptates
+            illo rerum recusandae pariatur
+            asperiores, aspernatur, saepe ipsum
+            error dolorem, quod inventore possimus
+            modi deleniti tenetur et officiis.
+            Nemo ab in totam ratione sequi error,
+            ea dolorum repudiandae omnis, eaque
+            facere impedit fugiat. Dolorum
+            distinctio autem sequi enim quidem
+            esse accusamus repudiandae voluptatum
+            nobis, velit, molestiae. Eaque
+            maiores, harum. Saepe esse repellendus
+            sint. Labore provident optio quis
+            commodi quod quaerat quo similique
+            perspiciatis libero facere. Suscipit
+            odit quas nemo, enim laudantium,
+            provident repellendus natus nostrum
+            facilis expedita adipisci qui, harum
+            minus quidem officia cupiditate
+            repellat ut praesentium. Possimus
+            corporis, error atque ex adipisci,
+            illum suscipit pariatur saepe impedit
+            aliquam amet eos reiciendis quidem
+            hic, nisi. Sint nobis modi, nesciunt
+            quasi placeat quia. Veniam inventore
+            corrupti quisquam illum debitis vitae
+            accusamus nobis alias cum iste error
+            magnam, cupiditate earum! Incidunt at
+            consequuntur, rem ipsa odio ipsum
+            deleniti repudiandae blanditiis harum
+            ut in, fugit officia rerum ad,
+            corporis dolore! Commodi repellendus
+            esse quibusdam enim qui totam ipsum,
+            consequuntur officia vel dolores, quod
+            corrupti eveniet maiores minus
+            explicabo, sapiente ratione doloribus
+            laboriosam impedit nesciunt a
+            obcaecati quam veritatis! Placeat,
+            velit possimus delectus, atque
+            voluptate iste alias illo, dolor odit
+            ipsa facere quibusdam? Non omnis
+            aliquid eveniet fuga labore dolores,
+            autem blanditiis, dolorem error ex
+            enim fugiat quisquam aut reprehenderit
+            delectus, nihil accusamus eaque at
+            odit natus accusantium sunt asperiores
+            unde? Tempora dolorem, ad quidem quis
+            adipisci dolores tempore. Lorem ipsum
+            dolor sit amet, consectetur
+            adipisicing elit. Officiis impedit
+            libero esse odio excepturi fuga est ut
+            itaque a quod suscipit, rerum
+            asperiores. Consequuntur voluptates
+            illo rerum recusandae pariatur
+            asperiores, aspernatur, saepe ipsum
+            error dolorem, quod inventore possimus
+            modi deleniti tenetur et officiis.
+            Nemo ab in totam ratione sequi error,
+            ea dolorum repudiandae omnis, eaque
+            facere impedit fugiat. Dolorum
+            distinctio autem sequi enim quidem
+            esse accusamus repudiandae voluptatum
+            nobis, velit, molestiae. Eaque
+            maiores, harum. Saepe esse repellendus
+            sint. Labore provident optio quis
+            commodi quod quaerat quo similique
+            perspiciatis libero facere. Suscipit
+            odit quas nemo, enim laudantium,
+            provident repellendus natus nostrum
+            facilis expedita adipisci qui, harum
+            minus quidem officia cupiditate
+            repellat ut praesentium. Possimus
+            corporis, error atque ex adipisci,
+            illum suscipit pariatur saepe impedit
+            aliquam amet eos reiciendis quidem
+            hic, nisi. Sint nobis modi, nesciunt
+            quasi placeat quia. Veniam inventore
+            corrupti quisquam illum debitis vitae
+            accusamus nobis alias cum iste error
+            magnam, cupiditate earum! Incidunt at
+            consequuntur, rem ipsa odio ipsum
+            deleniti repudiandae blanditiis harum
+            ut in, fugit officia rerum ad,
+            corporis dolore! Commodi repellendus
+            esse quibusdam enim qui totam ipsum,
+            consequuntur officia vel dolores, quod
+            corrupti eveniet maiores minus
+            explicabo, sapiente ratione doloribus
+            laboriosam impedit nesciunt a
+            obcaecati quam veritatis! Placeat,
+            velit possimus delectus, atque
+            voluptate iste alias illo, dolor odit
+            ipsa facere quibusdam? Non omnis
+            aliquid eveniet fuga labore dolores,
+            autem blanditiis, dolorem error ex
+            enim fugiat quisquam aut reprehenderit
+            delectus, nihil accusamus eaque at
+            odit natus accusantium sunt asperiores
+            unde? Tempora dolorem, ad quidem quis
+            adipisci dolores temporeNon omnis
+            aliquid eveniet fuga labore dolores,
+            autem blanditiis, dolorem error ex
+            enim fugiat quisquam aut reprehenderit
+            delectus, nihil accusamus eaque at
+            odit natus accusantium sunt asperiores
+            unde? Tempora dolorem, ad quidem quis
+            adipisci dolores temporeNon omnis
+            aliquid eveniet fuga labore dolores,
+            autem blanditiis, dolorem error ex
+            enim fugiat quisquam aut reprehenderit
+            delectus, nihil accusamus eaque at
+            odit natus accusantium sunt asperiores
+            unde? Tempora dolorem, ad quidem quis
+            adipisci dolores temporeNon omnis
+            aliquid eveniet fuga labore dolores,
+            autem blanditiis, dolorem error ex
+            enim fugiat quisquam aut reprehenderit
+            delectus, nihil accusamus eaque at
+            odit natus accusantium sunt asperiores
+            unde? Tempora dolorem, ad quidem quis
+            adipisci dolores temporeNon omnis
+            aliquid eveniet fuga labore dolores,
+            autem blanditiis, dolorem error ex
+            enim fugiat quisquam aut reprehenderit
+            delectus, nihil accusamus eaque at
+            odit natus accusantium sunt asperiores
+            unde? Tempora dolorem, ad quidem quis
+            adipisci dolores temporeNon omnis
+            aliquid eveniet fuga labore dolores,
+            autem blanditiis, dolorem error ex
+            enim fugiat quisquam aut reprehenderit
+            delectus, nihil accusamus eaque at
+            odit natus accusantium sunt asperiores
+            unde? Tempora dolorem, ad quidem quis
+            adipisci dolores tempore
+        </p>
+        <br>
+        <br>
+        <br>
+
+
+        <b>
+            polygon()
+        </b>
+        <pre>
+        <big>
+    .element {
+        shape-outside: polygon(0 0, 0 200px, 200px 300px);
+    }
+        </big>
+        </pre>
+        <div class="div3"></div>
+        <p>Lorem ipsum dolor sit amet, consectetur
+            adipisicing elit. Officiis impedit
+            libero esse odio excepturi fuga est ut
+            itaque a quod suscipit, rerum
+            asperiores. Consequuntur voluptates
+            illo rerum recusandae pariatur
+            asperiores, aspernatur, saepe ipsum
+            error dolorem, quod inventore possimus
+            modi deleniti tenetur et officiis.
+            Nemo ab in totam ratione sequi error,
+            ea dolorum repudiandae omnis, eaque
+            facere impedit fugiat. Dolorum
+            distinctio autem sequi enim quidem
+            esse accusamus repudiandae voluptatum
+            nobis, velit, molestiae. Eaque
+            maiores, harum. Saepe esse repellendus
+            sint. Labore provident optio quis
+            commodi quod quaerat quo similique
+            perspiciatis libero facere. Suscipit
+            odit quas nemo, enim laudantium,
+            provident repellendus natus nostrum
+            facilis expedita adipisci qui, harum
+            minus quidem officia cupiditate
+            repellat ut praesentium. Possimus
+            corporis, error atque ex adipisci,
+            illum suscipit pariatur saepe impedit
+            aliquam amet eos reiciendis quidem
+            hic, nisi. Sint nobis modi, nesciunt
+            quasi placeat quia. Veniam inventore
+            corrupti quisquam illum debitis vitae
+            accusamus nobis alias cum iste error
+            magnam, cupiditate earum! Incidunt at
+            consequuntur, rem ipsa odio ipsum
+            deleniti repudiandae blanditiis harum
+            ut in, fugit officia rerum ad,
+            corporis dolore! Commodi repellendus
+            aliquid eveniet fuga labore dolores,
+            autem blanditiis, dolorem error ex
+            enim fugiat quisquam aut reprehenderit
+            delectus, nihil accusamus eaque at
+            odit natus accusantium sunt asperiores
+            unde? Tempora dolorem, ad quidem quis
+            adipisci dolores temporeNon omnis
+            aliquid eveniet fuga labore dolores,
+            autem blanditiis, dolorem error ex
+            enim fugiat quisquam aut reprehenderit
+            delectus, nihil accusamus eaque at
+            odit natus accusantium sunt asperiores
+            unde? Tempora dolorem, ad quidem quis
+            adipisci dolores temporeNon omnis
+            aliquid eveniet fuga labore dolores,
+            autem blanditiis, dolorem error ex
+            enim fugiat quisquam aut reprehenderit
+            delectus, nihil accusamus eaque at
+            odit natus accusantium sunt asperiores
+            unde? Tempora dolorem, ad quidem quis
+            adipisci dolores tempore</p>
+
+
+</body>
+</html>

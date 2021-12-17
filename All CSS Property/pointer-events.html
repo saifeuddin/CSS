@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .div{
+            padding: 0.75em;
+            background: #ddd;
+            position: relative;
+        }
+
+        .avoid-clicks {
+            display: block;
+            width: 8em;
+            height: 8em;
+            background: rgba(51,51,51,0.85);
+            position: absolute;
+            top: 1em;
+            left: 4em;
+            padding: 0.75em;
+            pointer-events: none;
+            color: whitesmoke;
+        }
+    </style>
+</head>
+<body>
+    
+            <h1>CSS pointer-events Property</h1>
+                <p>The pointer-events property defines whether or not an element reacts to pointer events.</p>
+
+
+
+                <h2>Syntax  </h2>
+                    <pre>
+                        pointer-events: auto | none;
+                    </pre>
+
+
+
+
+                <h2>Values</h2>
+                    <ol>
+                        <li>auto 
+                            <p>
+                                The element reacts to pointer events, like :hover and click. This is default
+                            </p>
+                        </li>
+                        <li>none 
+                            <p>
+                                The element does not react to pointer events.
+                            </p>
+                        </li>
+                    </ol>
+        
+                    
+
+        <br>
+        <br>
+        <h3>Example :</h3>
+        <b>
+            Try Select the texts
+        </b>
+        <div class="div">
+        <p class="p">This is some basic flow content. Lorem
+            ipsum dolor sit amet, consectetur
+            adipisicing elit. Magni eos ipsum sunt
+            repellat nisi modi voluptatum ipsa
+            eligendi minima cumque. Accusantium
+            laudantium autem quae earum eaque
+            expedita quia molestiae in.</p>
+
+            <div class="avoid-clicks">try selecting
+            text through me</div>
+        </div>
+
+</body>
+</html>

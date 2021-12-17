@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .hidden {
+        visibility: hidden;
+        background: pink;
+        border: 10px dotted teal;
+        padding: 10px;
+        }
+        .hidden:hover {
+        visibility: visible;
+        }
+
+        .visible {
+        border: 1px solid black;
+        visibility: visible;
+        }
+    </style>
+</head>
+<body>
+    
+            <h1>CSS visibility Property</h1>    
+                <p>The visibility property specifies whether or not an element is visible.</p>
+                <b>
+                    Tip: Hidden elements take up space on the page. Use the display property to both hide and remove an
+                    element from the document layout!
+                </b>
+                <pre>
+                <big>
+        p {
+            visibility: hidden;
+        }
+
+        tr {
+            visibility: collapse;
+        }
+                </big>
+                </pre>
+                <b>
+                    The visibility property in CSS has two different functions. It hides rows and columns of a table, and it also hides an element without changing the layout.
+                </b>
+
+
+                <h2>Syntax</h2> 
+                    <pre>
+                        <big>
+                    <b>
+    visibility: visible | hidden | collapse  
+                    </b>
+                </big>
+                    </pre>
+
+
+
+
+                <h2>Property Values</h2>
+                    <ol>
+                        <li>visible 
+                            <p>
+                                Default value. The element is visible
+                            </p>
+                        </li>
+                        <li>hidden 
+                            <p>
+                                The element is hidden (but still takes up space)
+                            </p>
+                        </li>
+                        <li>collapse 
+                            <p>
+                                Only for table rows (tr), row groups (tbody), columns (col), column groups (colgroup). This value removes a row or column, but it does not affect the table layout. The space taken up by the row or column will be available for other content.
+                            </p>
+                            <b>
+                                If collapse is used on other elements, it renders as "hidden".
+                            </b>
+                        </li>
+                    </ol>
+
+
+
+
+
+
+                    <br>
+                    <br>
+            <h3>Example :</h3>
+            <div class="hidden">
+                Hi, I'm hidden. Notice that all of
+                my styling is hidden as well, and
+                that I still take up space, even
+                though you can't see me.
+                <div class="visible">
+                    Howdy, my parent element is
+                    hidden, but I'm still visible.
+                    <br>Hover over me to make my
+                    parent visible.
+                </div>
+            </div>
+
+
+
+
+</body>
+</html>
