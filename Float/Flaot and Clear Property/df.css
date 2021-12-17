@@ -1,0 +1,42 @@
+html,body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+*, *::after, *::before{
+    box-sizing: inherit;
+}
+
+
+.float{
+    background-color: rgb(146, 115, 115);
+    padding: 10px;
+}
+.float h1{
+    background-color: antiquewhite;
+    width: 200px;
+    height: 200px;
+    float: left;
+}
+
+
+
+.float p{
+    background-color: red;
+}
+
+/* Remove this to see the problem */
+.float p{
+    clear: both;
+} 
+
+p::before{
+    content: 'hhhhh';
+    clear: left;
+    display: table;
+}
+p::after{
+    content: 'hhhhh';
+    clear: right;
+    display: table;
+}

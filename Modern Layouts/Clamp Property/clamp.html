@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Clamping My Style </title>
+</head>
+
+
+<style>
+    *{
+        margin: 0px;
+        padding: 0;
+    }
+    body{
+        width: 100%;
+        display: grid;
+        /* place-content: center; */
+        place-items: center;
+    }
+    .container{
+        background-color: pink;
+        padding: 30px;
+
+                    /* clamp(<min>, <actual>, <max>) */
+        width: clamp(10ch, 50%, 85ch);
+    }
+    header{
+        padding-bottom: 10px;
+    }
+    main div{
+        background-color: rgb(35, 209, 128);
+        width: 100%;
+        height: 90px;
+    }
+    footer{
+        padding-top: 10px;
+    }
+
+</style>
+<body>
+            <div class="container">
+                <header>
+                    <h1> Title Here </h1>
+                </header>
+
+                <main> <div> </div> </main>
+                <footer> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla, adipisci.</footer>
+            </div>
+</body>
+</html>

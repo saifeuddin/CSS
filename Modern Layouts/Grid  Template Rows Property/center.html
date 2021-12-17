@@ -1,0 +1,48 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> grid-template-row : auto 1fr auto </title>
+
+
+
+
+    <style>
+        html, body{
+            height: 100%;
+        }
+        .parent{
+            height: 70%;
+            background-color: rosybrown;
+            
+            display: grid;
+            grid-template-rows: auto 5fr auto;
+        }
+        .box1{
+            background-color: rgb(54, 49, 49);
+        }
+        .box2 {
+            background-color: red;
+
+        }
+        .box3 {
+            background-color: rgb(153, 106, 106);
+        }
+    </style>
+</head>
+<body>
+    
+
+
+
+
+    <div class="parent">
+        <div class="box1"> Header </div>
+        <div class="box2"> Main  </div>
+        <div class="box3"> Footer </div>
+    </div>
+</body>
+</html>

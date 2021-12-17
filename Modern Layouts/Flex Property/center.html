@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Document </title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .parnt{
+            border: 3px solid #000;
+            
+            display: flex;
+            flex-wrap: wrap;
+
+            justify-content: center;
+            /* align-items: center; */
+
+
+
+                    /* Not Working  */
+            justify-items: center;
+        }
+        .parnt .box{
+            padding: 100px;
+            margin: 5px;
+            background-color: bisque;
+            text-align: center;
+
+
+                        /* Not Working  */
+            vertical-align: bottom;
+
+                    /* flex: 0 1 <basewidth> */
+            flex: 1 1 150px ;  /* Stretching */ 
+            flex: 0 1 150px ;  /* Stretching */ 
+        }
+
+    </style>
+</head>
+<body>
+
+        <div class="parnt"> 
+            <div class="box box1"> 1 </div>
+            <div class="box box2"> 2 </div>
+            <div class="box box3"> 3 </div>
+        </div>
+
+
+</body>
+</html>

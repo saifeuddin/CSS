@@ -1,0 +1,61 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Classic Holy Grail Layout </title>
+
+
+
+
+    <style>
+        html, body{
+            height: 100%;
+        }
+        .parent{
+            height: 70%;
+            background-color: rosybrown;
+            
+            display: grid;
+            grid-template : auto 1fr auto / auto 1fr auto ;
+        }
+        .box1{
+            background-color: rgb(54, 49, 49);
+            grid-column: 1/4;
+        }
+        .box2 {
+            background-color: rgb(146, 185, 201);
+            grid-column: 1/2;
+
+        }
+        .box3 {
+            background-color: rgb(199, 212, 142);
+            grid-column: 2/3;
+        }
+        .box4 {
+            background-color: rgb(120, 178, 192);
+            grid-column: 3/4;
+        }
+        .box5 {
+            background-color: rgb(56, 43, 43);
+            grid-column: 1/-1;
+        }
+    </style>
+</head>
+<body>
+    
+
+
+
+
+    <div class="parent">
+        <div class="box1"> Header </div>
+        <div class="box2"> Left Sidebar   </div>
+        <div class="box3">  Main   </div>
+        <div class="box4"> Right Sidebar </div>
+        <div class="box5"> Footer</div>
+    </div>
+</body>
+</html>

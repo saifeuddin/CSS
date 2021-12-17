@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Sidebar Says  </title>
+
+    <style>
+        .parent{
+            display: grid;
+            grid-template-columns: minmax(150px, 25%) 1fr ;
+            grid-template-rows: 400px;
+        }
+        .parent div:nth-child(2){
+            background-color: rgb(252, 206, 206);
+        }
+        .parent .div{
+            background-color: rgb(148, 139, 139);
+        }
+    </style>
+
+</head>
+<body>
+    
+    <div class="parent">
+        <div class="div"> min: 150px, max:25% </div>
+        <div> 1fr 1fr 1fr f1r this full div </div>
+    </div>
+
+    
+</body>
+</html>
