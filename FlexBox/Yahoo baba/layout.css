@@ -1,0 +1,207 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    /* margin: 0; */
+    /* padding: 0; */
+    font-family: arial;
+    display: flex;
+    flex-direction: column
+}
+a{
+    text-decoration: none;
+}
+ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+
+
+
+
+
+
+
+
+header{
+    background-color: #566c2b;
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+}
+header ul{
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    display: flex;
+}
+header a{
+    color: #fff;
+
+}
+#logo{
+    margin: 0 auto;
+    font-size: 25px;
+}
+
+#menu li{
+    padding: 10px;
+}
+#social-links li{
+    padding: 10px;
+}
+
+
+
+
+
+
+
+
+#main{
+    display: flex;
+
+}
+
+#main aside{
+    padding: 10px;
+    flex: 0 0 20vw;
+    background-color: beige;
+}
+aside ul li {
+
+}
+aside ul a{
+    color: #566c2b;
+    padding: 10px;
+    display: block;
+    border-bottom: 1px solid grey;
+}
+aside img{
+    width: 100%;
+    height: auto;
+}
+article{
+    padding: 0px;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.service-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.service-box{
+    border: 1px solid #eee;
+    padding: 10px;
+    margin-bottom: 15px;
+    min-width: 370px;
+    flex-basis: 32%;
+    display: flex;
+    flex-direction: column;
+}
+.service-box img {
+    width: 100%;
+}
+.service-box h3 {
+    margin: 5px 0 10px;
+}
+.service-box p{
+    margin: 0px 0 10px;
+}
+.call-to-action{
+    align-self: flex-start;
+    margin-top:auto;
+}
+.call-to-action a{
+    background-color: grey;
+    color: white;
+    padding: 8px 13px;
+    display: block;
+}
+.call-to-action a:hover{
+    background-color: transparent;
+    border: 2px solid grey;
+    color: grey;
+}
+
+
+
+
+
+
+
+
+footer{
+    background-color: #566c2b;
+    padding: 15px;
+    color: white;
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        /* Responsive */
+@media screen and (max-width:850px) {
+    .service-box{
+        flex-basis: 48%;
+    }
+    aside{
+        flex: 0 0 30vw;
+    }
+    
+}
+@media screen and (max-width:600px) {
+    header{
+        flex-direction: column;
+    }
+    
+    #logo{
+        order: -1;
+    }
+    #main{
+        flex-direction: column;
+    }
+    article{
+        order: -1;
+    }
+    .service-container{
+        flex-direction: column;
+        align-items: center;
+    }
+    h2{
+        text-align: center;
+    }
+    
+}
+
+
+

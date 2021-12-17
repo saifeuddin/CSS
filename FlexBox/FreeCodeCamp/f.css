@@ -1,0 +1,421 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Creating a Flexbox image grid */
+ body{
+    margin: 30px;
+    background-color: rgb(38, 192, 141);
+}
+/* Creating a Flexbox image grid */
+
+
+
+
+/* html, body{
+    padding: 10px;
+    margin: 10px;
+    background-color: rgba(0, 255, 98, 0.514); */
+
+                    /* To "Responsive Vertically(height)" set html,body & container height to 100% 
+            height: 100%;
+                    /* To "Responsive Vertically(height)" set html,body & container height to 100% 
+}
+
+                    /* First Flexbox layout 
+.container{
+    background-color: blanchedalmond;
+    padding: 20px;
+    border: 3px solid #000;
+    margin: 10px 10px;
+    display: flex;
+    
+}
+.d1 {
+    background-color: red;
+}
+
+.d2 {
+    background-color: rgb(204, 186, 186);
+    
+}
+
+.d3 {
+    background-color: rgb(65, 53, 53);
+}
+                    /* First Flexbox layout */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                /* Main axis and cross axis  */
+                /* Justify Content */
+                /* Positioning items 
+
+.d{
+    background-color: red;
+    height: 500px;
+    width: 100%;
+    padding: 20px;
+    padding-right: 40px;
+}
+
+.container {
+    background-color: blanchedalmond;
+    /* padding: 20px; 
+    margin: 10px 10px;
+    width: 100%;
+    height: 200px;
+    
+    display: flex;
+
+
+
+                /* If this the  Main Axis(x) goes Horizontal(left to right)        
+                                Cross Axis(y) goes Vertically(top to bottom) */
+    /* flex-direction: row; */
+    /* flex-direction: row-reverse; */
+    
+
+                /* Jdi "Flex-Direction: row" hoi Align Horizontally */
+    /* justify-content: center; */
+
+    /* justify-content: flex-end; */
+    /* justify-content:space-around; */
+    /* justify-content:space-between; */
+    /* justify-content:space-evenly; */
+                /* Jdi "Flex-Direction: row" hoi Align Vertically */
+    /* align-items: center; */
+    
+
+
+
+                /* If this the Main Axis goes Vertical(top to bottom)
+                                Cross Axis(y) goes Horizontal(left to right) */
+    /* flex-direction: column; */
+    /* flex-direction: column-reverse; */
+
+                /* Jdi "Flex-Direction: Column" hoi Align Vertically */
+    /* justify-content: center; */
+
+                /* Jdi "Flex-Direction: Column" hoi Align Horizontally */
+    /* align-items: center;     
+}
+
+.d1 {
+    /* width: 20%; 
+    height: 20%;
+    background-color: yellow;
+
+    margin-right: auto ;
+}
+
+.d2 {
+    /* width: 20%; 
+    height: 20%;
+    background-color: rgb(204, 186, 186);
+    
+}
+
+.d3 {
+    /* width: 20%; 
+    height: 20%;
+    background-color: rgb(65, 53, 53);
+
+    margin-left: auto;
+}
+                /* Main axis and cross axis  */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                /* The flex property */
+                /* Align items */
+                /* Flex direction*/
+                /* Wrapping 
+                Flex grow, shrink, basic 
+
+.container {
+    background-color: blanchedalmond;
+    margin: 10px 10px;
+    width: 100%;
+    overflow: hidden;
+
+                /* To "Responsive Vertically(hight)" set html,body & container height to 100% 
+            height: 100%;
+
+            /* Default  */
+            /* align-items: stretch;  */
+            /* Default  */
+            
+            /* align-items: baseline;  */
+            /* align-items: flex-end; */
+            /* align-items: flex-start; */
+
+            /* align-items: center; */
+            /* justify-content: center; */
+                /* To "Responsive Vertically(height)" set html,body & container height to 100% 
+
+    border: 6px solid;
+
+    display: flex;
+
+
+    flex-direction: row;
+    /* flex-direction: column; */
+
+
+    /* flex-wrap: wrap; */
+    
+    /* align-content: flex-end;
+}
+
+
+
+                /* To "Responsive Horizontally(width)" 
+.container > div{
+
+    /* flex: 1; */
+                /* OR  */
+    /* flex: 1 1 0; */
+                /* OR 
+    flex-grow:1;
+    flex-shrink: 3;
+    flex-basis: 200px;
+
+
+    /* line-height: 100px;
+}   
+
+/* .container > .d1,
+.container > .d3 {
+    flex: 4;
+} */
+                /* To "Responsive Horizontally(width)" */
+
+
+
+
+
+
+/* .container .d1 {
+    padding: 20px;
+    background-color: yellow; */
+ 
+    /* align-self: flex-end; */
+
+    /* flex-grow: 10;
+    flex-shrink: 2;
+    flex-basis: 400px; 
+    
+}
+
+.container .d2 {
+    padding: 20px;
+    background-color: rgb(204, 186, 186);
+
+    /* flex-grow: 3;
+    flex-shrink: 5; 
+}
+
+.container .d3 {
+    padding: 20px;
+    background-color: rgb(65, 53, 53);
+    
+    /* align-self: baseline; 
+    
+}
+                /* The flex property */
+                
+
+                
+                
+                
+                
+
+
+                
+                
+                
+
+                
+                
+                
+
+                
+                
+                
+                
+                
+                
+                
+
+                /* Oder 
+.container {
+    background-color: blanchedalmond;
+    width: 100%;
+    
+    height: 100%;
+    border: 3px solid;
+    
+    display: flex;
+    /* flex-direction: column; 
+}
+
+
+
+.container .d1 {
+    padding: 20px;
+    background-color: yellow; 
+
+    /* flex: 1 1; */
+
+
+    /* order: 3; 
+}
+.container .d2 {
+    padding: 20px;
+    background-color: rgb(204, 186, 186);
+
+    /* flex: 1 5 200px; */
+
+
+    /* order: 1; 
+}
+.container .d3 {
+    padding: 20px;
+    background-color: rgb(65, 53, 53);
+    
+    /* flex: 1 1; */
+
+    
+    /* order: 2; 
+}
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                /* Creating a Flexbox image grid */
+
+.container{
+    border: 3px solid;
+    overflow: hidden;
+
+
+    display: flex;
+    flex-wrap: wrap;
+
+    /* justify-content: flex-start; */
+
+}
+
+.container > div > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.container > .big{
+        flex: 1 1 300px;
+
+    
+}
+.container > .normal{
+        flex: 1 1 200px;
+
+}
+
+@media all and (max-width: 780px){
+    .container{
+        flex-direction: column;
+    }
+}
+
+
+
+
+
+
+
+
