@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dropdown Image</title>
+
+    <style>
+        .dropdown{
+            margin-left: 20px;
+
+            /* background-color: red; */
+            padding: 10px;
+
+            display: inline-block;
+            position: relative;
+        }
+        .dropdown .content{
+            position: absolute;
+            display: none;
+            min-width: 160px;
+            box-shadow: 4px 8px 16px 3px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+        .dropdown:hover .content{
+            display: block;
+        }
+        .desc{
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+
+            <h1>Dropdown Image</h1>
+            <p>How to add an image and other content inside the dropdown box.</p>
+
+            <br>
+            <br>
+            <br>
+            <div class="dropdown">
+                <img src="img.jpg" alt="Cinque Terre" width="150" height="90">
+                <div class="content">
+                    <img src="img.jpg" alt="Cinque Terre" width="300" height="200">
+                    <div class="desc" style="text-indent: 70px;">Beautiful Cinque Terre</div>
+                </div>
+            </div>
+</body>
+</html>

@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Layout - Float Examples</title>
+
+    <!-- <style>
+        *{
+                    /* Try to remove this  */
+            box-sizing: border-box;
+        }
+        .clearfix{
+            border: 1px solid #000;
+            padding: 20px;
+        }
+        .box{
+            background-color: darkgrey;
+            padding: 50px;
+
+
+            width: 32%;
+            float: left;
+            border-right: 5px solid;
+
+            margin: 0 5px;
+        }
+
+                    /* Try to remove this also */
+        .clearfix::after{
+            content: "";
+            clear: both;
+            display: table;
+        }
+    </style> -->
+
+
+
+
+
+
+    <!-- <style>
+                *{
+                            /* Try to remove this */
+                box-sizing: border-box;
+                }
+                .clearfix{
+                border: 1px solid #000;
+                }
+                .container{
+                padding: 50px;
+                width: 33%;
+                float: left;
+
+                }
+                img{
+                    width: 100%;
+                }
+                            /* Try to remove this also */
+                .clearfix::after{
+                content: "";
+                clear: both;
+                display: table;
+                }
+    </style> -->
+
+
+
+
+
+    <!-- <style>
+                *{
+                            /* Try to remove this */
+                box-sizing: border-box;
+                }
+                .clearfix{
+                border: 1px solid #000;
+                }
+                .box{
+                padding: 50px;
+                width: 50%;
+                height: 300px;
+                float: left;
+
+                /* overflow: auto; */
+                }
+                            /* Try to remove this also */
+                .clearfix::after{
+                content: "";
+                clear: both;
+                display: table;
+                }
+    </style> -->
+
+
+
+    <style>
+        *{
+            /* margin: 0; */
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .flex-container{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            background-color: dodgerblue;
+        }
+        .flex-container .box{
+            background-color: #f1f1f1;
+            margin: 10px;
+            text-align: center;
+            line-height: 75px;
+            font-size: 30px;
+
+            width: 47%;
+        }
+    </style>
+</head>
+<body>
+    
+            <!-- <h1>Grid of Boxes / Equal Width Boxes</h1>
+                <p> With float property, it is easy to float boxes of content side by side</p>
+
+                <div class="clearfix">
+                    <div class="box">
+                        <p> Some Content</p>
+                    </div>
+                    <div class="box box2">
+                        <p> Some Content</p>
+                    </div>
+                    <div class="box">
+                        <p> Some Content</p>
+                    </div>
+                </div>
+
+            <p>
+                Note that we also use the clearfix hack to take care of the layout flow, and that we add the box-sizing
+                property to make sure that the image container doesn't break due to extra padding. Try to remove this
+                code to see the effect.
+            </p> -->
+
+
+
+
+
+
+
+
+
+
+
+
+            
+
+
+
+             
+            <!-- <h1>Image Side By Side</h1>
+
+            <div class="clearfix">
+            <div class="container">
+                
+                <img src="1.jpg" alt="">
+            </div>
+            <div class="container">
+                <img src="2.jpg" alt="">
+            </div>
+            <div class="container">
+                <img src="3.jpg" alt="">
+            </div>
+            </div>
+
+            <p>
+                Note that we also use the clearfix hack to take care of the layout flow, and that we add the box-sizing
+                property to make sure that the image container doesn't break due to extra padding. Try to remove this
+                code to see the effect.
+            </p> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <!-- <h2>Equal Height Boxes</h2>
+                <p>Floating boxes with equal heights:</p>
+
+            <div class="clearfix">
+
+                <div class="box" style="background-color:#bbb">
+                    <h2>Box 1</h2>
+                    <p>Some content, some content, some content</p>
+                </div>
+
+                <div class="box" style="background-color:#ccc">
+                    <h2>Box 2</h2>
+                    <p>Some content, some content, some content</p>
+                    <p>Some content, some content, some content</p>
+                    <p>Some content, some content, some content</p>
+                </div>
+
+            </div>
+
+            <p>
+                This example not very flexible. It is ok to use CSS height if you can guarantee that the boxes will
+                always have the same amount of content in them, but that's not always the case. If you try the example
+                above on a mobile phone (or resize the browser window), you will see that the second box's content will
+                be displayed outside of the box.
+            </p> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <h1>Flexible Boxes</h1>
+
+            <div class="flex-container">
+                <div class="box">Box 1 - This is some text to make sure that the content gets really tall. This is some
+                    text to make sure that the content gets really tall.
+                </div>
+                <div class="box">Box 2 - My height will follow Box 1.</div>
+            </div>
+
+            <p>Try to resize the browser window to see the flexible layout.</p>
+            <p><strong>Note:</strong> Flexbox is not supported in Internet Explorer 10 or earlier versions.</p>
+
+
+</body> 
+</html>

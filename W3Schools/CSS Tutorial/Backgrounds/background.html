@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Background Property </title>
+
+
+</head>
+<body>
+
+        <h1> CSS Background Shorthand Property</h1>
+
+        <p> The background property is a shorthand property for: </p>
+        <ol>
+            <li>background-color</li>
+            <li>background-image</li>
+            <li>background-position</li>
+            <li>background-size</li>
+            <li>background-repeat </li>
+            <li>background-origin </li>
+            <li>background-clip </li>
+            <li>background-attachment </li>
+        </ol>
+        <p>
+            It does not matter if one of the values above are missing.
+        </p>
+        <h3> Example: </h3>
+            <p> background:#ff0000 url(smiley.gif); is
+                allowed. </p>
+
+
+        <h2> CSS Syntax </h2>
+            <pre>
+                background: bg-color bg-image position/bg-size bg-repeat bg-origin bg-clip bg-attachment
+                initial|inherit;
+            </pre>  
+            <p> <b>Note</b> If one of the properties in the shorthand declaration is the bg-size property, you must use
+                a / (slash) to separate it from the bg-position property </p>
+            <p> background:url(smiley.gif) 10px 20px/50px 50px; will result in a background image, positioned 10
+            pixels from the left, 20 pixels from the top, and the size of the image will be 50 pixels wide and50 pixels high.</p>
+
+            <p>Note: If using multiple background-image sources but also want a background-color, the "background-color"
+                parameter needs to be "last in the list".</p>
+
+
+            <h3> Example: </h3>
+        <pre>
+            body{
+                 background-color: light url('') no-repeat fixed center;
+            }
+        </pre>
+
+
+</body>
+</html>

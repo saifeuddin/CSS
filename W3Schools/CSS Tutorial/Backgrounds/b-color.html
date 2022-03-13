@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Background Color Property</title>
+</head>
+<body>
+
+
+            <h2> Css background -Color </h2>
+            <p>
+                The background-color property specifies the background color of an element.
+            </p>
+            <h3> Example: </h3>
+            <p>
+                Here, the h1, p, and div elements will have different background colors:
+            </p>
+
+            <pre>
+                h1 {
+                background-color: green;
+                }
+
+                div {
+                background-color: lightblue;
+                }
+
+                p {
+                background-color: yellow;
+                }
+            </pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <h2> opacity / Transparent</h2>
+            <p>
+                The opacity property specifies the opacity/transparency of an element.<br> It can take a value from 0.0
+                -
+                1.0. The lower value, the more transparent:
+            </p>
+
+            <h3> Example: </h3>
+            <pre>
+                div {
+                background-color: green;
+                opacity: 0.3;
+                }
+            </pre>
+            <p> <b>Note:</b> When using the opacity property to add transparency to the background of an element,
+                all of its child elements inherit the same transparency. This can make the text inside a fully
+                transparent element hard to read.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <h2> transparency using RGBA </h2>
+            <p> It you do not want to apply opacity to child elements, use RGBA color values </p>
+
+            <h3> Example: </h3>
+            <pre>
+                div {
+                background: rgba(0, 128, 0, 0.3) /* Green background with 30% opacity */
+                }
+            </pre>
+</body>
+</html>

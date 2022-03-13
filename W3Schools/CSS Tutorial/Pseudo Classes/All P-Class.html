@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Css Pseudo Element & classes </title>
+
+    <link rel="stylesheet" href="ps.css">
+</head>
+<body>
+
+
+                    <h1>Css pseudo Classes</h1> 
+                    
+    <ol>
+        
+        <li> :root<br>
+            Used for css variables.
+        </li>
+
+        <li> :hover</li>
+        <br/>
+
+        <li> :not(selector)
+            <br />
+            Jar sthy use krbo oita chara bki sob gulay kaj krbe.
+        </li>
+        <li> :not(:hover)</li>
+            <br/>
+
+        <li> 
+            :nth-child(value) <br/>
+            value(odd/even/2/3/6=5n/3n+1).<br/>
+            Ata "oporer dik theke" kaj krbve. Atake "parent element" er sathy use krte hbe jar child ase. 
+        </li>
+        <li> :nth-last-child()</li>
+        <li> :nth-of-type()
+        <br/>
+            Ata "nicher dik theke" kaj krbe. "Parent thakle o na thakle o" ata kaj krbe.
+        </li>
+        <li> :nth-last-of-type()</li>
+        <br/>
+
+        <li> :first-child
+        <br/>
+            Ata "parent element" er Jnnu.
+        </li>
+        <li> :last-child</li>
+        <li> :first-of-type
+        <br />
+            Ata "parent without parent" sobar jnnu.
+        </li>
+        <li> :last-of-type</li>
+        <br/>
+
+        <li> :only-child</li>
+        <li> :only-of-type</li>
+        <br/>
+
+        <li> :empty
+        <br/>
+            Use it on empty elements which "have no content".
+        </li>
+        <li> :lang 
+        <br/>
+            Jdi ami lang attribute use kore thaki kono element a tahole oi lang ta ai pseudo class diye select kore design krte parbo.
+        </li>
+        <br/>
+
+        <ol>
+            <h1> For Links </h1>
+            <li> :link</li>
+            <li> :hover</li>
+            <li> :visited
+            <br/>
+                This class will only work on static site .On dynamic site this will not work anymore.
+            </li>
+            <li> :active</li>
+            <li> :target</li>
+            <br/>
+        </ol>
+
+        <ol> <h1> For forms & inputs </h1>
+            <li> :default <br />
+                For Checkbox, radio button, select box.. jdi ami age theke select kore dei oigula ai class dara design kora jaby.
+
+            </li>
+
+            <li> :focus <br/>
+                Use it on any input element to style the input field when input field get clicked.<br />
+                Use it on form, input element. "Checkbox, select box, radio button" a worked "krbe na" .
+            </li>
+            <li>:focus-within 
+                <p>
+                    Child a focus kore parent er style korar jnno
+                </p>
+            </li>
+            <li> :checked 
+            <br/>
+                Worked only with "checkbox and radio button".
+            </li>
+            <br/>
+
+            <li> :enabled</li>
+            <li> :disabled</li>
+                <br/>
+
+            <li> :required</li>
+            <li> :optional</li>
+                <br/>
+
+            <li> :in-range</li>
+            <li> :out-of-range</li>
+                <br/>
+
+            <li> :read-only</li>
+            <li> :write-only<br>
+            Use it on form, input element.</li>
+            <li> :valid <br/>
+                 Use it on form, input element.</li>
+            <li> :invalid<br>
+                 Use it on form, input element.</li>
+            <br>
+            <li>placeholder-shown 
+                <p>
+                    Used to style placeholder text
+                </p>
+            </li>
+        </ol>
+    </ol>
+
+
+                      <h1> Css pseudo Elements </h1>
+    <p>You can't have Pseudo elements on things that don't have any content </p>
+    <ol>
+        <li> ::before</li>
+        <li> ::after</li>
+        <br/>
+        <li> ::first-letter</li>
+        <li> ::first-line</li>
+        <br/>
+        <li> ::placeholder</li>
+        <li> ::selection-- this element matched the portion that is selected by the user. Means kew jdi text copy korar jnnu select kore tokhn atar effect dekha jaby <br />
+        In this element "font-size property" doesn't work, You will se no changes.</li>
+    </ol>
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

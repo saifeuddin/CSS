@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Horizontal Navigation Bar</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        ul{
+            list-style-type: none;
+            background-color: rgb(73, 64, 64);
+            
+            
+            position: fixed;
+            top: 50px;
+            /* bottom: 0px; */
+            /* position: sticky; */
+            /* top: 0px; */
+            overflow: auto;
+            width: 100%;
+        }
+        ul li{
+            /* border: 1px solid #000; */
+            float: left;
+        }
+        ul li a{
+            text-decoration: none;
+            display: block;
+            color: white;
+
+            padding: 17px 40px;
+            text-align: center;
+        }
+
+        /* li a:hover{
+            background-color: #111;
+        } */
+        ul li a:hover:not(.active){
+            background-color: #111;
+        }
+        .active{
+            background-color: rgb(199, 170, 135);
+        }
+
+
+                    /* Responsive   Nav Bar */
+        @media all  and (max-width: 600px){
+            ul li{
+                float: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    
+
+            <h1>Horizontal Navigation Bar</h1>
+            <b>There are "two ways" to create a horizontal navigation bar. Using "display:inline" or "floating" list items.</b>
+
+            <br>
+            <br>
+            <br>
+            <ul>
+                <li><a class="active" href="#home">Home</a></li>
+                <li><a href="#news">News</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#about">About</a></li>
+            </ul>
+            <div style="padding:20px;margin-top: 0px; background-color:#6b837e;height:1600px;">
+                <h2>Fixed Top/bottom/sticky Navigation Bar</h2>
+                <h5>Make the navigation bar stay at the top of the page, even when the user scrolls the page:</h5>
+                <p>Some text some text some text some text..</p>
+                <p>Some text some text some text some text..</p>
+                <p>Some text some text some text some text..</p>
+                <p>Some text some text some text some text..</p>
+                <p>Some text some text some text some text..</p>
+                <p>Some text some text some text some text..</p>
+                <p>Some text some text some text some text..</p>
+                <p>Some text some text some text some text..</p>
+                <p>Some text some text some text some text..</p>
+                <p>Some text some text some text some text..</p>
+                <p>Some text some text some text some text..</p>
+                <p>Some text some text some text some text..</p>
+                <p>Some text some text some text some text..</p>
+                <p>Some text some text some text some text..</p>
+                <p>Some text some text some text some text..</p>
+                <p>Some text some text some text some text..</p>
+                <p>Some text some text some text some text..</p>
+                <p>Some text some text some text some text..</p>
+                <p>Some text some text some text some text..</p>
+                <p>Some text some text some text some text..</p>
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

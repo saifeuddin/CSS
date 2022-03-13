@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Dropdowns</title>
+
+
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .dropdown{
+            background-color: rgb(163, 94, 94);
+            display: inline-block;
+            position: relative;
+        }
+        .dropdown-content{
+            display: none;
+            position: absolute;
+
+            /* border: 1px solid #000; */
+            background-color: #f9f9f9;
+
+            /* min-width: 160px; */
+            width: 100%;
+            padding: 10px;
+            box-shadow: 1px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+        .dropdown:hover .dropdown-content{
+            background-color: rgb(128, 108, 148);
+            display: block;
+        }
+        .dropdown:hover{
+            background-color: red;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    
+
+            <h1> Basic Drop Down</h1>
+            <p>Create a dropdown box that appears when the user moves the mouse over an element.</p>
+            <br>
+            <br>
+            <br>
+            <div class="dropdown">
+                <span> Mouse Over Me </span>
+                <div class="dropdown-content">
+                    <p>Hello world </p>
+                </div>
+            </div>
+
+            <i>Here</i>
+            <br>
+            <br>
+            <br>
+            <br>
+            <p><b>Tips:</b>If you want the width of the dropdown content to be as wide as the dropdown button, set the width to 100% (and overflow:auto to enable scroll on small screens).
+            </p>
+</body>
+</html>

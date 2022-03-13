@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Website Layout</title>
+
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing:border-box;
+            
+        }
+        body{
+            background-color: #f1f1f1;
+            font-family: arial;
+            padding: 30px;
+        }
+
+                    /* Style The header */
+        header{
+            background-color: white;
+            padding: 30px;
+            text-align: center;
+            /* width: 100%; */
+        }
+        header h1{
+            font-size: 4em;
+        }
+
+                    /* Style the top navigation bar */
+        nav {
+            background-color: black;
+            overflow:hidden;
+            /* width: 100%; */
+        }
+                    /* Style the top navigation Links */
+        nav a{
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            
+            display: block;
+            padding: 14px 16px;
+            float: left;
+        }
+        nav a:last-child{
+            float: right;
+        }
+
+                    /* Style the top navigation Links on hover */
+        nav a:hover{
+            background-color: #ddd;
+            color: black;
+        }
+
+
+                        /* Create two unequal columns that floats next to each other */
+                /* Left column */
+        .row .leftcolumn{
+            float: left;
+            width: 75%;
+        }
+                /* RIGHT column */
+        .row .rightcolumn{
+            float: left;
+            width: 25%;
+            background-color: #f1f1f1;
+            padding-left: 20px;
+        }
+                /* Clear floats after the columns */
+        .row::after{
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+        .card .fake{
+            background-color: #aaa;
+            padding: 20px;
+            width: 100%;
+            box-shadow: 1px 1px  4px blue;
+        }
+
+
+
+                /* style the cards  */
+        .row .card{
+            background-color: white;
+            padding: 20px;
+            margin-top: 20px;
+            box-shadow: 1px 2px 3px 2px rgb(153, 112, 112);
+        }
+        .leftcolumn .card p:nth-child(4){
+            margin-top: 20px;
+        }
+        .rightcolumn .card p:nth-child(3), .fake{
+            margin-top: 20px;
+        }
+
+        /* Footer */
+        footer {
+        padding: 20px;
+        text-align: center;
+        background: white;
+        margin-top: 20px;
+        }
+
+
+
+        @media screen and (max-width:800px) {
+            .row .leftcolumn, .row .rightcolumn{
+                padding: 0;
+                width: 100%;
+            }
+        }
+
+        @media screen and (max-width:400px) {
+            nav a{
+                width: 100%;
+                font: none;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- <h1>Responsive Website Layout</h1> -->
+
+        <header>
+            <h1> My Website</h1>
+            <p> resize the window to see the effect. </p>
+        </header>
+        <nav>
+            <a href=""> Home</a>
+            <a href=""> About</a>
+            <a href=""> Blog </a>
+            <a href=""> Contact </a>
+        </nav>
+
+        <div class="row">
+
+            <div class="leftcolumn">
+                <div class="card">
+                    <h2>Title Heading</h2>
+                    <h5>Title Description, Dec 7, 2017 </h5>
+                    <div class="fake" style="height: 200px;"> Image </div>
+                    <p>Some text....</p>
+                    <p> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corrupti itaque iste inventore, nam similique fugiat, magni tempora molestias, veritatis sapiente fuga molestiae minima atque et beatae accusamus nesciunt? Incidunt, quia ea nostrum natus, quod a, delectus vitae aspernatur rem assumenda quis illo deserunt mollitia laborum omnis nihil ducimus autem illum.</p>
+                </div>
+                <div class="card">
+                    <h2>Title Heading</h2>
+                    <h5>Title Description, Sep 4, 2017 </h5>
+                    <div class="fake" style="height: 200px;"> Image </div>
+                    <p >Some text....</p>
+                    <p> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corrupti itaque iste inventore, nam similique fugiat, magni tempora molestias, veritatis sapiente fuga molestiae minima atque et beatae accusamus nesciunt? Incidunt, quia ea nostrum natus, quod a, delectus vitae aspernatur rem assumenda quis illo deserunt mollitia laborum omnis nihil ducimus autem illum.</p>
+                </div>
+                <div class="card">
+                    <h2>Title Heading</h2>
+                    <h5>Title Description, Jan 4, 2017 </h5>
+                    <div class="fake" style="height: 200px;"> Image </div>
+                    <p >Some text....</p>
+                    <p> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corrupti itaque iste inventore, nam similique fugiat, magni tempora molestias, veritatis sapiente fuga molestiae minima atque et beatae accusamus nesciunt? Incidunt, quia ea nostrum natus, quod a, delectus vitae aspernatur rem assumenda quis illo deserunt mollitia laborum omnis nihil ducimus autem illum.</p>
+                </div>
+            </div>
+
+
+            <div class="rightcolumn">
+                <div class="card">
+                    <h2>About Me</h2>
+                    <div class="fake" style="height:200px"> Image </div>
+                    <p> Some text about me some text about me </p>
+                </div>
+                <div class="card">
+                    <h2>Popular Posts</h2>
+                    <div class="fake"> <p>Image</p> </div>
+                    <div class="fake"> <p>Image</p> </div>
+                    <div class="fake"> <p>Image</p> </div>
+                </div>
+                <div class="card">
+                    <h3>Follow me</h3>
+                    <p>Some text....</p>
+                </div>
+            </div>
+
+        </div>
+        <footer>
+            <h2>Footer </h2>
+        </footer>
+
+
+
+</body>
+</html>

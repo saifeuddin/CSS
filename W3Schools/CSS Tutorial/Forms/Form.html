@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Using CSS to style an HTML Form</title>
+
+
+    <!-- <style>
+
+        input[type=text], select{
+            width: 100%;
+            display: inline-block;
+
+            padding: 12px 40px;
+            margin: 8px 0;
+            border: 2px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+
+
+                    /* OutLine none na dile focus a border buja jaby nah  */
+            outline: none;
+
+                    /* Add Transition On Focus  */
+            transition: 0.5s;
+        }
+        input[type=text]:focus{
+            background-color: #ccc;
+            color: red;
+            font-weight: bold;
+            font-size: 19px;
+            border: 3px solid rgb(34, 189, 20);
+        }
+
+                /* Add Icons to input  */
+        input[type=text]{
+        background: url(2.jpg) no-repeat 5px / 25px;
+        }
+
+
+
+        input[type=submit]{
+            width: 100%;
+            color: white;
+            background-color: #4CAF50;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border-radius: 6px;
+            border: none;
+            cursor: pointer;
+        }
+        input[type=submit]:hover{
+            background-color: #3f8a43;
+        }
+
+
+        select option{
+            background-color: rgb(224, 213, 213);
+            color: red;
+            font-size: 16px;
+        }
+        div form{
+            background-color: #f2f2f2;
+            padding: 30px;
+            border-radius: 10px;
+            margin: 20px;
+        }
+    </style> -->
+
+
+    <style>
+        input[type=text] {
+        width: 130px;
+        box-sizing: border-box;
+        font-size: 16px;
+
+        border: 2px solid #ccc;
+        border-radius: 4px;
+
+        background-image: url('2.jpg');
+        background-position: 5px 7px;
+        background-repeat: no-repeat;
+        background-size: 30px;
+
+        padding: 12px 20px 12px 40px;
+        transition: width 0.4s ease-in-out;
+        }
+       input[type=text]:focus {
+        width: 100%;
+       }
+       /* input[type=text]:hover {
+        width: 100%;
+       } */
+
+    </style>
+</head>
+<body>
+
+        <h1>Using CSS to style an HTML Form</h1>
+
+        <!-- <div class="form">
+            <form action="">
+
+                <label for="fname"> First Name </label>
+                <input type="text" id="fname" name="firstname" placeholder="Your First Name">
+                <label for="lname"> Last Name </label>
+                <input type="text" id="lname" name="lastname" placeholder="Your Last Name">
+
+                <label for="country"> Country </label>
+                    <select name="country" id="country">
+                        <option value="australia"> Australia</option>
+                        <option value="malaysia"> Malaysia</option>
+                        <option value="canada"> Canada </option>
+                        <option value="usa" selected> USA </option>
+                        <option value="uae"> UAE </option>
+                    </select>
+
+                    <input type="submit" value="submit">
+            </form>
+
+            <p><b>Note:-</b> By default, some browsers will add a blue outline around the input when it gets focus
+                (clicked on). You can remove this behavior by adding <b>outline: none;</b>to the input.</p>
+        </div> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <h2>Animated search input:</h2>
+        <form action="">
+            <input type="text" name="search" id="search" value="Search..">
+        </form>
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> CSS Fonts </title>
+</head>
+<body>
+
+            <h1> CSS Fonts</h1>
+
+
+            <br>
+            <br>
+            <br>
+
+            <h2>
+                Generic Font Families
+            </h2>
+            <p> In css there are 5 generic font families</p>
+            <ol>
+                <li> Serif</li>
+                    <p>
+                        Serif fonts have a small stroke at the edges of each letter. They create a sense of formality
+                        and elegance.
+                    </p>
+                <li> Sans-serif</li>
+                    <p>
+                        Sans-serif fonts have clean lines (no small strokes attached). They create a modern and
+                        minimalistic look.
+                    </p>
+                <li> Monospace</li>
+                    <p>
+                        Monospace fonts - here all the letters have the same fixed width. They create a mechanical look.
+                    </p>
+                <li> Cursive</li>
+                    <p>
+                        Cursive fonts imitate human handwriting.
+                    </p>
+                <li> Fantasy</li>
+                    <p>
+                        Fantasy fonts are decorative/playful fonts.
+                    </p>
+            </ol>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+
+            <h2> 
+                The CSS font-family Property
+           </h2>
+                <p>
+                    In CSS, we use the font-family property to specify the font of a text.
+                </p>
+                <p>
+                    The font-family property should hold several font names as a "fallback" system, to ensure maximum
+                    compatibility between browsers/operating systems. Start with the font you want, and end with a
+                    generic family (to let the browser pick a similar font in the generic family, if no other fonts are
+                    available). The font names should be separated with comma.
+                </p>
+                <p> <b>Note</b> If the font name is more than one word, it must be in quotation marks, like: "Times New
+                    Roman".</p>
+
+                    <h3>Example: </h3>
+                    <pre>
+                        .p1 {
+                        font-family: "Times New Roman", Times, serif;
+                        }
+
+                        .p2 {
+                        font-family: Arial, Helvetica, sans-serif;
+                        }
+
+                        .p3 {
+                        font-family: "Lucida Console", "Courier New", monospace;
+                        }
+                    </pre>
+
+    
+</body>
+</html>
