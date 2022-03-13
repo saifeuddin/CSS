@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <style>
+        p{
+            hyphens: manual;
+        }
+    </style>
+</head>
+<body>
+    
+
+            <h1>CSS hyphens Property</h1>
+                <h2>Definition and Usage</h2>
+                    <p>The hyphens property defines whether hyphenation is allowed to create more soft wrap
+                        opportunities within a line of text.</p>
+                    <b>Default value: manual</b>
+                <h2>CSS Syntax</h2> 
+                    <pre>
+                        hyphens: none|manual|auto|initial|inherit;
+                    </pre>
+                <h2>Property Values</h2>
+                    <ol>
+                        <li>manual 
+                            <p>
+                                Default. Words are only hyphenated at &hyphen; or &shy; (if needed)
+                            </p>
+                        </li>
+                        <li>none
+                            <p>Words are not hyphenated</p>
+                        </li>
+                        <li>auto 
+                            <p>Words are hyphenated where the algorithm is deciding (if needed)</p>
+                        </li>
+                    </ol>
+                <h3>Example</h3>
+                    <pre>
+                        div.a {
+                        -webkit-hyphens: none;
+                        -ms-hyphens: none;
+                        hyphens: none;
+                        }
+
+                        div.b {
+                        -webkit-hyphens: manual;
+                        -ms-hyphens: manual;
+                        hyphens: manual;
+                        }
+
+                        div.c {
+                        -webkit-hyphens: auto;
+                        -ms-hyphens: auto;
+                        hyphens: auto;
+                        }
+
+                    </pre>
+
+
+</body>
+</html>

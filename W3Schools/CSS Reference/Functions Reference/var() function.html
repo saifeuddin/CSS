@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+
+            <h1>CSS var() Function</h1> 
+                <h3>Example</h3>
+                    <pre>
+                        :root {
+                        --main-bg-color: coral;
+                        }
+
+                        #div1 {
+                        background-color: var(--main-bg-color);
+                        }
+
+                        #div2 {
+                        background-color: var(--main-bg-color);
+                        }
+                    </pre>
+                <h2>Definition and Usage</h2>   
+                    <p>
+                       The  var() function is used to insert th a value of a Css variable.
+                    </p>
+                <h2>CSS Syntax</h2>
+                    <pre>
+                        var(--name, value)
+                        <ol>
+                            <li>name 
+                                <p>Required. The variable name (must start with two dashes) </p>
+                            </li>
+                            <li>value
+                                <p>
+                                    Optional. The fallback value (used if the variable is not found)
+                                </p>
+                            </li>
+                        </ol>
+                    </pre>
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>  
+
+
+                <h1>CSS content Property</h1>
+                <h2>Definition and Usage </h2>
+                    <p>
+                        The content property is used with the ::before and ::after pseudo-elements, to insert generated
+                        content.
+                    </p>
+                <h2>Syntax </h2>
+                    <pre>
+                        content:
+                        normal|none|counter|attr|string|open-quote|close-quote|no-open-quote|no-close-quote|url|initial|inherit;
+                    </pre>
+                <h2>Property Values</h2>
+                    <ol>
+                        <li>normal 
+                            <p> Default value. Sets the content, if specified, to normal, which default is "none" (which is nothing) </p>
+                            <pre>
+                                p::before {
+                                content: normal;
+                                }
+                            </pre>
+                        </li>
+                        <li>none 
+                            <p> Sets the content if specified to nothing </p>
+                            <pre>
+                                p::before {
+                                content: none;
+                                }
+                            </pre>
+                        </li>
+                        <li>counter 
+                            <p> Sets the content as a counter </p>
+                            <pre>
+                                p {
+                                counter-increment: myIndex;
+                                }
+                                p::before {
+                                content:counter(myIndex);
+                                }
+                            </pre>
+                        </li>
+                        <li>attr(href) 
+                            <p>Sets the content as one of the selector's attribute</p>
+                            <pre>
+                                a::before {
+                                content: attr(href);
+                                }
+                            </pre>
+                        </li>
+                        <li>string 
+                            <p>Sets the content to the text you specify</p>
+                            <pre>
+                                p::before {
+                                content: "Read this -";
+                                }
+                            </pre>
+                        </li>
+                        <li>open-quote 
+                            <p>
+                                Sets the content to be an opening quote
+                            </p>
+                        </li>
+                        <li>close-quote 
+                            <p>
+                                Sets the content to be an closing quote
+                            </p>
+                        </li>
+                        <li>no-open-quote 
+                            <p>
+                                Removes the opening quote from the content, if specified
+                            </p>
+                        </li>
+                        <li>no-close-quote 
+                            <p>
+                                Removes the closing quote from the content, if specified
+                            </p>
+                        </li>
+                        <li>url('url') 
+                            <p>Sets the content to be some kind of media (an image, a sound, a video, etc.)</p>
+                        </li>
+                    </ol>
+    
+</body>
+</html>

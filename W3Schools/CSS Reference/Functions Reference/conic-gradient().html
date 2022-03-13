@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+.gradient {
+height: 250px;
+background-color: #ff8a00;
+background-image: conic-gradient(from 190deg,#ff8a00,red,blue,black,white);
+background-image: conic-gradient(from 0deg,#ff8a00,red,blue,black,white);
+background-image: conic-gradient(at 20% 70% ,#ff8a00,red,blue,black,white);
+background-image: conic-gradient(at 20% 70% ,#ff8a00 90deg,red 360deg,blue,black,white);
+background-image: conic-gradient(from 0deg at center  ,#ff8a00 90deg,red 360deg,blue,black,white);
+background-image: conic-gradient(from 0deg at 80%20%  ,#ff8a00 90deg,red 360deg,blue,black,white);
+background-image: conic-gradient(from 0deg at 80%20%  ,#ff8a00 90deg,red 10%,blue 40%,black,white);
+background-image: conic-gradient(#ff8a00,red ,blue 1turn ,black,white 1turn);
+}
+    </style>
+</head>
+<body>
+    
+        <h1>Conic gradients</h1>
+        <p>
+            A conic gradient is similar to a radial gradient. Both are circular and use the center of the element as the
+            source point for color stops. However, where the color stops of a radial gradient emerge from the center of
+            the circle, a conic gradient places them around the circle.
+        </p>
+            <p>
+                They’re called “conic” because they tend to look like the shape of a cone that is being viewed from
+                above. Well, at least when there is a distinct angle provided and the contrast between the color values
+                is great enough to tell a difference.
+            </p>
+            <h2>Syntax</h2> 
+            <b>
+                Make a conic-gradient that is located at [some point] that starts with [one color] at some angle and
+                ends with [another color] at [some angle]
+            </b>
+            <pre>
+                conic-gradient(
+                [ from angle ]? [ at position ]?,
+                        angular-color-stop-list)
+            </pre>
+            <pre>
+                .gradient {
+                /* Original example */
+                background-image: conic-gradient(#ff8a00, #e52e71);
+                /* Explicitly state the location center point */
+                background-image: conic-gradient(at 50% 50%, #ff8a00, #e52e71);
+                /* Explicitly state the angle of the start color */
+                background-image: conic-gradient(from 0deg, #ff8a00, #e52e71);
+                /* Explicitly state the angle of the start color and center point location */
+                background-image: conic-gradient(from 0deg at center, #ff8a00, #e52e71);
+                /* Explicitly state the angles of both colors as percentages instead of degrees */
+                background-image: conic-gradient(#ff8a00 0%, #ff8a00, #e52e71);
+                /* Explicitly state the angle of the starting color in degrees and the ending color by a full turn of
+                the circle */
+                background-image: conic-gradient(#ff8a00 0deg, #e52e71 1turn);
+                }
+            </pre>
+            <br>
+            <br>
+            <br>
+            <h3>Example</h3>
+                <pre>
+                    .gradient {
+                    height: 250px;
+                    background-color: #ff8a00;
+                    background-image: conic-gradient(#ff8a00, #e52e71);
+                    }
+                </pre>
+                <div class="gradient">
+
+                </div>
+
+
+
+</body>
+</html>

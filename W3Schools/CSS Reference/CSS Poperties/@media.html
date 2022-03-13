@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        img{
+            border: 1px solid #000;
+        }
+    </style>
+</head>
+<body>
+            <h1>CSS @media Rule</h1>
+                <h2>Definition and Usage</h2>   
+                    <p>
+                        The @media rule is used in media queries to apply different styles for different media
+                        types/devices.
+                    </p>
+                    <p>Using media queries are a popular technique for delivering a tailored style sheet (responsive web
+                        design) to desktops, laptops, tablets, and mobile phones.</p>
+                    <p>
+                        You can also use media queries to specify that certain styles are only for printed documents or
+                        for screen readers (media type: print, screen, or speech).
+                    </p>
+                    <p>
+                        In addition to media types, there are also media features. Media features provide more specific
+                        details to media queries, by allowing to test for a specific feature of the user agent or
+                        display device. For example, you can apply styles to only those screens that are greater, or
+                        smaller, than a certain width.
+                    </p>
+                <h2>CSS Syntax</h2>
+                    <pre>
+                        @media not|only mediatype and (mediafeature and|or|not mediafeature) {
+                        CSS-Code;
+                        }
+
+                    </pre>
+                    <p>You can also have different stylesheets for different media, like this:</p>
+                    <pre>
+                        <link rel="stylesheet" media="screen and (min-width: 900px)" href="widescreen.css">
+                        <link rel="stylesheet" media="screen and (max-width: 600px)" href="smallscreen.css">
+                    </pre>
+                <h2>Meaning of the not, only , and keyword</h2>
+                    <ol>
+                        <li>not 
+                            <p>
+                                The not keyword inverts the meaning of an entire media query.
+                            </p>
+                        </li>
+                        <li>only 
+                            <p>The only keyword prevents older browsers that do not support media queries with media
+                                features from applying the specified styles. It has no effect on modern browsers.</p>
+                        </li>
+                        <li>and 
+                            <p>The and keyword combines a media feature with a media type or other media features.</p>
+                        </li>
+                    </ol>
+                <h2>Values</h2> 
+                    <h4>Media Types</h4>
+                    <ol>
+                        <li>all 
+                            <p>Default. Used for all media type devices</p>
+                        </li>
+                        <li>print 
+                            <p>Used for printers</p>
+                        </li>
+                        <li>screen 
+                            <p>
+                                Used for computer screens, tablets, smart-phones etc.
+                            </p>
+                        </li>
+                        <li>speech 
+                            <p>
+                                Used for screen readers that "reads" the page out loud
+                            </p>
+                        </li>
+                    </ol>
+                    <h4>Media Features</h4>
+                        <img src="media.jpg" alt="" class="">
+                        <img src="media2.jpg" alt="" class="">
+                        <img src="media3.jpg" alt="" class="">
+                        <img src="media4.jpg" alt="" class="">
+                        <img src="media5.jpg" alt="" class="">
+
+
+    
+</body>
+</html>

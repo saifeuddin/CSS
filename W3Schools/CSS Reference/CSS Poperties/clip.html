@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+            <h1>CSS clip Property</h1>
+                <h3>Example</h3>
+                    <pre>
+                        img {
+                        position: absolute;
+                        clip: rect(0px,60px,200px,0px);
+                        }
+                    </pre>
+                <h2>Definition and Usage </h2>
+                    <b>What happens if an image is larger than its containing element?</b>
+                    <p>
+                        The clip property lets you specify a rectangle to clip an <b>absolutely positioned</b>  element. The
+                        rectangle is specified as four coordinates, all from the top-left corner of the element to be
+                        clipped.
+                    </p>
+                    <b>Note: The clip property does not work if "overflow:visible".</b>
+                    <b>Note: The clip property is deprecated and will be replaced by the clip-path property in the
+                        future.</b>
+                <h2>Syntax</h2>
+                    <pre>
+                        clip: auto|shape|initial|inherit;
+                    </pre>
+                <h2>Property Values</h2>
+                    <ol>
+                        <li>auto 
+                            <p>No clipping will be applied. This is default</p>
+                        </li>
+                        <li>shape 
+                            <p>Clips an element. The only valid value is: rect (top, right, bottom, left)</p>
+                        </li>
+                    </ol>
+
+
+
+
+
+</body>
+</html>
