@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Text Overflow</title>
+
+</head>
+<body>
+
+
+        <h1>CSS Text Overflow</h1>
+        <p>
+            The CSS text-overflow property specifies how overflowed content that is not displayed should be signaled to
+            the user.
+        </p>
+        <p>It can be clipped:</p>
+        <p>or it can be rendered as an ellipsis (...):</p>
+
+        <p>Both of the following properties are required for text-overflow:</p>
+            <ul>
+                <li><b>white-space:nowrap</b></li>
+                <li><b>overflow:hidden</b></li>
+            </ul>
+
+        <h2>Property Value</h2>
+        <ol>
+            <li>ellipsis
+                <p>
+                    Render an ellipsis ("...") to represent the clipped text
+                </p>
+            </li>
+            <li> clip
+                <p>Default value. The text is clipped and not accessible</p>
+            </li>
+
+            <li>string
+                <p>
+                    Render the given string to represent the clipped text
+                </p>
+                <p>Same as clip</p>
+            </li>
+        </ol>
+</body>
+</html>

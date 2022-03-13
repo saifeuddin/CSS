@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Filters</title>
+
+    <style>
+        img {
+        width: 33%;
+        height: auto;
+        float: left;
+        max-width: 235px;
+        }
+        .blur{
+            filter: blur(4px);
+
+                    /* Percentages Not Work  */
+            filter: blur(40%);
+            filter: blur(4);
+        }
+        .brightness{
+            filter: brightness(200%);
+            /* filter: brightness(200); */
+
+
+                    /* Pixels Doesn't Work  */
+            filter: brightness(200px);
+        }
+
+
+
+
+
+
+
+
+        .contrast{
+            filter: contrast(100);
+            filter: contrast(3600%);
+
+
+                    /* Percentages Not Work  */
+            filter: contrast(10px);
+        }
+        .saturate{
+        filter: saturate(500%);
+        filter: saturate(10);
+
+
+
+
+        /* Pixels Doesn't Work */
+        /* filter: saturate(10px); */
+        }
+
+
+
+
+
+        .grayscale{
+            /* filter: grayscale(); */
+            filter: grayscale(800%);
+
+
+
+                   /* Pixels Doesn't Work */
+            /* filter: grayscale(900px); */
+            /* filter: grayscale(900px); */
+        }
+        .sepia{
+        /* filter: sepia(); */
+        /* filter: sepia(100%); */
+        filter: sepia(100);
+        
+                /* Doesn't Work  */
+        filter: sepia(100px);
+        }
+
+
+
+
+
+
+
+        .huerotate{
+            filter: hue-rotate(180deg);
+
+
+
+                    /* Doesn't Work  */
+            filter: hue-rotate(180);
+        }
+
+        .invert{
+            /* filter: invert(); */
+            /* filter: invert(30%); */
+            /* filter: invert(300%); */
+            filter: invert(300);
+
+
+                   /* Pixels Doesn't Work */
+            /* filter: invert(300px); */
+        }
+
+
+
+
+
+
+
+
+
+
+        .opacity{
+            /* filter: opacity(30%); */
+            filter: opacity(.2);
+            /* filter: opacity(1); */
+
+
+
+
+                    /* Doesn't Work  */
+            filter: opacity(90px);
+            filter: opacity(1px);
+        }
+
+
+
+
+
+
+
+
+
+        .shadow{
+            filter: drop-shadow(15px 20px 5px green);
+        }
+    </style>
+</head>
+<body>  
+
+
+            <h1>Image Filters</h1>
+                <p><strong>Note:</strong> The filter property is not supported in Internet Explorer or Edge 12.</p>
+
+                <img src="pineapple.jpg" alt="Pineapple" width="300" height="300">
+                <img class="blur" src="pineapple.jpg" alt="Pineapple" width="300" height="300">
+                <img class="brightness" src="pineapple.jpg" alt="Pineapple" width="300" height="300">
+                <img class="contrast" src="pineapple.jpg" alt="Pineapple" width="300" height="300">
+                <img class="grayscale" src="pineapple.jpg" alt="Pineapple" width="300" height="300">
+                <img class="huerotate" src="pineapple.jpg" alt="Pineapple" width="300" height="300">
+                <img class="invert" src="pineapple.jpg" alt="Pineapple" width="300" height="300">
+                <img class="opacity" src="pineapple.jpg" alt="Pineapple" width="300" height="300">
+                <img class="saturate" src="pineapple.jpg" alt="Pineapple" width="300" height="300">
+                <img class="sepia" src="pineapple.jpg" alt="Pineapple" width="300" height="300">
+                <img class="shadow" src="pineapple.jpg" alt="Pineapple" width="300" height="300">
+    
+</body>
+</html>

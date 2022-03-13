@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Linear Gradients</title>
+
+
+
+
+
+
+
+            <!-- Direction -->
+    <style>
+        .top-bottom{
+            height: 200px; 
+            background-color: red;
+            background-image: linear-gradient(red, yellow)
+        }
+        .left-right{
+            height: 200px; 
+            background-color: red;
+            background-image: linear-gradient(to right, red, yellow)
+        }
+        .diagonal{
+            height: 200px; 
+            background-color: red;
+            background-image: linear-gradient(to top right, red, yellow)
+        }
+    </style>
+    
+    
+    
+    
+    
+
+
+
+
+
+
+        <!-- Using Angles -->
+    <style>
+        .angle{
+            height: 200px; 
+            background-color: red;
+            background-image: linear-gradient(180deg, red, yellow)
+        }
+</style>
+
+    <!-- Using Multiple Color Stops -->
+
+<style>
+    .angle1{
+        height: 200px; 
+        background-color: red;
+        background-image: linear-gradient(90deg, red 25%, yellow 50%, green 75%, blue 100%)
+    }
+</style>
+
+
+
+
+
+
+
+
+        <!-- Repeating a linear-gradient -->
+<style>
+    .repeat{
+        height: 300px; 
+        background-color: red;
+        background-image: repeating-linear-gradient(red, yellow 10%, green 20%, blue 30%);
+    }
+</style>
+
+
+
+
+
+</head>
+<body>
+
+
+
+
+
+                <h1>CSS Linear Gradients</h1>
+                    <p>To create a linear gradient you must define at least two "color stops". Color stops are the colors you want to render smooth transitions among. <br> You can also set a starting point and a direction (or an angle) along with the gradient effect.
+                    </p>
+
+                    <h2>Syntax</h2>
+                    <pre>
+                        background-image: linear-gradient(direction, color-stop1, color-stop2, ...);
+                    </pre>
+
+
+
+
+
+
+
+
+
+
+
+                    <br>
+                    <br>
+                    <br>
+            <h1> Direction </h1>
+                    <h2>Syntax</h2>
+                    <pre>
+                        background-image: linear-gradient(direction, color-stop1, color-stop2, ...);
+                    </pre>
+                    <h3>example</h3>
+                    
+                    <h3> Direction - Top to Bottom (this is default) </h3>
+                    <div class="top-bottom"></div>
+                    
+                    <h3> Direction - Left to Right </h3>
+                    <div class="left-right"> </div>
+
+                    <h3> Direction - Diagonal </h3>
+                    <p>
+                        You can make a gradient diagonally by specifying both the "horizontal and vertical" starting
+                        positions.
+                    </p>
+                    <div class="diagonal"></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    <br>
+                    <br>
+                    <br>
+                    <h1> Using Angles</h1>
+                    <h2>Using Multiple Color Stops</h2>
+                        <h3>Syntax</h3>
+                        <pre>
+                            background-image: linear-gradient(angle, color-stop1, color-stop2);
+                        </pre>
+                        <h3>Examples</h3>
+                        <br>
+
+                        <div class="angle"></div> <br>
+                        <div class="angle1"></div>
+
+
+
+
+
+
+
+
+
+
+                    <br>
+                    <br>
+                    <br>
+                    <h1>Repeating a linear-gradient</h1>
+                        <h2>Syntax</h2>
+                        <pre>
+                                background-image: repeating-linear-gradient(red, yellow 10%, green 20%);
+                        </pre>
+                        <h3> Use repeating-linear-gradient() function</h3>
+                        <h3>Example:</h3>
+                    <br>
+                        <div class="repeat"></div>
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS @keyframes Rule</title>
+</head>
+<body>
+
+
+            <h1>CSS @keyframes Rule</h1>
+            <h2>Definition and Usage</h2>
+                <p>
+                    The @keyframes rule specifies the animation code.
+                </p>
+                <p>
+                    Specify when the style change will happen in percent, or with the keywords "from" and "to", which is the same as 0% and 100%. <br>
+                    0% is the beginning of the animation, 100% is when the animation is
+                    complete.
+                </p>
+                <b>Tip: For best browser support, you should always define both the 0% and the 100% selectors.</b>
+                <p> <b>Note:</b>
+                     Use the animation properties to control the appearance of the animation, and also to bind the
+                    animation to selectors.
+                </p>
+                <b>
+                    Note: The "!important rule" is "ignored" in a keyframe.
+                </b>
+            <h2>Syntax</h2>
+                <pre>
+                    @keyframes animation name {keyframes-selector {css-styles;}}
+                </pre>
+            <h2>Property Values</h2>
+                <ol>
+                    <li>
+                        animation name 
+                        <p>Required.Defines the name of the animation</p>
+                    </li>
+                    <li>keyframes-selector
+                        <p>Required.Percentage of the animation duration </p>
+                        <p>Legal Value:
+                            <ul>
+                                <li>0-100%</li>
+                                <li>from(same as 0%)</li>
+                                <li>to(same as 100%)</li>
+                                <br>
+                                <b>Note:</b>
+                                <span>you can have many keyframe selector in one animation</span>
+                            </ul>
+                        </p>
+                    </li>
+                    <li>css-style
+                        <p>Required. One or more legal CSS style properties</p>
+                    </li>
+                </ol>
+</body>
+</html>

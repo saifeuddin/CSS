@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animated Buttons</title>
+
+<!-- <style>
+    .button {
+        display: inline-block;
+        border-radius: 4px;
+        background-color: #f4511e;
+        border: none;
+        color: #FFFFFF;
+        text-align: center;
+        font-size: 28px;
+        padding: 20px;
+        width: 200px;
+        transition: all 0.5s;
+        cursor: pointer;
+        margin: 5px;
+    }
+
+    .button span {
+        cursor: pointer;
+        display: inline-block;
+        position: relative;
+        transition: 0.5s;
+    }
+
+    .button span:after {
+        content: '\00bb';
+        position: absolute;
+        opacity: 0;
+        top: 0;
+        right: -20px;
+        transition: 0.5s ease;
+    }
+
+    .button:hover span {
+        padding-right: 25px;
+    }
+
+    .button:hover span:after {
+        opacity: 1;
+        right: 0;
+    }
+</style> -->
+
+
+
+<!-- <style>
+    .button {
+    display: inline-block;
+    padding: 15px 25px;
+    font-size: 24px;
+
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+
+    color: #fff;
+    background-color: #40b343;
+    border: 2px solid rgb(209, 201, 201);
+    border-radius: 15px;
+    box-shadow: 0 9px #999;
+    }
+
+    .button:hover {
+        background-color: #3e8e41;
+        }
+
+    .button:active {
+        background-color: #3e8e41;
+        transform: translateY(5px);
+        box-shadow: 0 3px #666;
+    }
+</style> -->
+
+
+
+
+<style>
+    .button {
+    position: relative;
+    background-color: #4CAF50;
+    color: #FFFFFF;
+    
+    border: none;
+    font-size: 28px;
+    padding: 20px;
+    width: 200px;
+    text-align: center;
+    
+    transition-duration: 0.4s;
+
+
+    text-decoration: none;
+    overflow: hidden;
+    cursor: pointer;
+    }
+    .button::after{
+        content: '';
+        position: absolute;
+        display: block;
+        background-color: #855050;
+
+        padding: 300% 0 0 350%;
+        margin-top: -130%;
+        margin-left: -20% !important;
+        opacity: 0;
+        transition: all 8s;
+    }
+    .button:active:after {
+    padding: 0;
+    margin: 0;
+    opacity: 1;
+    transition: 0s
+    }
+</style>
+
+
+
+
+
+
+
+
+</head>
+<body>
+    
+<!-- 
+            <h1>Animated Button</h1>
+                <button class="button"> <span> Hover </span></button> -->
+
+
+
+
+
+
+
+
+
+            <!-- <h2>Animated Buttons - "Pressed Effect"</h2>
+
+                <button class="button">Click Me</button> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <h2>Animated Button - Ripple Effect</h2>
+
+                <button class="button">Click Me</button>
+</body>
+</html>

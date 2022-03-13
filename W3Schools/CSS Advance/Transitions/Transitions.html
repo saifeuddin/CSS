@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Transitions</title>
+</head>
+<body>
+
+
+            <h1>CSS Transitions</h1>
+                <p>
+                    CSS transitions allows you to change property values smoothly, over a given duration.
+                </p>
+
+            <h1>CSS Transitions Properties</h1>
+                <ol>
+                    <li>transition</li>
+                    <li>transition-duration</li>
+                    <li>transition-property</li>
+                    <li>transition-delay</li>
+                    <li>transition-timing-function</li>
+                </ol>
+
+            <h1>How to Use CSS Transition ?</h1>
+                <p>
+                    To create a transition effect, you must specify two things
+                </p>
+                <ol>
+                    <li>Css property u want to add an effect</li>
+                    <li>Duration of the effect</li>
+                    <pre>
+                        div{
+                        transition: width 2s;
+                        }
+                    </pre>
+                    <br>
+                        <b>Note:</b>
+                        <p>
+                            If duration property is not specified, transition will not work
+                        </p>
+                </ol>
+                <br>
+                <br>
+                <br>
+                <h1>Change Several Property Values</h1>
+                <h3>Example:</h3>
+                    <pre>
+                        div {
+                        transition: width 2s, height 4s;
+                        }
+                    </pre>
+
+                <br>
+                <br>
+                <br>
+                <h1>Delay the Transition Effect</h1>
+                    <p>
+                        The transition-delay property specifies a delay (in seconds) for the transition effect.
+                    </p>
+                    <h3>Example:</h3>
+                    <pre>
+                        div {
+                        transition-delay: 1s;
+                        }
+                    </pre>
+
+                <br>
+                <br>
+                <br>
+                <h1>Specify the Speed Curve of the Transition</h1>
+                    <p>
+                        The transition-timing-function property specifies the speed curve of the transition effect.
+                    </p>
+                    <h2>Property Values</h2>
+                        <ol>
+                            <li>ease
+                                <p>
+                                    slow start, then fast, then end slowly (this is default)
+                                </p>
+                            </li>
+                            <li>ease-in
+                                <p>Slow Start</p>
+                            </li>
+                            <li>ease-out
+                                <p>Slow End</p>
+                            </li>
+                            <li>ease-in-out
+                                <p>Slow Start & End </p>
+                            </li>
+                            <li>linear
+                                <p>Always Same </p>
+                            </li>
+                            <li>cubic-bezier(n,n,n,n)</li>
+                        </ol>
+                <br>
+                <br>
+                <br>
+                <h1> Transition + Transformation</h1>
+                    <h3>Example:</h3>
+                    <pre>
+                        div {
+                        transition: width 2s, height 2s, transform 2s;
+                        }
+                    </pre>
+    
+</body>
+</html>

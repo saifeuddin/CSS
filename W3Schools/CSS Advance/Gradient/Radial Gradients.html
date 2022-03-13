@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> CSS Radial Gradients </title>
+
+
+    <style>
+        .ra{
+            height: 300px;
+            background-color: blue; /* For not supported browsers */
+
+            background-image: radial-gradient(red, blue, black);
+            
+            background-image: radial-gradient(red 20%, blue 30%, black 50%);
+        }
+    </style>
+
+
+
+
+
+            <!-- Set Shape   -->
+    <style>
+        .ra1{
+            width: 300px;
+            height: 300px;
+            background-color: blue; /* For not supported browsers */
+
+            background-image: radial-gradient(circle, black, white, rgb(145, 216, 13));
+        }
+    </style>
+
+
+
+
+
+                <!-- Use of Different Size Keywords  -->
+    <style>
+        .size{
+        width: 600px;
+        height: 350px;
+        background-color: blue; /* For not supported browsers */
+
+
+        background-image: radial-gradient(closest-corner at 60% 50%, black, blue, rgb(145, 216, 13));
+        background-image: radial-gradient(closest-side at 60% 50%, black, blue, rgb(145, 216, 13));
+        background-image: radial-gradient(farthest-side at 60% 50%, black, blue, rgb(145, 216, 13));
+        background-image: radial-gradient(farthest-corner at 60% 50%, black, blue, rgb(145, 216, 13));
+        }
+    </style>
+
+
+
+
+
+
+
+
+
+                    <!-- Repeating a radial-gradient -->
+    <style>
+        .repeat{
+            width: 600px;
+            height: 350px;
+            background-color: blue; /* For not supported browsers */
+
+            background-image: repeating-radial-gradient( yellow, red 10%, blue 20%);
+        }
+    </style>
+
+
+
+
+
+
+
+
+
+
+</head>
+<body>
+
+
+
+
+        <h1> Css Radial Gradients </h1>
+            <p> A radial gradient defined by its center </p>
+            <br>
+            <h2>Syntax</h2>
+            <pre>
+                background-image: radial-gradient(shape size at position, start-color, ..., last-color);
+            </pre>
+            <p>By default, shape is ellipse, size is farthest-corner, and position is center.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+            <br>
+            <br>
+            <h3> Radial Gradient - Evenly Spaced Color Stops (this is default) </h3>
+            <div class="ra"></div> 
+            <h3>Radial Gradient - Differently Spaced Color Stops</h3>
+                <div class="ra1"></div> 
+
+
+
+
+
+
+
+
+
+
+
+
+            <br>
+            <br>
+            <br>
+            <h2>Set Shape</h2>
+                <p> 
+                    The shape parameter defines the shape. It can take the value
+                    <ol>
+                        <li>circle</li>
+                        <li>ellipse</li>
+                    </ol>
+                    The default value is ellipse.
+                </p>
+                <div class="ra"></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <br>
+                <br>
+                <h2>Use of Different Size Keywords</h2>
+                    <p>The size parameter defines the size of the gradient. It can take four values:</p>
+                    <ol>
+                        <li>closest -side</li>
+                        <li>closest -corner</li>
+                        <li>farthest -side</li>
+                        <li>farthest -corner(Default) </li>
+                    </ol>
+                    <br>
+                    <div class="size"></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <h2>Repeating a radial-gradient</h2>
+                    <p>
+                        The repeating-radial-gradient() function is used to repeat radial gradients.
+                    </p>
+
+                    <h3> Example: </h3>
+                    <div class="repeat"></div>
+
+    
+</body>
+</html>
