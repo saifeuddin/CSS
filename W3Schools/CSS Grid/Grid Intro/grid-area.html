@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>      
+
+
+
+            <h1>CSS grid-area Property</h1>
+                <h3>Example</h3>
+                    <pre>
+                        .item1 {
+                        grid-area: 2 / 1 / span 2 / span 3;
+                        }
+                    </pre>
+                <p>The grid-area property specifies a grid item's size and location in a grid layout.</p>
+                <b> Shorthand
+                    property for the following properties:</b>
+                    <ol>
+                        <li>grid-row-start</li>
+                        <li>grid-column-start</li>
+                        <li>grid-row-end</li>
+                        <li>grid-column-end</li>
+                    </ol> 
+                <p>The grid-area property can also be <b>used to assign a name to a grid item</b> . Named grid items can then be
+                    referenced to by the "grid-template-areas property" of the grid container. See examples below.</p> 
+                <b>Default value: auto / auto / auto / auto</b>
+                <br>
+                <br>
+                <h2>Css Syntax</h2>
+                    <pre>
+                        grid-area: grid-row-start / grid-column-start / grid-row-end / grid-column-end | item name;
+                    </pre>
+                <br>
+                <h2>Property Values</h2>
+                    <ol>
+                        <li>grid-row-start
+                            <p>Specifies on which row to start displaying the item.</p>
+                        </li>
+                        <li>grid-column-start
+                            <p>
+                                Specifies on which column to start displaying the item.
+                            </p>
+                        </li>
+                        <li>grid-row-end 
+                            <p>
+                                Specifies on which row-line to stop displaying the item, or how many rows to span.
+                            </p>
+                        </li>
+                        <li>grid-column-end 
+                            <p>
+                                Specifies on which column-line to stop displaying the item, or how many rows to span.
+                            </p>
+                        </li>
+                        <li>item name 
+                            <p>Specifies a name for the grid item</p>
+                        </li>
+                    </ol>
+    
+</body>
+</html>

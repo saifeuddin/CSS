@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>  
+
+
+            <h1>CSS grid Property</h1>
+                <h3>Example</h3>
+                <pre>
+                    .grid-container {
+                    display: grid;
+                    grid: 150px / auto auto auto;
+                    }
+                </pre>
+                <h2>Definition and Usage</h2>
+                <p>
+                    The grid property is a shorthand property for:
+                </p>
+                <ol>
+                    <li>grid-template-rows</li>
+                    <li>grid-template-columns</li>
+                    <li>grid-template-areas</li>
+                    <li>grid-auto-rows</li>
+                    <li>grid-auto-columns</li>
+                    <li>grid-auto-flow</li>
+                </ol>
+                <b>Default value: none none none auto auto row</b>
+                <h2>Css Syntax</h2>
+                    <pre>grid: none |    grid-template-rows / grid-template-columns |     grid-template-areas |
+                    grid-template-rows / [grid-auto-flow] grid-auto-columns |
+                    [grid-auto-flow] grid-auto-rows / grid-template-columns |
+                    initial|inherit;</pre>
+                <h2>Property Values</h2>
+                    <ul>
+                        <li> none
+                            <p>Default value. No specific sizing of the columns or rows </p>
+                        </li>
+                        <li> grid-template-rows / grid-template-columns
+                            <p>
+                                Specifies the size(s) of the columns and rows
+                            </p>
+                        </li>
+                        <br>
+                        <li> grid-template-areas
+                            <p>
+                                Specifies the grid layout using named items
+                            </p>
+                        </li>
+                        <br>
+                        <li> grid-template-rows / grid-auto-columns
+                            <p>
+                                Specifies the size (height) of the rows, and the auto size(width) of the columns.
+                            </p>
+                        </li>
+                        <br>
+                        <li> grid-auto-rows / grid-template-columns
+                            <p>
+                                Specifies the auto size of the rows, and sets the size(width) columns. 
+                            </p>
+                        </li>
+                        <br>
+                        <li> grid-template-rows / grid-auto-flow grid-auto-columns
+                            <p>
+                                Specifies the size (height) of the rows, and how to place auto-placed items, and the
+                                auto size of the columns
+                            </p>
+                        </li>
+                        <br>
+                        <li> grid-auto-flow grid-auto-rows / grid-template-columns
+                            <p>
+                                Specifies how to place auto-placed items, and the auto size of the rows, and sets the
+                                grid-template-columns property
+                            </p>
+                        </li>
+                    </ul>
+    
+</body>
+</html>

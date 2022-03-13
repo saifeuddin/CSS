@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        /* Style the header */
+        .header {
+            background-color: #ac3d3d;
+            padding: 30px;
+            text-align: center;
+            font-size: 35px;
+            grid-area: header;
+        }
+
+        /* Container for flex boxes */
+        .row {
+            display: grid;
+            /* grid-template-columns:  auto auto auto; */
+            /* grid-template-rows:  auto; */
+            grid-template-areas: 'header header  header header header header'
+                                    'left left middle middle right right'
+                                    'footer footer footer footer  footer footer';
+        }
+
+        /* Create three equal columns that sits next to each other */
+        .row .column{
+            padding: 20px;
+            height: 300px
+        }
+        .row .left{
+            grid-area: left;
+        }
+        .row .middle{
+            grid-area: middle;
+        }
+        .row .right{
+            grid-area: right;
+        }
+        /* Style the footer */
+        .footer {
+            background-color: #b14848;
+            padding: 10px;
+            text-align: center;
+            grid-area: footer;
+        }
+
+        @media screen and (max-width:600px) {
+            .row{
+                grid-template-areas: 'header header  header header header header'
+                                    'left left left left left left'
+                                    'middle middle middle middle middle middle'
+                                    'right right right right right right'
+                                    'footer footer footer footer  footer footer';
+            }
+            .row .column{
+                height: 150px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>CSS Template using Grid</h2>
+    <p>In this example, we have created a header, three equal columns and a footer. On smaller screens, the columns will
+        stack on top of each other.</p>
+    <p>Resize the browser window to see the responsive effect.</p>
+    <p><strong>Note:</strong> Grid is not supported in Internet Explorer 15 and earlier versions.</p>
+
+    <div class="header">
+        <h2>Header</h2>
+    </div>
+
+    <div class="row">
+        <div class="column left" style="background-color:#aaa;">Column</div>
+        <div class="column middle" style="background-color:#bbb;">Column</div>
+        <div class="column right" style="background-color:#ccc;">Column</div>
+    </div>
+
+    <div class="footer">
+        <p>Footer</p>
+    </div>
+
+
+
+
+</body>
+</html>

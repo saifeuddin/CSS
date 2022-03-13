@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+            <h1>CSS grid-template-areas Property</h1>
+                <h2>Definition and Usage</h2>
+                <p>
+                    The grid-template-areas property specifies areas within the grid layout.
+                </p>
+                <p>
+                    You can name grid items by using the grid-area property, and then reference to the name in the
+                    grid-template-areas property.
+                </p>
+                <p>
+                    Each area is defined by apostrophes. Use a period sign(.) to refer to a grid item "with no name".
+                </p>
+            <h2>CSS Syntax</h2>
+                <pre>
+                    grid-template-areas: none | item names;
+                </pre>
+            <h2>Property Values</h2>
+                <ol>
+                    <li>none
+                        <p>
+                            Default value. No named grid areas
+                        </p>
+                    </li>
+                    <li>item name 
+                        <p>
+                            A sequence that specifies how each columns and row should display
+                        </p>
+                    </li>
+                </ol>
+                <h3>Example </h3>
+                    <pre>  grid-template-areas: 'myArea myArea . . .' 'myArea myArea . . .';</pre>
+    
+</body>
+</html>
